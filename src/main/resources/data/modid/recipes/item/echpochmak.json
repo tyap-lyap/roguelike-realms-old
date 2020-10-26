@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "OSC",
+    "WWW"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bread"
+    },
+    "O": {
+      "item": "minecraft:sugar"
+    },
+    "S": {
+      "item": "minecraft:sugar_cane"
+    },
+    "C": {
+      "item": "minecraft:cooked_beef"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "modid:echpochmak"
+  }
+}
