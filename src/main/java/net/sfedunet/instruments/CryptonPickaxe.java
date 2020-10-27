@@ -8,6 +8,6 @@ import net.sfedunet.AnyItemsMod;
 
 public class CryptonPickaxe extends PickaxeItem {
     public CryptonPickaxe(ToolMaterial toolmaterial) {
-        super(toolmaterial, -2, 0, new Item.Settings().group(AnyItemsMod.AIGENERAL));
+        super(toolmaterial, -2, 0, new Item.Settings().group(AnyItemsMod.AI_GENERAL));
     }
 }

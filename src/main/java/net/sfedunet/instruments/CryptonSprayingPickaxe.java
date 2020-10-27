@@ -8,6 +8,6 @@ import net.sfedunet.*;
 
 public class CryptonSprayingPickaxe extends PickaxeItem {
     public CryptonSprayingPickaxe(ToolMaterial toolmaterial) {
-        super(toolmaterial, 0, 0, new Settings().group(ItemGroup.TOOLS));
+        super(toolmaterial, 0, 0, new Settings().group(AnyItemsMod.AI_GENERAL));
     }
 }
