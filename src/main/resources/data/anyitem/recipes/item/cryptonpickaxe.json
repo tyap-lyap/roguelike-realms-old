@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "anyitem:"
+    "item": "anyitem:cryptonsprayingpickaxe"
   },
   "addition": {
-    "item": "anyitem:"
+    "item": "anyitem:cryptonsprayingpickaxe"
   },
   "result": {
-    "item": "anyitem:"
+    "item": "anyitem:cryptonpickaxe"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "anyitem:cryptonsprayingsword"
+  },
+  "addition": {
+    "item": "anyitem:cryptonsprayingsword"
+  },
+  "result": {
+    "item": "anyitem:cryptonsword"
+  }
+}

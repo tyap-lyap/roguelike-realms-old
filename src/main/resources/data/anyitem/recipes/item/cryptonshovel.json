@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "anyitem:cryptonsprayingshovel"
+  },
+  "addition": {
+    "item": "anyitem:cryptonsprayingshovel"
+  },
+  "result": {
+    "item": "anyitem:cryptonhovel"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SCM",
+    "#O#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bread"
+    },
+    "O": {
+      "item": "anyitem:onion"
+    },
+    "S": {
+      "item": "minecraft:sugar_cane"
+    },
+    "C": {
+      "item": "minecraft:cooked_chicken"
+    },
+    "M": {
+      "item": "minecraft:brown_mushroom"
+    }
+  },
+  "result": {
+    "item": "anyitem:shaurma"
+  }
+}

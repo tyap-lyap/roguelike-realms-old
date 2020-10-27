@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "anyitem:crypton_ore"
+          "name": "anyitem:crypton_dust"
         }
       ],
       "conditions": [

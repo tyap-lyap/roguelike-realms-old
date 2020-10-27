@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "minecraft:diamond_pickaxe"
+    "item": "minecraft:diamond_axe"
   },
   "addition": {
     "item": "anyitem:crypton_dust"
   },
   "result": {
-    "item": "anyitem:cryptonsprayingpickaxe"
+    "item": "anyitem:cryptonsprayingaxe"
   }
 }
