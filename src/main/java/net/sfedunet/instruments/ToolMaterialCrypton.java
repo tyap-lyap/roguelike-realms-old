@@ -6,12 +6,12 @@ import net.minecraft.recipe.Ingredient;
 public class ToolMaterialCrypton implements ToolMaterial {
     @Override
     public int getDurability() {
-        return 2084;
+        return 3521;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 4.1f;
+        return 4.5f;
     }
 
     @Override

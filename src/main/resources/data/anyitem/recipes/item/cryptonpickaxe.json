@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "anyitem:"
+  },
+  "addition": {
+    "item": "anyitem:"
+  },
+  "result": {
+    "item": "anyitem:"
+  }
+}
