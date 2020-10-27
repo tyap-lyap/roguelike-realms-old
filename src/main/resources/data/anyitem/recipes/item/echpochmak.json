@@ -10,7 +10,7 @@
       "item": "minecraft:bread"
     },
     "O": {
-      "item": "modid:onion"
+      "item": "anyitem:onion"
     },
     "S": {
       "item": "minecraft:sugar_cane"
@@ -23,6 +23,6 @@
     }
   },
   "result": {
-    "item": "modid:echpochmak"
+    "item": "anyitem:echpochmak"
   }
 }

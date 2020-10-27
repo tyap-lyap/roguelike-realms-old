@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "anyitem",
   "version": "${version}",
 
   "name": "Any Items Mod",

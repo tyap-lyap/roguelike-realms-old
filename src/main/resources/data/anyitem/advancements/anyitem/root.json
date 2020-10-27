@@ -4,10 +4,10 @@
       "item": "minecraft:emerald_block"
     },
     "title": {
-      "translate": "advancements.modid.root.title"
+      "translate": "advancements.anyitem.root.title"
     },
     "description": {
-      "translate": "advancements.modid.root.description"
+      "translate": "advancements.anyitem.root.description"
     },
     "frame": "task",
     "show_toast": false,

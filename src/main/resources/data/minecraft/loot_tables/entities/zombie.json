@@ -23,7 +23,7 @@
               }
             }
           ],
-          "name": "minecraft:rotten_flash"
+          "name": "minecraft:rotten_flesh"
         }
       ]
     },
@@ -69,7 +69,7 @@
               }
             }
           ],
-          "name": "modid:onion"
+          "name": "anyitem:onion"
         }
       ],
       "conditions": [

@@ -1,11 +1,11 @@
 {
-  "parent": "modid:modid/root",
+  "parent": "anyitem:anyitem/root",
   "display": {
     "title": {
-      "translate": "advancements.modid.eat_echpochmak.title"
+      "translate": "advancements.anyitem.eat_echpochmak.title"
     },
     "description": {
-      "translate": "advancements.modid.eat_echpochmak.description"
+      "translate": "advancements.anyitem.eat_echpochmak.description"
     },
     "icon": {
       "item": "modid:echpochmak"
