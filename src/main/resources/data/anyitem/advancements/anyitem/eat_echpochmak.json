@@ -8,7 +8,7 @@
       "translate": "advancements.anyitem.eat_echpochmak.description"
     },
     "icon": {
-      "item": "modid:echpochmak"
+      "item": "anyitem:echpochmak"
     },
     "frame": "task",
     "show_toast": true,
