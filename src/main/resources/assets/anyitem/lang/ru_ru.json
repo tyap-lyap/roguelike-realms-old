@@ -1,8 +1,10 @@
 {
   "item.anyitem.echpochmak": "Эчпочмак",
   "item.anyitem.onion": "Лук",
+  "item.anyitem.cryptonpickaxe": "Криптоновая кирка",
+  "item.anyitem.cryptonsprayingpickaxe": "Кирка с криптоновым напылением",
   "advancements.anyitem.root.title": "AnyItems Mod",
-  "advancements.anyitem.root.description": "Добро Пожаловать в AnyItems Mod",
+  "advancements.anyitem.root.description": "Добро пожаловать в AnyItems Mod",
   "advancements.anyitem.eat_echpochmak.title": "Эчпочмак?",
   "advancements.anyitem.eat_echpochmak.description": "Попробовать эчпочмак"
 }

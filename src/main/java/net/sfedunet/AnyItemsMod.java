@@ -21,6 +21,7 @@ public class AnyItemsMod implements ModInitializer {
 	{
 		Registry.register(Registry.ITEM, new Identifier("anyitem", "echpochmak"), ECHPOCHMAK);
 		Registry.register(Registry.ITEM, new Identifier("anyitem", "onion"), ONION);
-		Registry.register(Registry.ITEM, new Identifier("anyitem", "cryptonsprayngpickaxe"), new CryptonSprayingPickaxe(new ToolMaterialCryptonSpraying()));
+		Registry.register(Registry.ITEM, new Identifier("anyitem", "cryptonsprayingpickaxe"), new CryptonSprayingPickaxe(new ToolMaterialCryptonSpraying()));
+		Registry.register(Registry.ITEM, new Identifier("anyitem", "cryptonpickaxe"), new CryptonPickaxe(new ToolMaterialCrypton()));
 	}
 }
