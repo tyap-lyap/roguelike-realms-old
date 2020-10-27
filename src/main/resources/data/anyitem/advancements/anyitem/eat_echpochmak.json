@@ -20,7 +20,7 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "item": "modid:echpochmak",
+          "item": "anyitem:echpochmak",
           "count": {
             "min": 1,
             "max": 64
