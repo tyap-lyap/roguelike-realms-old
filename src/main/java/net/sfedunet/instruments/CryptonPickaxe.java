@@ -7,6 +7,6 @@ import net.minecraft.item.ToolMaterial;
 
 public class CryptonPickaxe extends PickaxeItem {
     public CryptonPickaxe(ToolMaterial toolmaterial) {
-        super(toolmaterial, -2, 0, new Item.Settings().group(anyitem.TOOLS));
+        super(toolmaterial, -2, 0, new Item.Settings().group(ItemGroup.TOOLS));
     }
 }
