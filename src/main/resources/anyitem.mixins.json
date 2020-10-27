@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.sfedunet.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "OreBiomeMixin$DefaultBiomeFeaturesMixin"
+  ],
+  "client": [
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
