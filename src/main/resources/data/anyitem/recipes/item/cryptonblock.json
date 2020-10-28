@@ -8,9 +8,10 @@
   "key": {
     "#": {
       "item": "anyitem:crypton_dust"
-    },
-    "result": {
-      "item": "anyitem:cryptonblock"
     }
+  },
+  "result": {
+    "item": "anyitem:cryptonblock",
+    "count": 1
   }
 }
