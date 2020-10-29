@@ -18,6 +18,18 @@
   "block.anyitem.crypton_ore": "Криптоновая руда",
   "advancements.anyitem.root.title": "AnyItems Mod",
   "advancements.anyitem.root.description": "Добро пожаловать в AnyItems Mod",
+  "advancements.anyitem.get_crypton_dust.title": "Криптоновая пыль!",
+  "advancements.anyitem.get_crypton_dust.description": "Получите криптоновую пыль",
+  "advancements.anyitem.craft_cryptonsprayingpickaxe.title": "Криптоновая пыль + алмаз = ???",
+  "advancements.anyitem.craft_cryptonsprayingpickaxe.description": "Получите кирку с криптоновым напылением",
+  "advancements.anyitem.craft_cryptonsprayinghoe.title": "Беспо... мотыга с криптоновым напылением",
+  "advancements.anyitem.craft_cryptonsprayinghoe.description": "Получите мотыгу с криптоновым напылением",
+  "advancements.anyitem.craft_cryptonpickaxe.title": "Сила полного криптона!",
+  "advancements.anyitem.craft_cryptonpickaxe.description": "Получите криптоновую кирку",
+  "advancements.anyitem.craft_cryptonhoe.title": "Полная криптоновая бесп... мотыга, я имел ввиду мотыга",
+  "advancements.anyitem.craft_cryptonhoe.description": "Получите криптоновую мотыгу",
   "advancements.anyitem.eat_echpochmak.title": "Эчпочмак?",
-  "advancements.anyitem.eat_echpochmak.description": "Попробовать эчпочмак"
+  "advancements.anyitem.eat_echpochmak.description": "Попробуйте эчпочмак",
+  "advancements.anyitem.eat_cooked_shaurma.title": "Еда богов",
+  "advancements.anyitem.eat_cooked_shaurma.description": "Попробуйте приготовленную шаурму"
 }

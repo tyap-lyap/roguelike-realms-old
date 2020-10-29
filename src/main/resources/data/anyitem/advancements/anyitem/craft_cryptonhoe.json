@@ -1,0 +1,32 @@
+{
+  "parent": "anyitem:anyitem/craft_cryptonpickaxe",
+  "display": {
+    "title": {
+      "translate": "advancements.anyitem.craft_cryptonhoe.title"
+    },
+    "description": {
+      "translate": "advancements.anyitem.craft_cryptonhoe.description"
+    },
+    "icon": {
+      "item": "anyitem:cryptonhoe"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "craftcryptonh": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "item": {
+          "item": "anyitem:cryptonhoe",
+          "count": {
+            "min": 1,
+            "max": 64
+          }
+        }
+      }
+    }
+  }
+}

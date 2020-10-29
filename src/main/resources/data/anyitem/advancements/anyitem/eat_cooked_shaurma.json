@@ -1,0 +1,32 @@
+{
+  "parent": "anyitem:anyitem/root",
+  "display": {
+    "title": {
+      "translate": "advancements.anyitem.eat_cooked_shaurma.title"
+    },
+    "description": {
+      "translate": "advancements.anyitem.eat_cooked_shaurma.description"
+    },
+    "icon": {
+      "item": "anyitem:cooked_shaurma"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "eatshaur": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "anyitem:cooked_shaurma",
+          "count": {
+            "min": 1,
+            "max": 64
+          }
+        }
+      }
+    }
+  }
+}

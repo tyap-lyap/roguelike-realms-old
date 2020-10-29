@@ -2,6 +2,7 @@ package net.sfedunet.instruments;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.sfedunet.AnyItemsMod;
 
 public class ToolMaterialCryptonSpraying implements ToolMaterial {
     @Override
@@ -31,6 +32,6 @@ public class ToolMaterialCryptonSpraying implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return null;
+        return Ingredient.ofItems(AnyItemsMod.CRYPTON_DUST);
     }
 }

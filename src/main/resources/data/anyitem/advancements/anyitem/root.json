@@ -17,18 +17,10 @@
   },
   "criteria": {
     "start": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "minecraft:enter_block",
       "conditions": {
-        "items": [
-          {
-            "item": "minecraft:dirt",
-            "count": {
-              "min": 1,
-              "max": 64
-            }
+        "block": "minecraft:air"
           }
-        ]
-      }
+        }
     }
-  }
 }

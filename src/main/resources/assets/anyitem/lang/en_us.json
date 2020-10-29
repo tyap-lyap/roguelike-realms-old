@@ -18,6 +18,18 @@
  "block.anyitem.crypton_ore": "Crypton Ore",
  "advancements.anyitem.root.title": "AnyItems Mod",
  "advancements.anyitem.root.description": "Welcome to AnyItems Mod",
+ "advancements.anyitem.get_crypton_dust.title": "Crypton Dust!",
+ "advancements.anyitem.get_crypton_dust.description": "Get Crypton Dust",
+ "advancements.anyitem.craft_cryptonsprayingpickaxe.title": "Crypton Dust + Diamond =???",
+ "advancements.anyitem.craft_cryptonsprayingpickaxe.description": "Craft Crypton Spraying Pickaxe",
+ "advancements.anyitem.craft_cryptonsprayinghoe.title": "Crypton Spraying Use... HOE!",
+ "advancements.anyitem.craft_cryptonsprayinghoe.description": "Craft Crypton Spraying Hoe",
+ "advancements.anyitem.craft_cryptonpickaxe.title": "Full Crypton Power!",
+ "advancements.anyitem.craft_cryptonpickaxe.description": "Craft Crypton Pickaxe",
+ "advancements.anyitem.craft_cryptonhoe.title": "Full Crypton Usele... Hoe, i mean HOE!",
+ "advancements.anyitem.craft_cryptonhoe.description": "Craft Crypton Hoe",
  "advancements.anyitem.eat_echpochmak.title": "Echpochmak?",
- "advancements.anyitem.eat_echpochmak.description": "Eat echpochmak"
+ "advancements.anyitem.eat_echpochmak.description": "Eat echpochmak",
+ "advancements.anyitem.eat_cooked_shaurma.title": "Food of the Gods",
+ "advancements.anyitem.eat_cooked_shaurma.description": "Eat Cooked Shaurma"
 }

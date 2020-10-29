@@ -1,0 +1,32 @@
+{
+  "parent": "anyitem:anyitem/get_crypton_dust",
+  "display": {
+    "title": {
+      "translate": "advancements.anyitem.craft_cryptonsprayingpickaxe.title"
+    },
+    "description": {
+      "translate": "advancements.anyitem.craft_cryptonsprayingpickaxe.description"
+    },
+    "icon": {
+      "item": "anyitem:cryptonsprayingpickaxe"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "craftsprayingp": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "item": {
+          "item": "anyitem:cryptonsprayingpickaxe",
+          "count": {
+            "min": 1,
+            "max": 64
+          }
+        }
+      }
+    }
+  }
+}

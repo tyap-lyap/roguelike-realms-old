@@ -1,0 +1,32 @@
+{
+  "parent": "anyitem:anyitem/craft_cryptonsprayingpickaxe",
+  "display": {
+    "title": {
+      "translate": "advancements.anyitem.craft_cryptonsprayinghoe.title"
+    },
+    "description": {
+      "translate": "advancements.anyitem.craft_cryptonsprayinghoe.description"
+    },
+    "icon": {
+      "item": "anyitem:cryptonsprayinghoe"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "craftsprayingh": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "item": {
+          "item": "anyitem:cryptonsprayinghoe",
+          "count": {
+            "min": 1,
+            "max": 64
+          }
+        }
+      }
+    }
+  }
+}
