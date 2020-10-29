@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
@@ -19,6 +20,8 @@ import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.sfedunet.armor.BaseArmor;
+import net.sfedunet.armor.CryptonArmorMaterial;
 import net.sfedunet.instruments.*;
 
 public class AnyItemsMod implements ModInitializer {
@@ -32,6 +35,7 @@ public class AnyItemsMod implements ModInitializer {
 	public static final Item ONION = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL).food(new FoodComponent.Builder().saturationModifier(2f).hunger(1).statusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 20*10),1f).build()));
 	public static final Block CRYPTONBLOCK = new Block(FabricBlockSettings.copy(Blocks.OBSIDIAN).sounds(BlockSoundGroup.BONE));
 	public static final Block CRYPTON_ORE = new Block(FabricBlockSettings.copy(Blocks.DIAMOND_ORE).sounds(BlockSoundGroup.STONE));
+	public static final ArmorMaterial CRYPTON_ARMOR = new CryptonArmorMaterial();
 
 
 		public static ConfiguredFeature<?, ?> CRYPTON_ORE_OTHERWORLD = Feature.ORE.configure(new OreFeatureConfig(
@@ -72,6 +76,11 @@ public class AnyItemsMod implements ModInitializer {
 
 		Registry.register(Registry.ITEM, new Identifier("anyitem", "cryptonsprayinghoe"), new CryptonSprayingHoe(new ToolMaterialCryptonSpraying()));
 		Registry.register(Registry.ITEM, new Identifier("anyitem", "cryptonhoe"), new CryptonHoe(new ToolMaterialCrypton()));
+
+		Registry.register(Registry.ITEM, new Identifier("anyitem","crypton_helmet"), new BaseArmor(CRYPTON_ARMOR, EquipmentSlot.HEAD));
+		Registry.register(Registry.ITEM, new Identifier("anyitem","crypton_chestplate"), new BaseArmor(CRYPTON_ARMOR, EquipmentSlot.CHEST));
+		Registry.register(Registry.ITEM, new Identifier("anyitem","crypton_leggings"), new BaseArmor(CRYPTON_ARMOR, EquipmentSlot.LEGS));
+		Registry.register(Registry.ITEM, new Identifier("anyitem","crypton_boots"), new BaseArmor(CRYPTON_ARMOR, EquipmentSlot.FEET));
 
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier("anyitem", "crypton_ore_otherworld"), CRYPTON_ORE_OTHERWORLD);
 	}

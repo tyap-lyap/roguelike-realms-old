@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:diamond_leggings"
+  },
+  "addition": {
+    "item": "anyitem:crypton_dust"
+  },
+  "result": {
+    "item": "anyitem:crypton_leggings"
+  }
+}

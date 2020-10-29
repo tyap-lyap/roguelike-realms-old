@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:diamond_chestplate"
+  },
+  "addition": {
+    "item": "anyitem:crypton_dust"
+  },
+  "result": {
+    "item": "anyitem:crypton_chestplate"
+  }
+}
