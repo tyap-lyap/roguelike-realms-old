@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:emerald_block"
+      "item": "anyitem:crypton_block"
     },
     "title": {
       "translate": "advancements.anyitem.root.title"

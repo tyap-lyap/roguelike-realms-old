@@ -53,10 +53,10 @@ public class AnyItemsMod implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("anyitem", "onion"), ONION);
 
 		Registry.register(Registry.BLOCK, new Identifier("anyitem", "cryptonblock"), CRYPTONBLOCK);
-		Registry.register(Registry.ITEM, new Identifier("anyitem", "cryptonblock"), new BlockItem(CRYPTONBLOCK, new Item.Settings().group(AnyItemsMod.AI_GENERAL).group(ItemGroup.BUILDING_BLOCKS)));
+		Registry.register(Registry.ITEM, new Identifier("anyitem", "cryptonblock"), new BlockItem(CRYPTONBLOCK, new Item.Settings().group(AnyItemsMod.AI_GENERAL)));
 
 		Registry.register(Registry.BLOCK, new Identifier("anyitem", "crypton_ore"), CRYPTON_ORE);
-		Registry.register(Registry.ITEM, new Identifier("anyitem", "crypton_ore"), new BlockItem(CRYPTON_ORE, new Item.Settings().group(AnyItemsMod.AI_GENERAL).group(ItemGroup.BUILDING_BLOCKS)));
+		Registry.register(Registry.ITEM, new Identifier("anyitem", "crypton_ore"), new BlockItem(CRYPTON_ORE, new Item.Settings().group(AnyItemsMod.AI_GENERAL)));
 
 		Registry.register(Registry.ITEM, new Identifier("anyitem", "cryptonsprayingsword"), new CryptonSprayingSword(new ToolMaterialCryptonSpraying()));
 		Registry.register(Registry.ITEM, new Identifier("anyitem", "cryptonsword"), new CryptonSword(new ToolMaterialCrypton()));
