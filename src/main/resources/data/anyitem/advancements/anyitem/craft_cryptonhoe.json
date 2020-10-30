@@ -19,13 +19,15 @@
     "craftcryptonh": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "item": {
-          "item": "anyitem:cryptonhoe",
-          "count": {
-            "min": 1,
-            "max": 64
+        "items": [
+		  {
+            "item": "anyitem:cryptonhoe",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
           }
-        }
+		]
       }
     }
   }

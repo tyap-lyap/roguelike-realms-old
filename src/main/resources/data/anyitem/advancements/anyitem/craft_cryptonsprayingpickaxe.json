@@ -19,13 +19,15 @@
     "craftsprayingp": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "item": {
-          "item": "anyitem:cryptonsprayingpickaxe",
-          "count": {
-            "min": 1,
-            "max": 64
+        "items": [
+		  {
+            "item": "anyitem:cryptonsprayingpickaxe",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
           }
-        }
+		]
       }
     }
   }
