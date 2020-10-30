@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "anyitem:hostile_soul_shard"
+    }
+  },
+  "result": {
+    "item": "anyitem:hostile_soul",
+    "count": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "anyitem:friend_soul_shard"
+    }
+  },
+  "result": {
+    "item": "anyitem:friend_soul",
+    "count": 1
+  }
+}
