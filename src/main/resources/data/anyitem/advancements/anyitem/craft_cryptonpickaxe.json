@@ -19,13 +19,15 @@
     "craftcryptonp": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "item": {
-          "item": "anyitem:cryptonpickaxe",
-          "count": {
-            "min": 1,
-            "max": 64
+        "items": [
+		  {
+            "item": "anyitem:cryptonpickaxe",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
           }
-        }
+		]
       }
     }
   }
