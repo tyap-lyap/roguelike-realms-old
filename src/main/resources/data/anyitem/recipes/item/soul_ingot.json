@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "@I#",
+    "@@@"
+  ],
+  "key": {
+    "#": {
+      "item": "anyitem:hostile_soul"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "@": {
+      "item": "anyitem:friend_soul"
+    }
+  },
+  "result": {
+    "item": "anyitem:soul_ingot",
+    "count": 1
+  }
+}

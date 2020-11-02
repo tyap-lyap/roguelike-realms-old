@@ -29,6 +29,7 @@ public class AnyItemsMod implements ModInitializer {
 			new Identifier("anyitem","general"),
 			()->new ItemStack(AnyItemsMod.CRYPTONBLOCK));
 	public static final Item CRYPTON_DUST = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
+	public static final Item SOUL_INGOT = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
 	public static final Item FRIEND_SOUL = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
 	public static final Item HOSTILE_SOUL = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
 	public static final Item FRIEND_SOUL_SHARD = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
@@ -60,6 +61,8 @@ public class AnyItemsMod implements ModInitializer {
 
 		Registry.register(Registry.ITEM, new Identifier("anyitem", "friend_soul_shard"), FRIEND_SOUL_SHARD);
 		Registry.register(Registry.ITEM, new Identifier("anyitem", "friend_soul"), FRIEND_SOUL);
+
+		Registry.register(Registry.ITEM, new Identifier("anyitem", "soul_ingot"), SOUL_INGOT);
 
 		Registry.register(Registry.ITEM, new Identifier("anyitem", "shaurma"), SHAURMA);
         Registry.register(Registry.ITEM, new Identifier("anyitem", "cooked_shaurma"), COOKED_SHAURMA);
