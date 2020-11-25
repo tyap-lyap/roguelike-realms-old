@@ -51,9 +51,12 @@ public class AnyItemsMod implements ModInitializer {
 	public static final Block DRAGON_INGOT_BLOCK = new Block(FabricBlockSettings.copy(Blocks.DIAMOND_BLOCK));
 	public static final Block ASHES_BLOCK = new Block(FabricBlockSettings.copy(Blocks.CLAY));
 	public static final ArmorMaterial CRYPTON_ARMOR = new CryptonArmorMaterial();
+
 	public static final ToolMaterialCrypton CRYPTON_TOOLS = new ToolMaterialCrypton();
 	public static final ToolMaterialCryptonSpraying CRYPTON_TOOLS_SPRAYING = new ToolMaterialCryptonSpraying();
 	public static final ConfiguredFeature<?, ?> CRYPTON_ORE_OTHERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, AnyItemsMod.CRYPTON_ORE.getDefaultState(), 5)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0,20,40))).spreadHorizontally().repeat(10);
+
+    public static final Item DRAGON_SCALES = new Item (new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
 
 	@Override
 	public void onInitialize()
@@ -120,6 +123,12 @@ public class AnyItemsMod implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("anyitem:crypton_leggings"), new BaseArmor(CRYPTON_ARMOR, EquipmentSlot.LEGS));
 		Registry.register(Registry.ITEM, new Identifier("anyitem:crypton_boots"), new BaseArmor(CRYPTON_ARMOR, EquipmentSlot.FEET));
 
+
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier("anyitem:crypton_ore_otherworld"), CRYPTON_ORE_OTHERWORLD);
+
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier("anyitem", "crypton_ore_otherworld"), CRYPTON_ORE_OTHERWORLD);
+
+	    Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_scales"),DRAGON_SCALES);
+
 	}
 }
