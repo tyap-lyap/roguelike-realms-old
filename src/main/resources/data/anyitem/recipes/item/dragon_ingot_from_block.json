@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "anyitem:dragon_ingot_block"
+    }
+  ],
+  "result": {
+    "item": "anyitem:dragon_ingot",
+    "count": 9
+  }
+}

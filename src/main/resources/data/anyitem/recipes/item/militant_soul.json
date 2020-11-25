@@ -7,11 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "anyitem:crypton_dust"
+      "item": "anyitem:militant_soul_shard"
     }
   },
   "result": {
-    "item": "anyitem:cryptonblock",
-    "count": 1
+    "item": "anyitem:militant_soul"
   }
 }

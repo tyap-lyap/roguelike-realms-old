@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "anyitem:crypton_dust"
+    }
+  },
+  "result": {
+    "item": "anyitem:crypton_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "###",
+      "@I#",
+      "@@@"
+    ],
+    "key": {
+      "#": {
+        "item": "anyitem:militant_soul"
+      },
+      "I": {
+        "item": "anyitem:dragon_ingot"
+      },
+      "@": {
+        "item": "anyitem:pacified_soul"
+      }
+    },
+    "result": {
+      "item": "anyitem:ruler_soul_ingot"
+    }
+  }
