@@ -1,12 +1,20 @@
 {
-  "type": "minecraft:smithing",
-  "base": {
-    "item": "anyitem:cryptonsprayingaxe"
-  },
-  "addition": {
-    "item": "anyitem:cryptonsprayingaxe"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " ##",
+    " I#",
+    " I "
+  ],
+  "key": {
+    "#": {
+      "item": "anyitem:cryptonezerit"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
   },
   "result": {
-    "item": "anyitem:cryptonaxe"
+    "item": "anyitem:cryptonaxe",
+    "count": 1
   }
 }

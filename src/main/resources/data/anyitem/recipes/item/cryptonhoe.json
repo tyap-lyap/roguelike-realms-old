@@ -1,12 +1,20 @@
 {
-  "type": "minecraft:smithing",
-  "base": {
-    "item": "anyitem:cryptonsprayinghoe"
-  },
-  "addition": {
-    "item": "anyitem:cryptonsprayinghoe"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "## ",
+    " I ",
+    " I "
+  ],
+  "key": {
+    "#": {
+      "item": "anyitem:cryptonezerit"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
   },
   "result": {
-    "item": "anyitem:cryptonhoe"
+    "item": "anyitem:cryptonhoe",
+    "count": 1
   }
 }

@@ -32,6 +32,6 @@ public class ToolMaterialCrypton implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(AnyItemsMod.CRYPTON_DUST);
+        return Ingredient.ofItems(AnyItemsMod.CRYPTONEZERIT);
     }
 }

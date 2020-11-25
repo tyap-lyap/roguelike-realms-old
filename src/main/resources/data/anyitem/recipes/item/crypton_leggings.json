@@ -1,12 +1,17 @@
 {
-  "type": "minecraft:smithing",
-  "base": {
-    "item": "minecraft:diamond_leggings"
-  },
-  "addition": {
-    "item": "anyitem:crypton_dust"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "anyitem:cryptonezerit"
+    }
   },
   "result": {
-    "item": "anyitem:crypton_leggings"
+    "item": "anyitem:crypton_leggings",
+    "count": 1
   }
 }

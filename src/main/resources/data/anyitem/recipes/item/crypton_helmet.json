@@ -1,12 +1,17 @@
 {
-  "type": "minecraft:smithing",
-  "base": {
-    "item": "minecraft:diamond_helmet"
-  },
-  "addition": {
-    "item": "anyitem:crypton_dust"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "# #",
+    "   "
+  ],
+  "key": {
+    "#": {
+      "item": "anyitem:cryptonezerit"
+    }
   },
   "result": {
-    "item": "anyitem:crypton_helmet"
+    "item": "anyitem:crypton_helmet",
+    "count": 1
   }
 }

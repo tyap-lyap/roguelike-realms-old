@@ -25,6 +25,7 @@ import net.sfedunet.instruments.*;
 public class AnyItemsMod implements ModInitializer {
 	public static final ItemGroup AI_GENERAL = FabricItemGroupBuilder.build(new Identifier("anyitem:general"), ()->new ItemStack(AnyItemsMod.CRYPTON_BLOCK));
 	public static final Item CRYPTON_DUST = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
+	public static final Item CRYPTONEZERIT = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
 	public static final Item SOUL_INGOT = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
 	public static final Item FRIEND_SOUL = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
 	public static final Item HOSTILE_SOUL = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
@@ -39,7 +40,7 @@ public class AnyItemsMod implements ModInitializer {
 	public static final Item RULER_SOUL_INGOT = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
 	public static final Item DRAGON_INGOT = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));;
 	public static final Item ASHES = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
-	public static final Item DRAGON_SCALE = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
+	public static final Item DRAGON_SCALES = new Item (new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
 	public static final Item DRAGON_FIRE = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
 	public static final Item SHAURMA = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL).food(new FoodComponent.Builder().saturationModifier(7.5f).hunger(9).statusEffect(new StatusEffectInstance(StatusEffects.POISON,20*20),0.2f).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 20*10),0.21f).build()));
     public static final Item COOKED_SHAURMA = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL).food(new FoodComponent.Builder().saturationModifier(15f).hunger(18).statusEffect(new StatusEffectInstance(StatusEffects.POISON,20*15),0.09f).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 20*30),0.1f).statusEffect(new StatusEffectInstance(StatusEffects.LUCK, 20*30,5),0.05f).build()));
@@ -56,12 +57,11 @@ public class AnyItemsMod implements ModInitializer {
 	public static final ToolMaterialCryptonSpraying CRYPTON_TOOLS_SPRAYING = new ToolMaterialCryptonSpraying();
 	public static final ConfiguredFeature<?, ?> CRYPTON_ORE_OTHERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, AnyItemsMod.CRYPTON_ORE.getDefaultState(), 5)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0,20,40))).spreadHorizontally().repeat(10);
 
-    public static final Item DRAGON_SCALES = new Item (new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
-
 	@Override
 	public void onInitialize()
 	{
 		Registry.register(Registry.ITEM, new Identifier("anyitem:crypton_dust"), CRYPTON_DUST);
+		Registry.register(Registry.ITEM, new Identifier("anyitem:cryptonezerit"), CRYPTONEZERIT);
 
 		Registry.register(Registry.ITEM, new Identifier("anyitem:hostile_soul_shard"), HOSTILE_SOUL_SHARD);
 		Registry.register(Registry.ITEM, new Identifier("anyitem:hostile_soul"), HOSTILE_SOUL);
@@ -80,7 +80,7 @@ public class AnyItemsMod implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("anyitem:ruler_soul_ingot"), RULER_SOUL_INGOT);
 		Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_ingot"), DRAGON_INGOT);
 		Registry.register(Registry.ITEM, new Identifier("anyitem:ashes"), ASHES);
-		Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_scale"), DRAGON_SCALE);
+		Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_scales"),DRAGON_SCALES);
 		Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_fire"), DRAGON_FIRE);
 
 		Registry.register(Registry.BLOCK, new Identifier("anyitem:echserock"), ECHSEROCK);
@@ -125,10 +125,6 @@ public class AnyItemsMod implements ModInitializer {
 
 
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier("anyitem:crypton_ore_otherworld"), CRYPTON_ORE_OTHERWORLD);
-
-		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier("anyitem", "crypton_ore_otherworld"), CRYPTON_ORE_OTHERWORLD);
-
-	    Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_scales"),DRAGON_SCALES);
 
 	}
 }

@@ -1,12 +1,20 @@
 {
-  "type": "minecraft:smithing",
-  "base": {
-    "item": "anyitem:cryptonsprayingshovel"
-  },
-  "addition": {
-    "item": "anyitem:cryptonsprayingshovel"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    " I ",
+    " I "
+  ],
+  "key": {
+    "#": {
+      "item": "anyitem:cryptonezerit"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
   },
   "result": {
-    "item": "anyitem:cryptonshovel"
+    "item": "anyitem:cryptonshovel",
+    "count": 1
   }
 }
