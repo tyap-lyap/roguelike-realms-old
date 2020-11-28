@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.FallingBlock;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -50,7 +51,7 @@ public class AnyItemsMod implements ModInitializer {
 	public static final Block CRYPTON_ORE = new Block(FabricBlockSettings.copy(Blocks.DIAMOND_ORE).sounds(BlockSoundGroup.STONE));
 	public static final Block ECHSEROCK = new Block(FabricBlockSettings.copy(AnyItemsMod.CRYPTON_ORE).strength(10f));
 	public static final Block DRAGON_INGOT_BLOCK = new Block(FabricBlockSettings.copy(Blocks.DIAMOND_BLOCK));
-	public static final Block ASHES_BLOCK = new Block(FabricBlockSettings.copy(Blocks.SAND));
+	public static final Block ASHES_BLOCK = new FallingBlock(FabricBlockSettings.copy(Blocks.SAND));
 	public static final ArmorMaterial CRYPTON_ARMOR = new CryptonArmorMaterial();
 
 	public static final ToolMaterialCrypton CRYPTON_TOOLS = new ToolMaterialCrypton();
