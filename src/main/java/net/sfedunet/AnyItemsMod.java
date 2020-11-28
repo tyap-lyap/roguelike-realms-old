@@ -39,7 +39,7 @@ public class AnyItemsMod implements ModInitializer {
 	public static final Item PACIFIED_SOUL = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
 	public static final Item PACIFIED_SOUL_SHARD = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
 	public static final Item RULER_SOUL_INGOT = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
-	public static final Item DRAGON_INGOT = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));;
+	public static final Item DRAGON_INGOT = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
 	public static final Item ASHES = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
 	public static final Item DRAGON_SCALES = new Item (new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
 	public static final Item DRAGON_FIRE = new Item(new FabricItemSettings().group(AnyItemsMod.AI_GENERAL));
