@@ -1,0 +1,105 @@
+{
+  "type": "anyitem:draconic_shadow",
+  "generator": {
+    "biome_source": {
+	  "seed": 0,
+	  "type": "minecraft:multi_noise",
+	  "biomes": [
+        {
+          "biome": "anyitem:draconic_fields",
+          "parameters": {
+            "altitude": 0.0,
+            "weirdness": 0.0,
+            "offset": 0.0,
+            "temperature": 0.0,
+            "humidity": 0.0
+          }
+        }
+		],
+      "altitude_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1.0,
+          1.0
+        ]
+      },
+	  "weirdness_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1.0,
+          1.0
+        ]
+      },
+	  "temperature_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1.0,
+          1.0
+        ]
+      },
+	  "humidity_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+	"seed": 0,
+	"type": "minecraft:noise",
+    "settings": {
+      "default_block": {
+        "Name": "minecraft:gray_wool",
+        "Properties": {}
+      },
+      "default_fluid": {
+        "Name": "minecraft:water",
+        "Properties": {
+          "level": "8"
+        }
+      },
+      "bedrock_floor_position": -20,
+      "bedrock_roof_position": -20,
+      "sea_level": 0,
+      "disable_mob_generation": false,
+      "noise": {
+	    "density_factor": 0.0,
+		"density_offset": 0.0,
+	    "simplex_surface_noise": true,
+		"top_slide": {
+          "target": -30,
+          "size": 100,
+          "offset": -36
+        },
+		"bottom_slide": {
+          "target": -30,
+          "size": 7,
+          "offset": 2
+        },
+		"size_horizontal": 2,
+		"size_vertical": 1,
+		"height": 128,
+		"sampling": {
+          "xz_scale": 2.0,
+          "y_scale": 1.0,
+          "xz_factor": 80.0,
+          "y_factor": 160.0
+        }
+      },
+      "structures": {
+        "stronghold": {
+          "distance": 32,
+          "spread": 3,
+          "count": 128
+        },
+        "structures": {
+          "minecraft:village": {
+            "spacing": 32,
+            "separation": 8,
+            "salt": 10387312
+          }
+        }
+      }
+    }
+  }
+}
