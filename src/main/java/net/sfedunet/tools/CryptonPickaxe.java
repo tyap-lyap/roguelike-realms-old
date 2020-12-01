@@ -1,4 +1,4 @@
-package net.sfedunet.instruments;
+package net.sfedunet.tools;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.PickaxeItem;
@@ -7,6 +7,6 @@ import net.sfedunet.AnyItemsMod;
 
 public class CryptonPickaxe extends PickaxeItem {
     public CryptonPickaxe(ToolMaterial toolmaterial) {
-        super(toolmaterial, -2, 0, new Item.Settings().group(AnyItemsMod.AI_GENERAL));
+        super(toolmaterial, -2, 0, new Item.Settings().group(AnyItemsMod.GENERAL));
     }
 }

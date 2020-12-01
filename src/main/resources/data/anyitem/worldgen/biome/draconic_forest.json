@@ -27,7 +27,11 @@
     "type": "minecraft:default"
   },
   "carvers": {},
-  "features": [],
+  "features": [
+    [
+      "anyitem:draconic_trees"
+    ]
+  ],
   "starts": [],
   "spawners": {
     "monster": [
@@ -46,7 +50,7 @@
     ],
     "creature": [
       {
-        "type": "minecraft:pig",
+        "type": "minecraft:bee",
         "weight": 100,
         "minCount": 4,
         "maxCount": 8

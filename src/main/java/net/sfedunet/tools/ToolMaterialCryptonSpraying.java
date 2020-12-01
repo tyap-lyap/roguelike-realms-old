@@ -1,36 +1,37 @@
-package net.sfedunet.instruments;
+package net.sfedunet.tools;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.sfedunet.items.AnyItemsItems;
 
-public class ScytheMaterial implements ToolMaterial {
+public class ToolMaterialCryptonSpraying implements ToolMaterial {
     @Override
     public int getDurability() {
-        return 2000;
+        return 1750;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 10;
+        return 4;
     }
 
     @Override
     public float getAttackDamage() {
-        return 50;
+        return 4.5f;
     }
 
     @Override
     public int getMiningLevel() {
-        return 0;
+        return 3;
     }
 
     @Override
     public int getEnchantability() {
-        return 100;
+        return 0;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return null;
+        return Ingredient.ofItems(AnyItemsItems.CRYPTON_DUST);
     }
 }

@@ -1,37 +1,37 @@
-package net.sfedunet.instruments;
+package net.sfedunet.tools;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-import net.sfedunet.AnyItemsMod;
+import net.sfedunet.items.AnyItemsItems;
 
-public class ToolMaterialCryptonSpraying implements ToolMaterial {
+public class ToolMaterialCrypton implements ToolMaterial {
     @Override
     public int getDurability() {
-        return 1750;
+        return 3521;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 4;
-    }
-
-    @Override
-    public float getAttackDamage() {
         return 4.5f;
     }
 
     @Override
+    public float getAttackDamage() {
+        return 8.5f;
+    }
+
+    @Override
     public int getMiningLevel() {
-        return 3;
+        return 4;
     }
 
     @Override
     public int getEnchantability() {
-        return 0;
+        return 32;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(AnyItemsMod.CRYPTON_DUST);
+        return Ingredient.ofItems(AnyItemsItems.CRYPTONEZERIT);
     }
 }
