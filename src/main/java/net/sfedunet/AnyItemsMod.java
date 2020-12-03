@@ -2,7 +2,10 @@ package net.sfedunet;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.kyrptonaught.customportalapi.CustomPortalApiRegistry;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.sfedunet.armor.*;
 import net.sfedunet.blocks.AnyItemsBlocks;
@@ -16,6 +19,7 @@ public class AnyItemsMod implements ModInitializer {
 	@Override
 	public void onInitialize()
 	{
+		CustomPortalApiRegistry.addPortal(Blocks.EMERALD_BLOCK, Blocks.FIRE, new Identifier("anyitem:draconic_shadow"), DyeColor.ORANGE.getMaterialColor().color);
 		AnyItemsConfiguredFeatures.register();
 		AnyItemsBlocks.register();
 		AnyItemsItems.register();
