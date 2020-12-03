@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "anyitem:dragon_cobblestone"
+  },
+  "result": "anyitem:dragon_stone",
+  "experience": 0.1,
+  "cookingtime": 200
+}
