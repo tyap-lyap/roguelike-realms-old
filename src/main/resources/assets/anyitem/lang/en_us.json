@@ -48,6 +48,7 @@
  "block.anyitem.dragon_cobblestone": "Dragon Cobblestone",
  "block.anyitem.dragon_planks": "Dragon Planks",
  "block.anyitem.dragon_leaves": "Dragon Leaves",
+ "item.anyitem.dragon_sword": "Dragon Sword",
  "advancements.anyitem.root.title": "AnyItems Mod",
  "advancements.anyitem.root.description": "Welcome to AnyItems Mod",
  "advancements.anyitem.get_crypton_dust.title": "Crypton Dust!",
@@ -63,5 +64,5 @@
  "advancements.anyitem.eat_echpochmak.title": "Echpochmak?",
  "advancements.anyitem.eat_echpochmak.description": "Eat echpochmak",
  "advancements.anyitem.eat_cooked_shaurma.title": "Food of the Gods",
- "advancements.anyitem.eat_cooked_shaurma.description": "Eat Cooked Shaurma"
+ "advancements.anyitem.eat_cooked_shaurma.description": "Eat Cooked Shaurma",
 }

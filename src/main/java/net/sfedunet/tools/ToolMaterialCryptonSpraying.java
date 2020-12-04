@@ -7,22 +7,22 @@ import net.sfedunet.items.AnyItemsItems;
 public class ToolMaterialCryptonSpraying implements ToolMaterial {
     @Override
     public int getDurability() {
-        return 1750;
+        return 2000;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 4;
+        return 15;
     }
 
     @Override
     public float getAttackDamage() {
-        return 4.5f;
+        return 2.5f;
     }
 
     @Override
     public int getMiningLevel() {
-        return 3;
+        return 6;
     }
 
     @Override
