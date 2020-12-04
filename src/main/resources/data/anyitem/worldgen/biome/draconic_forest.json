@@ -16,7 +16,7 @@
         "Name": "minecraft:grass_block"
       },
       "under_material": {
-        "Name": "minecraft:brown_wool",
+        "Name": "minecraft:dirt",
         "Properties": {}
       },
       "underwater_material": {

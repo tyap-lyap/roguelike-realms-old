@@ -59,7 +59,7 @@
 	"type": "minecraft:noise",
     "settings": {
       "default_block": {
-        "Name": "minecraft:gray_wool",
+        "Name": "anyitem:dragon_stone",
         "Properties": {}
       },
       "default_fluid": {
