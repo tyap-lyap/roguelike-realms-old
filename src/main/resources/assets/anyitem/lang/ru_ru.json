@@ -47,6 +47,7 @@
   "block.anyitem.ashes_block": "Пепел",
   "block.anyitem.echserock": "Эксерок",
   "block.anyitem.dragon_ingot_block": "Блок драконьих слитков",
+  "item.anyitem.dragon_sword": "Драконий меч",
   "advancements.anyitem.root.title": "AnyItems Mod",
   "advancements.anyitem.root.description": "Добро пожаловать в AnyItems Mod",
   "advancements.anyitem.get_crypton_dust.title": "Криптоновая пыль!",
@@ -62,5 +63,6 @@
   "advancements.anyitem.eat_echpochmak.title": "Эчпочмак?",
   "advancements.anyitem.eat_echpochmak.description": "Попробуйте эчпочмак",
   "advancements.anyitem.eat_cooked_shaurma.title": "Еда богов",
-  "advancements.anyitem.eat_cooked_shaurma.description": "Попробуйте приготовленную шаурму"
+  "advancements.anyitem.eat_cooked_shaurma.description": "Попробуйте приготовленную шаурму",
+
 }
