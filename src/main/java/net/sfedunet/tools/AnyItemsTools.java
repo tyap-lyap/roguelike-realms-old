@@ -26,6 +26,6 @@ public class AnyItemsTools {
 
         Registry.register(Registry.ITEM, new Identifier("anyitem:scythe"), new Scythe(new ScytheMaterial()));
 
-        Registry.register(Registry.ITEM, new Identifier("anyitem:dragonsword"), new DragonSword(DRAGON_TOOL));
+        Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_sword"), new DragonSword(DRAGON_TOOL));
     }
 }
