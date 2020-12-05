@@ -17,7 +17,7 @@ public class ToolMaterialCrypton implements ToolMaterial {
 
     @Override
     public float getAttackDamage() {
-        return 8.5f;
+        return 5.5f;
     }
 
     @Override
