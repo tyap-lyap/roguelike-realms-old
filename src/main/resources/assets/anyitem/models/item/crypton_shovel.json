@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "anyitem:item/cryptonshovel"
+    "layer0": "anyitem:item/crypton_shovel"
   }
 }

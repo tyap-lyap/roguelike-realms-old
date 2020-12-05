@@ -1,7 +1,8 @@
 {
   "replace": false,
   "values": [
-    "anyitem:cryptonpickaxe",
-    "anyitem:cryptonsprayingpickaxe"
+    "anyitem:crypton_spraying_pickaxe",
+    "anyitem:crypton_pickaxe",
+    "anyitem:dragon_pickaxe"
   ]
 }

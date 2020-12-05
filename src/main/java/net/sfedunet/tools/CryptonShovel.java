@@ -6,6 +6,6 @@ import net.sfedunet.AnyItemsMod;
 
 public class CryptonShovel extends ShovelItem {
     public CryptonShovel(ToolMaterial toolmaterial) {
-        super(toolmaterial, 0, 0, new Settings().group(AnyItemsMod.GENERAL));
+        super(toolmaterial, -1, -1, new Settings().group(AnyItemsMod.GENERAL));
     }
 }

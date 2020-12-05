@@ -1,16 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    "# #",
-    "   "
+    " # ",
+    " I ",
+    " I "
   ],
   "key": {
     "#": {
       "item": "anyitem:cryptonezerit"
+    },
+    "I": {
+      "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "anyitem:crypton_helmet"
+    "item": "anyitem:crypton_shovel"
   }
 }

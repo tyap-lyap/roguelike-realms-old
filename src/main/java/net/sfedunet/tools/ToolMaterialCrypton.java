@@ -12,7 +12,7 @@ public class ToolMaterialCrypton implements ToolMaterial {
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 4.5f;
+        return 2.6f;
     }
 
     @Override

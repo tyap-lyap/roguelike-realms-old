@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "anyitem:item/cryptonsprayingaxe"
+    "layer0": "anyitem:item/crypton_spraying_sword"
   }
 }

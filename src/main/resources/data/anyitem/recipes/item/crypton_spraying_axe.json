@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "minecraft:diamond_hoe"
+    "item": "minecraft:diamond_axe"
   },
   "addition": {
     "item": "anyitem:crypton_dust"
   },
   "result": {
-    "item": "anyitem:cryptonsprayinghoe"
+    "item": "anyitem:crypton_spraying_axe"
   }
 }

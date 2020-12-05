@@ -6,6 +6,6 @@ import net.sfedunet.AnyItemsMod;
 
 public class CryptonAxe extends AxeItem {
     public CryptonAxe(ToolMaterial toolmaterial) {
-        super(toolmaterial, 0, 0, new Settings().group(AnyItemsMod.GENERAL));
+        super(toolmaterial, 3, -1, new Settings().group(AnyItemsMod.GENERAL));
     }
 }

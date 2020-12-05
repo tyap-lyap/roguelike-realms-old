@@ -1,20 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    " I ",
+    " ##",
+    " I#",
     " I "
   ],
   "key": {
     "#": {
-      "item": "anyitem:cryptonezerit"
+      "item": "anyitem:dragon_ingot"
     },
     "I": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "anyitem:cryptonpickaxe",
-    "count": 1
+    "item": "anyitem:dragon_axe"
   }
 }

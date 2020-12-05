@@ -1,14 +1,14 @@
 {
-  "parent": "anyitem:anyitem/craft_cryptonpickaxe",
+  "parent": "anyitem:anyitem/craft_crypton_pickaxe",
   "display": {
     "title": {
-      "translate": "advancements.anyitem.craft_cryptonhoe.title"
+      "translate": "advancements.anyitem.craft_crypton_hoe.title"
     },
     "description": {
-      "translate": "advancements.anyitem.craft_cryptonhoe.description"
+      "translate": "advancements.anyitem.craft_crypton_hoe.description"
     },
     "icon": {
-      "item": "anyitem:cryptonhoe"
+      "item": "anyitem:crypton_hoe"
     },
     "frame": "challenge",
     "show_toast": true,
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
 		  {
-            "item": "anyitem:cryptonhoe",
+            "item": "anyitem:crypton_hoe",
             "count": {
               "min": 1,
               "max": 64

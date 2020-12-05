@@ -6,6 +6,6 @@ import net.sfedunet.AnyItemsMod;
 
 public class CryptonSprayingHoe extends HoeItem {
     public CryptonSprayingHoe(ToolMaterial toolmaterial) {
-        super(toolmaterial, 0, 0, new Settings().group(AnyItemsMod.GENERAL));
+        super(toolmaterial, -3, -3, new Settings().group(AnyItemsMod.GENERAL));
     }
 }

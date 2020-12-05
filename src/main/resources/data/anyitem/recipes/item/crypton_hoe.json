@@ -1,8 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " # ",
-    " # ",
+    "## ",
+    " I ",
     " I "
   ],
   "key": {
@@ -14,7 +14,6 @@
     }
   },
   "result": {
-    "item": "anyitem:cryptonsword",
-    "count": 1
+    "item": "anyitem:crypton_hoe"
   }
 }
