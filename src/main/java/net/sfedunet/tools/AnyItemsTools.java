@@ -11,7 +11,7 @@ public class AnyItemsTools {
     public static void register(){
         Registry.register(Registry.ITEM, new Identifier("anyitem:crypton_spraying_sword"), new CryptonSprayingSword(CRYPTON_TOOLS_SPRAYING));
         Registry.register(Registry.ITEM, new Identifier("anyitem:crypton_sword"), new CryptonSword(CRYPTON_TOOLS));
-
+        Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_helmet"), new DragonHelmet(Dragon_TOOL));
         Registry.register(Registry.ITEM, new Identifier("anyitem:crypton_spraying_pickaxe"), new CryptonSprayingPickaxe(CRYPTON_TOOLS_SPRAYING));
         Registry.register(Registry.ITEM, new Identifier("anyitem:crypton_pickaxe"), new CryptonPickaxe(CRYPTON_TOOLS));
 
