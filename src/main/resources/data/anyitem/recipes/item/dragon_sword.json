@@ -1,20 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " #",
-    " #",
+    " # ",
+    " # ",
     " I "
   ],
   "key": {
     "#": {
       "item": "anyitem:dragon_ingot"
     },
-    "I": {
+    "I":{
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "anyitem:dragon_sword",
-    "count": 1
+    "item": "anyitem:dragon_sword"
   }
 }
