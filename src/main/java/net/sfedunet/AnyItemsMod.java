@@ -15,8 +15,6 @@ import net.sfedunet.world.features.AnyItemsConfiguredFeatures;
 
 public class AnyItemsMod implements ModInitializer {
 	public static final ItemGroup GENERAL = FabricItemGroupBuilder.build(new Identifier("anyitem:general"), ()->new ItemStack(AnyItemsBlocks.CRYPTON_BLOCK));
-
-
 	@Override
 	public void onInitialize()
 	{

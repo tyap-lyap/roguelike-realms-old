@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "anyitem:dragon_ingot"
+    }
+  },
+  "result": {
+    "item": "anyitem:dragon_chestplate"
+  }
+}
