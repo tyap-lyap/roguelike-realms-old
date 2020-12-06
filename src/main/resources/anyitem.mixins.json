@@ -4,7 +4,13 @@
   "package": "net.sfedunet.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "OreBiomeMixin$DefaultBiomeFeaturesMixin"
+    "OreBiomeMixin$DefaultBiomeFeaturesMixin",
+    "LivingEntityMixin",
+    "TrackTargetGoalMixin",
+    "MobEntityMixin",
+    "ModelPredicateProviderRegistryMixin",
+    "PlayerEntityRendererMixin",
+    "HeldItemRendererMixin"
   ],
   "client": [
   ],

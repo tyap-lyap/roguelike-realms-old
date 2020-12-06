@@ -1,12 +1,15 @@
 package net.sfedunet.tools;
 
+import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import net.sfedunet.AnyItemsMod;
 
 public class AnyItemsTools {
     public static final ToolMaterialCrypton CRYPTON_TOOLS = new ToolMaterialCrypton();
     public static final ToolMaterialCryptonSpraying CRYPTON_TOOLS_SPRAYING = new ToolMaterialCryptonSpraying();
     public static final DragonMaterialTool DRAGON_TOOL = new DragonMaterialTool();
+    public static final RulerWill RULER_WILL = new RulerWill(new Item.Settings().group(AnyItemsMod.GENERAL));
 
     public static void register(){
         Registry.register(Registry.ITEM, new Identifier("anyitem:crypton_spraying_sword"), new CryptonSprayingSword(CRYPTON_TOOLS_SPRAYING));
@@ -31,5 +34,7 @@ public class AnyItemsTools {
         Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_axe"), new DragonAxe(DRAGON_TOOL));
         Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_shovel"), new DragonShovel(DRAGON_TOOL));
         Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_hoe"), new DragonHoe(DRAGON_TOOL));
+
+        Registry.register(Registry.ITEM, new Identifier("anyitem:ruler_will"), RULER_WILL);
     }
 }
