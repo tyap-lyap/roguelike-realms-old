@@ -57,59 +57,6 @@
     },
 	"seed": 0,
 	"type": "minecraft:noise",
-    "settings": {
-      "default_block": {
-        "Name": "anyitem:dragon_stone",
-        "Properties": {}
-      },
-      "default_fluid": {
-        "Name": "minecraft:water",
-        "Properties": {
-          "level": "8"
-        }
-      },
-      "bedrock_floor_position": -20,
-      "bedrock_roof_position": -20,
-      "sea_level": 0,
-      "disable_mob_generation": false,
-      "noise": {
-	    "density_factor": 0.0,
-		"density_offset": 0.0,
-	    "simplex_surface_noise": true,
-		"top_slide": {
-          "target": -30,
-          "size": 100,
-          "offset": -36
-        },
-		"bottom_slide": {
-          "target": -30,
-          "size": 7,
-          "offset": 2
-        },
-		"size_horizontal": 2,
-		"size_vertical": 1,
-		"height": 128,
-		"sampling": {
-          "xz_scale": 2.0,
-          "y_scale": 1.0,
-          "xz_factor": 80.0,
-          "y_factor": 160.0
-        }
-      },
-      "structures": {
-        "stronghold": {
-          "distance": 32,
-          "spread": 3,
-          "count": 128
-        },
-        "structures": {
-          "minecraft:village": {
-            "spacing": 32,
-            "separation": 8,
-            "salt": 10387312
-          }
-        }
-      }
-    }
+    "settings": "anyitem:draconic_shadow_noise"
   }
 }

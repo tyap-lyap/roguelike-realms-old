@@ -4,8 +4,8 @@
     "fog_color": 15320170,
 	"water_color": 9485933,
     "water_fog_color": 9485933,
-	"foliage_color": 15824662,
-    "grass_color": 15824662
+	"foliage_color": 16291358,
+    "grass_color": 16291358
   },
   "surface_builder": {
     "config": {
@@ -27,7 +27,14 @@
     "type": "minecraft:default"
   },
   "carvers": {},
-  "features": [],
+  "features": [
+	[
+	  "minecraft:patch_sunflower",
+	  "minecraft:patch_grass_plain",
+	  "anyitem:draconic_fields_trees",
+	  "minecraft:lake_water"
+	]
+  ],
   "starts": [],
   "spawners": {
     "monster": [

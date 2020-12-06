@@ -29,7 +29,9 @@
   "carvers": {},
   "features": [
     [
-      "anyitem:draconic_trees"
+      "anyitem:draconic_forest_trees",
+	  "minecraft:patch_grass_plain",
+	  "minecraft:lake_water"
     ]
   ],
   "starts": [],
