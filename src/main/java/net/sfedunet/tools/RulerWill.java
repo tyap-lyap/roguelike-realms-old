@@ -49,7 +49,6 @@ public class RulerWill extends RangedWeaponItem implements Vanishable {
 
     };
 
-
     public Predicate<ItemStack> getProjectiles() {
         return test;
     }
@@ -195,7 +194,6 @@ public class RulerWill extends RangedWeaponItem implements Vanishable {
 
                 if (creative || simulated != 0.0F) {
                     ((ParalysisArrowEntity)projectileEntity2).pickupType = PersistentProjectileEntity.PickupPermission.CREATIVE_ONLY;
-
                 }
             }
 
@@ -212,9 +210,6 @@ public class RulerWill extends RangedWeaponItem implements Vanishable {
                 ((ParalysisArrowEntity) projectileEntity2).setVelocity((double) vector3f.getX(), (double) vector3f.getY(), (double) vector3f.getZ(), speed, 0);
                 ((ParalysisArrowEntity) projectileEntity2).setShotFromCrossbow(true);
                 ((ParalysisArrowEntity) projectileEntity2).setCritical(true);
-
-
-
             }
             crossbow.damage(1, shooter, (e) -> {
                 e.sendToolBreakStatus(hand);
@@ -223,8 +218,6 @@ public class RulerWill extends RangedWeaponItem implements Vanishable {
             world.playSound((PlayerEntity)null, shooter.getX(), shooter.getY(), shooter.getZ(), SoundEvents.ITEM_CROSSBOW_SHOOT, SoundCategory.PLAYERS, 1.0F, soundPitch);
         }
     }
-
-
 
     public static void shootAll(World world, LivingEntity entity, Hand hand, ItemStack stack, float speed, float divergence) {
         List<ItemStack> list = getProjectiles(stack);
@@ -243,7 +236,6 @@ public class RulerWill extends RangedWeaponItem implements Vanishable {
                 }
             }
         }
-
         postShoot(world, entity, stack);
     }
 
@@ -263,11 +255,9 @@ public class RulerWill extends RangedWeaponItem implements Vanishable {
             if (!world.isClient) {
                 Criteria.SHOT_CROSSBOW.trigger(serverPlayerEntity, stack);
             }
-            
 
             serverPlayerEntity.incrementStat(Stats.USED.getOrCreateStat(stack.getItem()));
         }
-
         clearProjectiles(stack);
     }
 
@@ -284,8 +274,8 @@ public class RulerWill extends RangedWeaponItem implements Vanishable {
 
             if (f >= 0.1F && !this.charged) {
                 this.charged = true;
-                world.playSound((PlayerEntity)null, user.getX(), user.getY(), user.getZ(), soundEvent, SoundCategory.PLAYERS, 0.5F, 1.0F);
 
+                world.playSound((PlayerEntity)null, user.getX(), user.getY(), user.getZ(), soundEvent, SoundCategory.PLAYERS, 0.5F, 1.0F);
 
             }
 
@@ -352,4 +342,3 @@ public class RulerWill extends RangedWeaponItem implements Vanishable {
         return 8;
     }
 }
-

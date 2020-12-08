@@ -30,23 +30,19 @@ public class ParalysisArrowEntity extends ArrowEntity{
 @Override
     public void onEntityHit(EntityHitResult entityHitResult) {
         super.onEntityHit(entityHitResult);
-   if(entityHitResult.getEntity().getType() != EntityType.ARMOR_STAND){
+   if(entityHitResult.getEntity().getType() != EntityType.PLAYER){
 
 entityHitResult.getEntity().getDataTracker().set(PARALYSIS,10*20);
        world.playSound((PlayerEntity)null, this.getX(), this.getY(), this.getZ(), SoundEvents.BLOCK_ANVIL_DESTROY, SoundCategory.HOSTILE, 1F,1F);
 
-
-
-
    }
+    if(entityHitResult.getEntity().getType() == EntityType.PLAYER) {
+        entityHitResult.getEntity().getDataTracker().set(PARALYSIS, entityHitResult.getEntity().getDataTracker().get(ParalysisArrowEntity.PARALYSIS) + 10 * 20);
     }
-
-
+    }
 
     @Override
     protected ItemStack asItemStack() {
         return new ItemStack(Items.ARROW);
     }
 }
-
-

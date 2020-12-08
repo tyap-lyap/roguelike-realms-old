@@ -10,7 +10,8 @@
     "MobEntityMixin",
     "ModelPredicateProviderRegistryMixin",
     "PlayerEntityRendererMixin",
-    "HeldItemRendererMixin"
+    "HeldItemRendererMixin",
+    "LookAtEntityGoalMixin"
   ],
   "client": [
   ],

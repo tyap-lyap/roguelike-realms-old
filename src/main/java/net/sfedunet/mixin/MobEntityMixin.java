@@ -21,10 +21,9 @@ public abstract class MobEntityMixin extends LivingEntity {
 
     @Inject(at = @At("HEAD"), method = "canTarget",cancellable = true)
     public void canTarget(CallbackInfoReturnable<Boolean> ret) {
-        if (mob.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >=1 && mob.getType() != EntityType.PLAYER) {
+        if (mob.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >=1 && mob.getType() != EntityType.PLAYER && mob.getType() != EntityType.ZOGLIN && mob.getType() != EntityType.PIGLIN && mob.getType() != EntityType.PIGLIN_BRUTE) {
 
             ret.setReturnValue(Boolean.FALSE);
         }
     }
 }
-

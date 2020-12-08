@@ -6,6 +6,8 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -19,7 +21,6 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Mixin(LivingEntity.class)
-
 public abstract class LivingEntityMixin extends Entity {
 
     private static final UUID PARALYSIS = UUID.fromString("CB3F15D5-645C-4F38-A897-8C13A33DB1CF");
@@ -38,7 +39,6 @@ public abstract class LivingEntityMixin extends Entity {
 
     public LivingEntityMixin(EntityType<?> type, World world) {
         super(type, world);
-
     }
 
     @Inject(at = @At("HEAD"), method = "initDataTracker")
@@ -48,7 +48,7 @@ public abstract class LivingEntityMixin extends Entity {
 
     @Inject(at = @At("HEAD"), method = "writeCustomDataToTag")
 
-    public void writeCustomDataToTag(CompoundTag tag,CallbackInfo ci) {
+    public void writeCustomDataToTag(CompoundTag tag, CallbackInfo ci) {
         tag.putInt("Paralysis", this.getParalysis());
 
     }
@@ -74,7 +74,19 @@ private void tick(CallbackInfo ci) {
             livingEntity.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED).removeModifier(PARALYSIS);
         }
     }
+if(livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 2 && livingEntity.getType() == EntityType.PLAYER){
+    livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS,livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS),4));
+    livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS,livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS),4));
+    livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE,livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS),4));
+    livingEntity.getDataTracker().set(ParalysisArrowEntity.PARALYSIS, livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) - 1);
+} else {
+    if(livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 1 && livingEntity.getType() == EntityType.PLAYER){
+        livingEntity.removeStatusEffect(StatusEffects.SLOWNESS);
+        livingEntity.removeStatusEffect(StatusEffects.WEAKNESS);
+        livingEntity.removeStatusEffect(StatusEffects.MINING_FATIGUE);
+    }
 }
+    }
 
     public int getParalysis() {
         return (Integer) this.dataTracker.get(ParalysisArrowEntity.PARALYSIS);
