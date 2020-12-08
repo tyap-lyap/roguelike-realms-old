@@ -17,16 +17,16 @@ import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import net.sfedunet.blocks.AnyItemsBlocks;
 
 public class AnyItemsConfiguredFeatures {
-    public static ConfiguredFeature<TreeFeatureConfig, ?> DRAGONWOOD;
-    public static ConfiguredFeature<TreeFeatureConfig, ?> DRAGONWOODTWO;
-    public static ConfiguredFeature<?, ?> DRACONIC_TREES;
+    public static ConfiguredFeature<TreeFeatureConfig, ?> DRAGONWOOD, DRAGONWOODTWO;
+    public static ConfiguredFeature<?, ?> DRACONIC_FOREST_TREES, DRACONIC_FIELDS_TREES;
     public static final ConfiguredFeature<?, ?> CRYPTON_ORE_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, AnyItemsBlocks.CRYPTON_ORE.getDefaultState(), 5)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0,20,40))).spreadHorizontally().repeat(10);
 
     public static void register() {
 
         DRAGONWOOD = register("anyitem:dragonwood", Feature.TREE.configure(Configs.DRAGONWOOD_CONFIG));
         DRAGONWOODTWO = register("anyitem:dragonwoodtwo", Feature.TREE.configure(Configs.DRAGONWOODTWO_CONFIG));
-        DRACONIC_TREES = register("anyitem:draconic_trees", Feature.RANDOM_SELECTOR.configure(Configs.DRACONIC_TREES_CONFIG).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP).decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(5, 0.3F, 1))));
+        DRACONIC_FOREST_TREES = register("anyitem:draconic_forest_trees", Feature.RANDOM_SELECTOR.configure(Configs.DRACONIC_TREES_CONFIG).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP).decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(5, 0.3F, 1))));
+        DRACONIC_FIELDS_TREES = register("anyitem:draconic_fields_trees", Feature.RANDOM_SELECTOR.configure(Configs.DRACONIC_TREES_CONFIG).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP).decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(1, 0.05F, 1))));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier("anyitem:crypton_ore_otherworld"), CRYPTON_ORE_OVERWORLD);
     }
     private static <FC extends FeatureConfig> ConfiguredFeature<FC, ?> register(String id, ConfiguredFeature<FC, ?> configuredFeature) {
