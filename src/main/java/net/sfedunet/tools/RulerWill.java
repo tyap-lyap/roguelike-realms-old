@@ -80,7 +80,6 @@ public class RulerWill extends RangedWeaponItem implements Vanishable {
             SoundCategory soundCategory = user instanceof PlayerEntity ? SoundCategory.PLAYERS : SoundCategory.HOSTILE;
             world.playSound((PlayerEntity)null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_CROSSBOW_LOADING_END, soundCategory, 1.0F, 1.0F / (RANDOM.nextFloat() * 0.5F + 1.0F) + 0.2F);
         }
-
     }
 
     private static boolean loadProjectiles(LivingEntity shooter, ItemStack projectile) {
@@ -287,7 +286,6 @@ public class RulerWill extends RangedWeaponItem implements Vanishable {
 
             }
         }
-
     }
 
     public int getMaxUseTime(ItemStack stack) {

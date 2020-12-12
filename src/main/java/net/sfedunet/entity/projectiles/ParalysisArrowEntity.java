@@ -10,7 +10,10 @@ import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.hit.EntityHitResult;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 public class ParalysisArrowEntity extends ArrowEntity{
     public static TrackedData<Integer> PARALYSIS;
@@ -27,19 +30,31 @@ public class ParalysisArrowEntity extends ArrowEntity{
         super(world, owner);
     }
 
+    private static int Random(int min, int max) {
+        Random random = new Random();
+        return random.nextInt((max - min) + 1) + min;
+    }
+
 @Override
     public void onEntityHit(EntityHitResult entityHitResult) {
-        super.onEntityHit(entityHitResult);
-   if(entityHitResult.getEntity().getType() != EntityType.PLAYER){
+    super.onEntityHit(entityHitResult);
 
-entityHitResult.getEntity().getDataTracker().set(PARALYSIS,10*20);
-       world.playSound((PlayerEntity)null, this.getX(), this.getY(), this.getZ(), SoundEvents.BLOCK_ANVIL_DESTROY, SoundCategory.HOSTILE, 1F,1F);
+    //Humans and Simple Monsters
+    //Undead
+    if (entityHitResult.getEntity().getType() == EntityType.ZOMBIE || entityHitResult.getEntity().getType() == EntityType.SKELETON || entityHitResult.getEntity().getType() == EntityType.ZOMBIE_VILLAGER || entityHitResult.getEntity().getType() == EntityType.ZOMBIFIED_PIGLIN) {
+        entityHitResult.getEntity().getDataTracker().set(PARALYSIS, Random(6*20, 8*20));
+        System.out.println(entityHitResult.getEntity().getDataTracker().get(PARALYSIS) + " тиков - теста рандома(Для справки - от 120 до 160 тиков)");
+    }
+    //Humanoid
+    if (entityHitResult.getEntity().getType() == EntityType.CREEPER || entityHitResult.getEntity().getType() == EntityType.PLAYER || entityHitResult.getEntity().getType() == EntityType.VILLAGER || entityHitResult.getEntity().getType() == EntityType.PIGLIN || entityHitResult.getEntity().getType() == EntityType.PIGLIN_BRUTE || entityHitResult.getEntity().getType() == EntityType.EVOKER || entityHitResult.getEntity().getType() == EntityType.VINDICATOR || entityHitResult.getEntity().getType() == EntityType.VEX || entityHitResult.getEntity().getType() == EntityType.WANDERING_TRADER || entityHitResult.getEntity().getType() == EntityType.WITCH) {
+        entityHitResult.getEntity().getDataTracker().set(PARALYSIS, Random(8*20, 10*20));
+        System.out.println(entityHitResult.getEntity().getDataTracker().get(PARALYSIS) + " тиков - теста рандома(Для справки - от 160 до 200 тиков)");
+    }
 
-   }
-    if(entityHitResult.getEntity().getType() == EntityType.PLAYER) {
-        entityHitResult.getEntity().getDataTracker().set(PARALYSIS, entityHitResult.getEntity().getDataTracker().get(ParalysisArrowEntity.PARALYSIS) + 10 * 20);
+    if (entityHitResult.getEntity().getType() == EntityType.WITHER_SKELETON || entityHitResult.getEntity().getType() == EntityType.PIGLIN) {
+        entityHitResult.getEntity().getDataTracker().set(PARALYSIS, 8 * 20);
     }
-    }
+}
 
     @Override
     protected ItemStack asItemStack() {
