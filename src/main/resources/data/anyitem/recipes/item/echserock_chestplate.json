@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "anyitem:echserock_chunk"
+    }
+  },
+  "result": {
+    "item": "anyitem:echserock_chestplate"
+  }
+}

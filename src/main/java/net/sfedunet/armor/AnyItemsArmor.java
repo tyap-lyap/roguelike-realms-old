@@ -8,6 +8,7 @@ import net.minecraft.util.registry.Registry;
 public class AnyItemsArmor {
     public static final ArmorMaterial CRYPTON_ARMOR = new CryptonArmorMaterial();
     public static final ArmorMaterial DRAGON_ARMOR = new DragonArmorMaterial();
+    public static final ArmorMaterial ECHSEROCK_ARMOR = new EchserockArmorMaterial();
 
     public static void register(){
         Registry.register(Registry.ITEM, new Identifier("anyitem:crypton_helmet"), new CryptonArmor(CRYPTON_ARMOR, EquipmentSlot.HEAD));
@@ -19,5 +20,10 @@ public class AnyItemsArmor {
         Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_chestplate"), new DragonArmor(DRAGON_ARMOR, EquipmentSlot.CHEST));
         Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_leggings"), new DragonArmor(DRAGON_ARMOR, EquipmentSlot.LEGS));
         Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_boots"), new DragonArmor(DRAGON_ARMOR, EquipmentSlot.FEET));
+
+        Registry.register(Registry.ITEM, new Identifier("anyitem:echserock_helmet"), new EchserockArmor(ECHSEROCK_ARMOR, EquipmentSlot.HEAD));
+        Registry.register(Registry.ITEM, new Identifier("anyitem:echserock_chestplate"), new EchserockArmor(ECHSEROCK_ARMOR, EquipmentSlot.CHEST));
+        Registry.register(Registry.ITEM, new Identifier("anyitem:echserock_leggings"), new EchserockArmor(ECHSEROCK_ARMOR, EquipmentSlot.LEGS));
+        Registry.register(Registry.ITEM, new Identifier("anyitem:echserock_boots"), new EchserockArmor(ECHSEROCK_ARMOR, EquipmentSlot.FEET));
     }
 }

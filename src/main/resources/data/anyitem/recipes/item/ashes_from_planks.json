@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#$"
+  ],
+  "key": {
+    "#": {
+      "item": "anyitem:dragon_fire"
+    },
+    "$": {
+      "item": "anyitem:dragon_planks"
+    }
+  },
+  "result": {
+    "item": "anyitem:shes",
+    "count": 1
+  }
+}

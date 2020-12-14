@@ -9,7 +9,11 @@ public class AnyItemsTools {
     public static final ToolMaterialCrypton CRYPTON_TOOLS = new ToolMaterialCrypton();
     public static final ToolMaterialCryptonSpraying CRYPTON_TOOLS_SPRAYING = new ToolMaterialCryptonSpraying();
     public static final DragonMaterialTool DRAGON_TOOL = new DragonMaterialTool();
+
     public static final RulerWill RULER_WILL = new RulerWill(new Item.Settings().group(AnyItemsMod.GENERAL).maxCount(1).maxDamage(2000));
+
+    public static final EchserockToolMaterial ECHSEROCK_TOOL = new EchserockToolMaterial();
+
 
     public static void register(){
         Registry.register(Registry.ITEM, new Identifier("anyitem:crypton_spraying_sword"), new CryptonSprayingSword(CRYPTON_TOOLS_SPRAYING));
@@ -35,6 +39,11 @@ public class AnyItemsTools {
         Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_shovel"), new DragonShovel(DRAGON_TOOL));
         Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_hoe"), new DragonHoe(DRAGON_TOOL));
 
+
         Registry.register(Registry.ITEM, new Identifier("anyitem:ruler_will"), RULER_WILL);
+
+        Registry.register(Registry.ITEM, new Identifier("anyitem:echserock_sword"), new EchserockSword(ECHSEROCK_TOOL));
+        Registry.register(Registry.ITEM, new Identifier("anyitem:echserock_pickaxe"), new EchserockPickaxe(ECHSEROCK_TOOL));
+
     }
 }
