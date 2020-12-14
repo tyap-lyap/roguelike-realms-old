@@ -12,6 +12,10 @@ group = project.maven_group
 
 repositories {
 	maven { url "https://dl.bintray.com/kyrptonaught/customportalapi" }
+	maven {
+		name = "JitPack"
+		url = "https://jitpack.io"
+	}
 }
 dependencies {
 	//to change the versions see the gradle.properties file
@@ -23,6 +27,9 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	modRuntime ("com.github.SuperCoder7979:databreaker:${project.databreaker_version}") {
+		exclude module: "fabric-loader"
+	}
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
