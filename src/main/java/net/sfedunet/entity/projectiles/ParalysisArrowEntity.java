@@ -3,17 +3,12 @@ package net.sfedunet.entity.projectiles;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.data.TrackedData;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.hit.EntityHitResult;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
-import java.util.Random;
 
 public class ParalysisArrowEntity extends ArrowEntity{
     public static TrackedData<Integer> PARALYSIS;
@@ -30,32 +25,16 @@ public class ParalysisArrowEntity extends ArrowEntity{
         super(world, owner);
     }
 
-    private static int Random(int min, int max) {
-        Random random = new Random();
-        return random.nextInt((max - min) + 1) + min;
-    }
-
 @Override
     public void onEntityHit(EntityHitResult entityHitResult) {
     super.onEntityHit(entityHitResult);
-
-    //Humans and Simple Monsters
-    //Undead
-    if (entityHitResult.getEntity().getType() == EntityType.ZOMBIE || entityHitResult.getEntity().getType() == EntityType.SKELETON || entityHitResult.getEntity().getType() == EntityType.ZOMBIE_VILLAGER || entityHitResult.getEntity().getType() == EntityType.ZOMBIFIED_PIGLIN) {
-        entityHitResult.getEntity().getDataTracker().set(PARALYSIS, Random(6*20, 8*20));
-        System.out.println(entityHitResult.getEntity().getDataTracker().get(PARALYSIS) + " тиков - теста рандома(Для справки - от 120 до 160 тиков)");
-    }
-    //Humanoid
-    if (entityHitResult.getEntity().getType() == EntityType.CREEPER || entityHitResult.getEntity().getType() == EntityType.PLAYER || entityHitResult.getEntity().getType() == EntityType.VILLAGER || entityHitResult.getEntity().getType() == EntityType.PIGLIN || entityHitResult.getEntity().getType() == EntityType.PIGLIN_BRUTE || entityHitResult.getEntity().getType() == EntityType.EVOKER || entityHitResult.getEntity().getType() == EntityType.VINDICATOR || entityHitResult.getEntity().getType() == EntityType.VEX || entityHitResult.getEntity().getType() == EntityType.WANDERING_TRADER || entityHitResult.getEntity().getType() == EntityType.WITCH) {
-        entityHitResult.getEntity().getDataTracker().set(PARALYSIS, Random(8*20, 10*20));
-        System.out.println(entityHitResult.getEntity().getDataTracker().get(PARALYSIS) + " тиков - теста рандома(Для справки - от 160 до 200 тиков)");
-    }
-
-    if (entityHitResult.getEntity().getType() == EntityType.WITHER_SKELETON || entityHitResult.getEntity().getType() == EntityType.PIGLIN) {
-        entityHitResult.getEntity().getDataTracker().set(PARALYSIS, 8 * 20);
+    if  (entityHitResult.getEntity().getType() == EntityType.PLAYER || entityHitResult.getEntity().getType() == EntityType.ZOMBIE || entityHitResult.getEntity().getType() == EntityType.PIGLIN_BRUTE || entityHitResult.getEntity().getType() == EntityType.PIGLIN || entityHitResult.getEntity().getType() == EntityType.PIG || entityHitResult.getEntity().getType() == EntityType.WITCH || entityHitResult.getEntity().getType() == EntityType.WITCH || entityHitResult.getEntity().getType() == EntityType.DROWNED || entityHitResult.getEntity().getType() == EntityType.WANDERING_TRADER || entityHitResult.getEntity().getType() == EntityType.VINDICATOR || entityHitResult.getEntity().getType() == EntityType.EVOKER || entityHitResult.getEntity().getType() == EntityType.VILLAGER || entityHitResult.getEntity().getType() == EntityType.ZOMBIE_VILLAGER || entityHitResult.getEntity().getType() == EntityType.GHAST || entityHitResult.getEntity().getType() == EntityType.ZOMBIFIED_PIGLIN || entityHitResult.getEntity().getType() == EntityType.WITHER_SKELETON || entityHitResult.getEntity().getType() == EntityType.BLAZE || entityHitResult.getEntity().getType() == EntityType.CREEPER || entityHitResult.getEntity().getType() == EntityType.SKELETON || entityHitResult.getEntity().getType() == EntityType.ZOGLIN || entityHitResult.getEntity().getType() == EntityType.BAT || entityHitResult.getEntity().getType() == EntityType.BEE || entityHitResult.getEntity().getType() == EntityType.CAT || entityHitResult.getEntity().getType() == EntityType.CAVE_SPIDER || entityHitResult.getEntity().getType() == EntityType.CHICKEN || entityHitResult.getEntity().getType() == EntityType.COD || entityHitResult.getEntity().getType() == EntityType.COW || entityHitResult.getEntity().getType() == EntityType.DOLPHIN || entityHitResult.getEntity().getType() == EntityType.DONKEY || entityHitResult.getEntity().getType() == EntityType.FOX || entityHitResult.getEntity().getType() == EntityType.GUARDIAN || entityHitResult.getEntity().getType() == EntityType.GIANT || entityHitResult.getEntity().getType() == EntityType.HOGLIN || entityHitResult.getEntity().getType() == EntityType.HORSE || entityHitResult.getEntity().getType() == EntityType.HUSK || entityHitResult.getEntity().getType() == EntityType.ILLUSIONER || entityHitResult.getEntity().getType() == EntityType.IRON_GOLEM || entityHitResult.getEntity().getType() == EntityType.LLAMA || entityHitResult.getEntity().getType() == EntityType.MAGMA_CUBE || entityHitResult.getEntity().getType() == EntityType.MOOSHROOM || entityHitResult.getEntity().getType() == EntityType.MULE){
+       entityHitResult.getEntity().getDataTracker().set(PARALYSIS, 1*20);
+   }
+    if (entityHitResult.getEntity().getType() == EntityType.ELDER_GUARDIAN || entityHitResult.getEntity().getType() == EntityType.WITHER || entityHitResult.getEntity().getType() == EntityType.ENDER_DRAGON){
+        entityHitResult.getEntity().getDataTracker().set(PARALYSIS, 1*10);
     }
 }
-
     @Override
     protected ItemStack asItemStack() {
         return new ItemStack(Items.ARROW);

@@ -44,13 +44,13 @@ public class RulerWill extends RangedWeaponItem implements Vanishable {
         super(settings);
     }
 
-    public static final Predicate<ItemStack> test = (stack) -> {
+    public static final Predicate<ItemStack> PROJECTILE = (stack) -> {
         return stack.getItem() == Items.ARROW;
 
     };
 
     public Predicate<ItemStack> getProjectiles() {
-        return test;
+        return PROJECTILE;
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
@@ -185,6 +185,7 @@ public class RulerWill extends RangedWeaponItem implements Vanishable {
     }
 
    static Object projectileEntity2;
+
     private static void shoot(World world, LivingEntity shooter, Hand hand, ItemStack crossbow, ItemStack projectile, float soundPitch, boolean creative, float speed, float divergence, float simulated) {
 
     if (!world.isClient) {
