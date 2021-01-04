@@ -11,7 +11,12 @@
     "ModelPredicateProviderRegistryMixin",
     "PlayerEntityRendererMixin",
     "HeldItemRendererMixin",
-    "LookAtEntityGoalMixin"
+    "LookAtEntityGoalMixin",
+    "MoveToTargetPosGoalMixin",
+    "GoToWalkTargetGoalMixin",
+    "ZoglinEntityMixin",
+    "HoglinEntityMixin",
+    "AbstractPiglinEntityMixin"
   ],
   "client": [
   ],
