@@ -23,7 +23,8 @@ public class AnyItemsBlocks {
     public static final Block DRAGON_STONE = new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2f).sounds(BlockSoundGroup.STONE));
     public static final Block DRAGON_COBBLESTONE = new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2f).sounds(BlockSoundGroup.STONE));
     public static final Block DRAGON_PLANKS = new Block(FabricBlockSettings.copy(Blocks.ACACIA_PLANKS).strength(1f).sounds(BlockSoundGroup.WOOD));
-    public static final Block DRAGON_LEAVES = new Block(FabricBlockSettings.copy(Blocks.BIRCH_LEAVES).strength(0f).sounds(BlockSoundGroup.GRASS));
+    public static final Block DRAGON_LEAVES1 = new Block(FabricBlockSettings.copy(Blocks.BIRCH_LEAVES).strength(0f).sounds(BlockSoundGroup.GRASS));
+    public static final Block DRAGON_LEAVES2 = new Block(FabricBlockSettings.copy(Blocks.BIRCH_LEAVES).strength(0f).sounds(BlockSoundGroup.GRASS));
 
     public static void register() {
         Registry.register(Registry.BLOCK, new Identifier("anyitem:echserock"), ECHSEROCK);
@@ -56,8 +57,11 @@ public class AnyItemsBlocks {
         Registry.register(Registry.BLOCK, new Identifier("anyitem:dragon_planks"), DRAGON_PLANKS);
         Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_planks"), new BlockItem(DRAGON_PLANKS, new FabricItemSettings().group(AnyItemsMod.GENERAL)));
 
-        Registry.register(Registry.BLOCK, new Identifier("anyitem:dragon_leaves"), DRAGON_LEAVES);
-        Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_leaves"), new BlockItem(DRAGON_LEAVES, new FabricItemSettings().group(AnyItemsMod.GENERAL)));
+        Registry.register(Registry.BLOCK, new Identifier("anyitem:dragon_leaves1"), DRAGON_LEAVES1);
+        Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_leaves1"), new BlockItem(DRAGON_LEAVES1, new FabricItemSettings().group(AnyItemsMod.GENERAL)));
+
+        Registry.register(Registry.BLOCK, new Identifier("anyitem:dragon_leaves2"), DRAGON_LEAVES2);
+        Registry.register(Registry.ITEM, new Identifier("anyitem:dragon_leaves2"), new BlockItem(DRAGON_LEAVES2, new FabricItemSettings().group(AnyItemsMod.GENERAL)));
     }
 
 }
