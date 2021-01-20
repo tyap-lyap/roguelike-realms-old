@@ -2,13 +2,11 @@ package net.sfedunet.mixin;
 
 import net.minecraft.entity.*;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
@@ -65,7 +63,6 @@ public abstract class LivingEntityMixin extends Entity {
         if (livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 2 && livingEntity.getType() != EntityType.PLAYER) {
             livingEntity.setCustomNameVisible(true);
             livingEntity.setCustomName(Text.of("§cParalysis:§b " + livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) + " §ctick(s)!"));
-
         } else {
             if (livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 1 && livingEntity.getType() != EntityType.PLAYER) {
                 livingEntity.setCustomNameVisible(false);

@@ -16,7 +16,8 @@
     "GoToWalkTargetGoalMixin",
     "ZoglinEntityMixin",
     "HoglinEntityMixin",
-    "AbstractPiglinEntityMixin"
+    "JumpControlMixin",
+    "LookAroundGoalMixin"
   ],
   "client": [
   ],

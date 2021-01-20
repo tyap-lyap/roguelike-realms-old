@@ -23,7 +23,6 @@ public abstract class MobEntityMixin extends LivingEntity {
 
     @Inject(at = @At("HEAD"), method = "canTarget", cancellable = true)
     public void canTarget(CallbackInfoReturnable<Boolean> ret) {
-
         if (mob.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 1) {
             ret.setReturnValue(Boolean.FALSE);
         }
@@ -32,9 +31,8 @@ public abstract class MobEntityMixin extends LivingEntity {
     @Inject(at = @At("HEAD"), method = "tick")
     private void tick(CallbackInfo ci) {
         if (mob.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 1) {
-            mob.getNavigation().stop();
             mob.getLookControl().lookAt(Vec3d.ZERO);
-
+            mob.getNavigation().stop();
         }
     }
 }
