@@ -23,8 +23,8 @@ public class AnyItemsBlocks {
     public static final Block DRAGON_STONE = new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2f).sounds(BlockSoundGroup.STONE));
     public static final Block DRAGON_COBBLESTONE = new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(2f).sounds(BlockSoundGroup.STONE));
     public static final Block DRAGON_PLANKS = new Block(FabricBlockSettings.copy(Blocks.ACACIA_PLANKS).strength(1f).sounds(BlockSoundGroup.WOOD));
-    public static final Block DRAGON_LEAVES1 = new Block(FabricBlockSettings.copy(Blocks.BIRCH_LEAVES).strength(0f).sounds(BlockSoundGroup.GRASS));
-    public static final Block DRAGON_LEAVES2 = new Block(FabricBlockSettings.copy(Blocks.BIRCH_LEAVES).strength(0f).sounds(BlockSoundGroup.GRASS));
+    public static final Block DRAGON_LEAVES1 = new LeavesBlock(FabricBlockSettings.copy(Blocks.BIRCH_LEAVES).strength(0f).sounds(BlockSoundGroup.GRASS));
+    public static final Block DRAGON_LEAVES2 = new LeavesBlock(FabricBlockSettings.copy(Blocks.BIRCH_LEAVES).strength(0f).sounds(BlockSoundGroup.GRASS));
 
     public static void register() {
         Registry.register(Registry.BLOCK, new Identifier("anyitem:echserock"), ECHSEROCK);
