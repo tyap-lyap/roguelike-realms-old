@@ -9,6 +9,7 @@ import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.sfedunet.armor.*;
 import net.sfedunet.blocks.AnyItemsBlocks;
+import net.sfedunet.entity.AnyItemsEntities;
 import net.sfedunet.items.AnyItemsItems;
 import net.sfedunet.tools.*;
 import net.sfedunet.world.features.AnyItemsConfiguredFeatures;
@@ -24,5 +25,6 @@ public class AnyItemsMod implements ModInitializer {
 		AnyItemsItems.register();
 		AnyItemsTools.register();
 		AnyItemsArmor.register();
+		AnyItemsEntities.register();
 	}
 }
