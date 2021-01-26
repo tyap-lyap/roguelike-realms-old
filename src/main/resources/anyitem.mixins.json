@@ -6,18 +6,13 @@
   "mixins": [
     "OreBiomeMixin$DefaultBiomeFeaturesMixin",
     "LivingEntityMixin",
-    "TrackTargetGoalMixin",
     "MobEntityMixin",
     "ModelPredicateProviderRegistryMixin",
     "PlayerEntityRendererMixin",
     "HeldItemRendererMixin",
-    "LookAtEntityGoalMixin",
-    "MoveToTargetPosGoalMixin",
-    "GoToWalkTargetGoalMixin",
     "ZoglinEntityMixin",
     "HoglinEntityMixin",
-    "JumpControlMixin",
-    "LookAroundGoalMixin"
+    "JumpControlMixin"
   ],
   "client": [
   ],
