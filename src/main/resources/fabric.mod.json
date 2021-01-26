@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.sfedunet.AnyItemsMod"
+    ],
+    "client": [
+      "net.sfedunet.AnyItemsClient"
     ]
   },
 

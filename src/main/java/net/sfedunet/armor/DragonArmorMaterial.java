@@ -5,7 +5,7 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.sfedunet.items.AnyItemsItems;
+import net.sfedunet.item.AnyItemsItems;
 
 public class DragonArmorMaterial implements ArmorMaterial {
     private static final int[] BASE_DURABILITY = new int[] {385, 450, 415, 370};

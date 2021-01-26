@@ -8,8 +8,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Hand;
 import net.minecraft.util.UseAction;
-import net.sfedunet.tools.AnyItemsTools;
-import net.sfedunet.tools.RulerWill;
+import net.sfedunet.item.tools.AnyItemsTools;
+import net.sfedunet.item.tools.RulerWill;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(PlayerEntityRenderer.class)

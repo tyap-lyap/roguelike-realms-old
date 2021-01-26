@@ -26,8 +26,8 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Matrix4f;
-import net.sfedunet.tools.AnyItemsTools;
-import net.sfedunet.tools.RulerWill;
+import net.sfedunet.item.tools.AnyItemsTools;
+import net.sfedunet.item.tools.RulerWill;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(HeldItemRenderer.class)
