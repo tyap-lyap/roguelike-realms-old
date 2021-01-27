@@ -31,7 +31,8 @@ public class AnyItemsBlocks {
     public static final Block DRAGON_PLANKS = add("dragon_planks", new BaseBlock(Blocks.OAK_PLANKS, BlockSoundGroup.WOOD));
     public static final Block DRAGON_LEAVES1 = add("dragon_leaves1", new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).strength(0f).sounds(BlockSoundGroup.GRASS)));
     public static final Block DRAGON_LEAVES2 = add("dragon_leaves2", new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).strength(0f).sounds(BlockSoundGroup.GRASS)));
-    public static final Block DRACONIC_SHADOW_PORTAL = add("draconic_shadow_portal", new DraconicShadowPortalBlock());
+    public static final Block DRACONIC_SHADOW_PORTAL = add("draconic_shadow_portal", new DraconicShadowPortalBlock()); //зачем?
+    public static final EmeraldPedestal EMERALD_PEDESTAL = add("emerald_pedestal", new EmeraldPedestal(FabricBlockSettings.copy(Blocks.EMERALD_BLOCK).sounds(BlockSoundGroup.METAL)));
 
     private static <B extends Block> B add(String name, B block, ItemGroup tab) {
         Item.Settings settings = new Item.Settings();
