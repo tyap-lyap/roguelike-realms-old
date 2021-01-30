@@ -12,7 +12,10 @@
     "HeldItemRendererMixin",
     "ZoglinEntityMixin",
     "HoglinEntityMixin",
-    "JumpControlMixin"
+    "JumpControlMixin",
+    "MoveControlMixin",
+    "LookControlMixin",
+    "TargetPredicateMixin"
   ],
   "client": [
   ],

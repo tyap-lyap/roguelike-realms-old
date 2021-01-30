@@ -16,9 +16,7 @@ public class JumpControlMixin {
     }
 
     public void tick() {
-        if (this.entity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 1) {
-            this.active = true;
-        } else {
+        if (this.entity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) == 0) {
             this.entity.setJumping(this.active);
             this.active = false;
         }

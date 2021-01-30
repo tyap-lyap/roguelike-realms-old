@@ -11,15 +11,8 @@ import net.minecraft.world.World;
 
 
 public class ParalysisArrowEntity extends ArrowEntity{
+
     public static TrackedData<Integer> PARALYSIS;
-
-    public ParalysisArrowEntity(EntityType<? extends ArrowEntity> entityType, World world) {
-        super(entityType, world);
-    }
-
-    public ParalysisArrowEntity(World world, double x, double y, double z) {
-        super(world, x, y, z);
-    }
 
     public ParalysisArrowEntity(World world, LivingEntity owner) {
         super(world, owner);

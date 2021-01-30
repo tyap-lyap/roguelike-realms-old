@@ -1,6 +1,7 @@
 package net.sfedunet.mixin;
 
 import net.minecraft.entity.*;
+import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
@@ -12,6 +13,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.sfedunet.entity.projectiles.ParalysisArrowEntity;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -42,9 +44,9 @@ public abstract class LivingEntityMixin extends Entity {
         super(type, world);
     }
 
-
     @Inject(at = @At("HEAD"), method = "tick")
     private void tick(CallbackInfo ci) {
+
 
         if (livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >=1){
             livingEntity.getDataTracker().set(ParalysisArrowEntity.PARALYSIS, livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) - 1);
@@ -71,12 +73,10 @@ public abstract class LivingEntityMixin extends Entity {
         }
     }
 
-    @Inject(at = @At("HEAD"), method = "tryAttack", cancellable = false)
-    public void tryAttack(Entity target,CallbackInfoReturnable<Boolean> ret) {
 
-        if (livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 1) {
-            ret.setReturnValue(Boolean.FALSE);
-        }
+    public boolean tryAttack(Entity target) {
+
+    return false;
     }
 
     public int getParalysis() {
