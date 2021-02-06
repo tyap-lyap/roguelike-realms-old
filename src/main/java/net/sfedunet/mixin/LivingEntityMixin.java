@@ -1,7 +1,6 @@
 package net.sfedunet.mixin;
 
 import net.minecraft.entity.*;
-import net.minecraft.entity.ai.brain.MemoryModuleType;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
@@ -9,18 +8,15 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.sfedunet.entity.projectiles.ParalysisArrowEntity;
-import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
 import java.util.Optional;
 import java.util.UUID;
 
@@ -44,40 +40,34 @@ public abstract class LivingEntityMixin extends Entity {
         super(type, world);
     }
 
-    @Inject(at = @At("HEAD"), method = "tick")
+    @Inject(at = @At("HEAD"), method = "canTarget",cancellable = true)
+
+    public void canTarget(CallbackInfoReturnable<Boolean> ret) {
+
+        if (livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 1) {
+
+            ret.setReturnValue(Boolean.FALSE);
+        }
+    }
+
+        @Inject(at = @At("HEAD"), method = "tick")
     private void tick(CallbackInfo ci) {
 
-
-        if (livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >=1){
-            livingEntity.getDataTracker().set(ParalysisArrowEntity.PARALYSIS, livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) - 1);
-        }
-        if (livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 2 && livingEntity.getType() == EntityType.PLAYER) {
-            livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS), 4));
-            livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS), 4));
-            livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS), 4));
-        } else {
-            if (livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 1 && livingEntity.getType() == EntityType.PLAYER) {
-                livingEntity.removeStatusEffect(StatusEffects.SLOWNESS);
-                livingEntity.removeStatusEffect(StatusEffects.WEAKNESS);
-                livingEntity.removeStatusEffect(StatusEffects.MINING_FATIGUE);
+            if (livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 1) {
+                livingEntity.getDataTracker().set(ParalysisArrowEntity.PARALYSIS, livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) - 1);
+            }
+            if (livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 2 && livingEntity.getType() == EntityType.PLAYER) {
+                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS), 4));
+                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS), 4));
+                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS), 4));
+            } else {
+                if (livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 1 && livingEntity.getType() == EntityType.PLAYER) {
+                    livingEntity.removeStatusEffect(StatusEffects.SLOWNESS);
+                    livingEntity.removeStatusEffect(StatusEffects.WEAKNESS);
+                    livingEntity.removeStatusEffect(StatusEffects.MINING_FATIGUE);
+                }
             }
         }
-        if (livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 2 && livingEntity.getType() != EntityType.PLAYER) {
-            livingEntity.setCustomNameVisible(true);
-            livingEntity.setCustomName(Text.of("§cParalysis:§b " + livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) + " §ctick(s)!"));
-        } else {
-            if (livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 1 && livingEntity.getType() != EntityType.PLAYER) {
-                livingEntity.setCustomNameVisible(false);
-                livingEntity.setCustomName(Text.of(""));
-            }
-        }
-    }
-
-
-    public boolean tryAttack(Entity target) {
-
-    return false;
-    }
 
     public int getParalysis() {
         return (Integer) this.dataTracker.get(ParalysisArrowEntity.PARALYSIS);
