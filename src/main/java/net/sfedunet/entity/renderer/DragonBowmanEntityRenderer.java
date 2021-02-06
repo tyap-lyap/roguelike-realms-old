@@ -7,20 +7,20 @@ import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.feature.ArmorFeatureRenderer;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.util.Identifier;
-import net.sfedunet.entity.InferiorDragonEntity;
-import net.sfedunet.entity.model.InferiorDragonEntityModel;
+import net.sfedunet.entity.DragonBowmanEntity;
+import net.sfedunet.entity.model.DragonBowmanEntityModel;
 
 @Environment(EnvType.CLIENT)
-public class InferiorDragonEntityRenderer extends BipedEntityRenderer<InferiorDragonEntity, InferiorDragonEntityModel> {
-    public InferiorDragonEntityRenderer(EntityRenderDispatcher dispatcher) {
-        super(dispatcher, new InferiorDragonEntityModel(0.0F, false), 0.5f);
+public class DragonBowmanEntityRenderer extends BipedEntityRenderer<DragonBowmanEntity, DragonBowmanEntityModel> {
+    public DragonBowmanEntityRenderer(EntityRenderDispatcher dispatcher) {
+        super(dispatcher, new DragonBowmanEntityModel(0.0F, false), 0.5f);
         this.addFeature(new ArmorFeatureRenderer<>(this, new BipedEntityModel<>(0.5f), new BipedEntityModel<>(1.0f)));
     }
 
-    private static final Identifier TEXTURE = new Identifier("anyitem:textures/entity/inferior_dragon.png");
+    private static final Identifier TEXTURE = new Identifier("anyitem:textures/entity/dragon_bowman.png");
     
     @Override
-   public Identifier getTexture(InferiorDragonEntity entity) {
+   public Identifier getTexture(DragonBowmanEntity entity) {
       return TEXTURE;
    }
 }

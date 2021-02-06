@@ -24,8 +24,8 @@ import net.minecraft.world.World;
 import net.sfedunet.armor.AnyItemsArmor;
 
 @SuppressWarnings("EntityConstructor")
-public class InferiorDragonEntity extends HostileEntity {
-    public InferiorDragonEntity(EntityType<? extends InferiorDragonEntity> entityType, World world) {
+public class DragonWarlordEntity extends HostileEntity {
+    public DragonWarlordEntity(EntityType<? extends DragonWarlordEntity> entityType, World world) {
         super(entityType, world);
     }
 
@@ -43,7 +43,7 @@ public class InferiorDragonEntity extends HostileEntity {
 
     protected void initEquipment() {
         Item mainHand = Items.STONE_SWORD;
-        //Item offHand = Items.SHIELD;
+        Item offHand = Items.SHIELD;
         Item head = AnyItemsArmor.DRAGON_HELMET;
         //Item chest = AnyItemsArmor.DRAGON_CHESTPLATE;
         Item legs = AnyItemsArmor.DRAGON_LEGGINGS;
@@ -63,7 +63,7 @@ public class InferiorDragonEntity extends HostileEntity {
                 break;
         }
         this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(mainHand));
-        //this.equipStack(EquipmentSlot.OFFHAND, new ItemStack(offHand));
+        this.equipStack(EquipmentSlot.OFFHAND, new ItemStack(offHand));
         this.equipStack(EquipmentSlot.HEAD, new ItemStack(head));
         //this.equipStack(EquipmentSlot.CHEST, new ItemStack(chest));
         this.equipStack(EquipmentSlot.LEGS, new ItemStack(legs));
