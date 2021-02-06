@@ -31,7 +31,7 @@ import java.util.Optional;
 
 
 @Mixin(ModelPredicateProviderRegistry.class)
-public  class ModelPredicateProviderRegistryMixin {
+public class ModelPredicateProviderRegistryMixin {
     @Shadow
     private static final Map<Identifier, ModelPredicateProvider> GLOBAL = Maps.newHashMap();
     @Shadow
