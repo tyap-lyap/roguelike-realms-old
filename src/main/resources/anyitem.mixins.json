@@ -15,7 +15,8 @@
     "JumpControlMixin",
     "MoveControlMixin",
     "LookControlMixin",
-    "TargetPredicateMixin"
+    "TargetPredicateMixin",
+    "TrackTargetGoalMixin"
   ],
   "client": [
   ],

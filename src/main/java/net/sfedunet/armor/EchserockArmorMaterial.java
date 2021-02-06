@@ -4,6 +4,8 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
+import net.sfedunet.item.AnyItemsItems;
 
 public class EchserockArmorMaterial implements ArmorMaterial {
     private static final int[] BASE_DURABILITY = new int[] {385, 450, 415, 370};
@@ -25,12 +27,12 @@ public class EchserockArmorMaterial implements ArmorMaterial {
 
     @Override
     public SoundEvent getEquipSound() {
-        return null;
+        return SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return null;
+        return Ingredient.ofItems(AnyItemsItems.ECHSEROCK_CHUNK);
     }
 
     @Override
