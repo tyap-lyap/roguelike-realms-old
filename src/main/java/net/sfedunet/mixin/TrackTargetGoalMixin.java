@@ -16,7 +16,7 @@ public abstract class TrackTargetGoalMixin{
 
     @Shadow @Final protected MobEntity mob;
 
-    @Shadow @Inject(at = @At("HEAD"), method = "shouldContinue",cancellable = true)
+   @Inject(at = @At("HEAD"), method = "shouldContinue",cancellable = true)
 
     public void shouldContinue(CallbackInfoReturnable<Boolean> ret){
 
