@@ -13,11 +13,8 @@ group = project.maven_group
 
 repositories {
 	maven { url "https://dl.bintray.com/kyrptonaught/customportalapi" }
-	maven {
-		name = "TerraformersMC"
-		url = "https://maven.terraformersmc.com"
-	}
-	jcenter()
+	maven { url "https://maven.terraformersmc.com" }
+	maven { url "https://maven.shedaniel.me" }
 	
 }
 
@@ -32,7 +29,7 @@ dependencies {
 	modImplementation "net.kyrptonaught:customportalapi:0.0.1-beta20-1.16"
     include "net.kyrptonaught:customportalapi:0.0.1-beta20-1.16"
 
-	modRuntime "me.shedaniel:RoughlyEnoughItems:5.8.10"
+	modRuntime "me.shedaniel:RoughlyEnoughItems:5.9.170"
 	modRuntime "com.terraformersmc:modmenu:1.16.6"
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
