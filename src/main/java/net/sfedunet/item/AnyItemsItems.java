@@ -8,7 +8,9 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.sfedunet.AnyItemsMod;
+import net.sfedunet.item.armor.AnyItemsArmor;
 import net.sfedunet.item.base.BaseItem;
+import net.sfedunet.item.tools.AnyItemsTools;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -51,5 +53,8 @@ public class AnyItemsItems {
         for (Identifier id : ITEMS.keySet()) {
             Registry.register(Registry.ITEM, id, ITEMS.get(id));
         }
+
+        AnyItemsTools.register();
+        AnyItemsArmor.register();
     }
 }

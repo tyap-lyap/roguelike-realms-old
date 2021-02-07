@@ -18,13 +18,11 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
-import net.sfedunet.armor.AnyItemsArmor;
+import net.sfedunet.item.armor.AnyItemsArmor;
 
 @SuppressWarnings("EntityConstructor")
 public class SpittingDragonEntity extends HostileEntity {

@@ -27,7 +27,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
-import net.sfedunet.armor.AnyItemsArmor;
+import net.sfedunet.item.armor.AnyItemsArmor;
 
 @SuppressWarnings("EntityConstructor")
 public class DragonBowmanEntity extends HostileEntity implements RangedAttackMob {

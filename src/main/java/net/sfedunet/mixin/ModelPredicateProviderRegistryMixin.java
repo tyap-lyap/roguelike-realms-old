@@ -20,7 +20,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.World;
-import net.sfedunet.AngleRandomizer;
+import net.sfedunet.util.AngleRandomizer;
 import net.sfedunet.item.tools.AnyItemsTools;
 import net.sfedunet.item.tools.RulerWill;
 import org.jetbrains.annotations.Nullable;

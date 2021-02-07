@@ -1,4 +1,4 @@
-package net.sfedunet;
+package net.sfedunet.util;
 
 import net.minecraft.util.math.MathHelper;
 
