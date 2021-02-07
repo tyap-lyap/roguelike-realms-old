@@ -65,14 +65,6 @@ public class EmeraldPedestal extends Block {
         world.setBlockState(pos.add(-1, -1, 1), blockState);
         world.setBlockState(pos.add(-1, -1, -1), blockState);
     }
-    private void checkFrame(boolean IsActiv, World world, BlockPos pos, BlockState state) {
-        if(IsActiv){
-            world.get
-        }
-        else{
-            //
-        }
-    }
 
     //мне некуда девать свой интеллект
     void cumShot(World world, BlockPos pos, LivingEntity entity){
