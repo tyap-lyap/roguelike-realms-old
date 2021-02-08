@@ -50,7 +50,7 @@ public class DraconicShadowPortalBlock extends Block {
         if (currentWorld.getRegistryKey() != destination.getRegistryKey()) {
             moveToDimension(destination, serverPlayerEntity);
         } else {
-            serverPlayerEntity.sendMessage(new LiteralText("you can't go back b1tc4"), true);
+            serverPlayerEntity.sendMessage(new LiteralText("U can't go back)"), true);
         }
 
     }
