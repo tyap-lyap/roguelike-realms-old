@@ -1,7 +1,10 @@
 package net.sfedunet;
 
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
+import net.minecraft.client.render.RenderLayer;
+import net.sfedunet.block.AnyItemsBlocks;
 import net.sfedunet.entity.AnyItemsEntities;
 import net.sfedunet.entity.renderer.ArmoredDragonEntityRenderer;
 import net.sfedunet.entity.renderer.DragonBowmanEntityRenderer;
@@ -24,5 +27,7 @@ public class AnyItemsClient implements ClientModInitializer {
         EntityRendererRegistry.INSTANCE.register(AnyItemsEntities.INFERIOR_DRAGON, (dispatcher, context) -> new InferiorDragonEntityRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(AnyItemsEntities.SPITTING_DRAGON, (dispatcher, context) -> new SpittingDragonEntityRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(AnyItemsEntities.SUPREME_DRAGON, (dispatcher, context) -> new SupremeDragonEntityRenderer(dispatcher));
+
+        BlockRenderLayerMap.INSTANCE.putBlock(AnyItemsBlocks.DRACONIC_SHADOW_PORTAL, RenderLayer.getTranslucent());
     }
 }

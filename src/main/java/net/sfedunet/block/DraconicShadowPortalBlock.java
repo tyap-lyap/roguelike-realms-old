@@ -2,9 +2,7 @@ package net.sfedunet.block;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.advancement.criterion.Criteria;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
+import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
@@ -12,11 +10,14 @@ import net.minecraft.network.packet.s2c.play.*;
 import net.minecraft.server.PlayerManager;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.LiteralText;
 import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.RegistryKey;
+import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldProperties;
 import net.minecraft.world.biome.source.BiomeAccess;
@@ -25,7 +26,7 @@ import net.sfedunet.world.dimension.DraconicShadow;
 public class DraconicShadowPortalBlock extends Block {
 
     public DraconicShadowPortalBlock() {
-        super(FabricBlockSettings.copyOf(Blocks.BEDROCK).noCollision());
+        super(FabricBlockSettings.copyOf(Blocks.BEDROCK).sounds(BlockSoundGroup.GLASS).noCollision());
     }
 
 
@@ -105,6 +106,16 @@ public class DraconicShadowPortalBlock extends Block {
         world.setBlockState(blockPos.add(-1, 0, -1), blockState);
         world.setBlockState(blockPos.add(1, 0, -1), blockState);
         world.setBlockState(blockPos.add(-1, 0, 1), blockState);
+    }
+
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D);
+    }
+
+    @Override
+    public BlockRenderType getRenderType(BlockState blockState) {
+        return BlockRenderType.MODEL;
     }
 
 
