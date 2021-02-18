@@ -4,6 +4,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.sfedunet.AnyItemsMod;
+import net.sfedunet.item.AnyItemGroups;
 import net.sfedunet.item.base.*;
 
 import java.util.LinkedHashMap;
@@ -30,7 +31,7 @@ public class AnyItemsTools {
     public static final Item DRAGON_AXE = add("dragon_axe", new BaseAxeItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, 2, 1));
     public static final Item DRAGON_SHOVEL = add("dragon_shovel", new BaseShovelItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, 0, 1));
     public static final Item DRAGON_HOE = add("dragon_hoe", new BaseHoeItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, -5, -3));
-    public static final Item RULER_WILL = add("ruler_will", new RulerWill(new Item.Settings().group(AnyItemsMod.GENERAL).maxCount(1).maxDamage(2000)));
+    public static final Item RULER_WILL = add("ruler_will", new RulerWill(new Item.Settings().group(AnyItemGroups.TOOLS_AND_WEAPONS).maxCount(1).maxDamage(2000)));
     public static final Item ECHSEROCK_SWORD = add("echserock_sword", new BaseSwordItem(AnyToolMaterials.ECHSEROCK_TOOL_MATERIAL, 0, 0));
     public static final Item ECHSEROCK_PICKAXE = add("echserock_pickaxe", new BasePickaxeItem(AnyToolMaterials.ECHSEROCK_TOOL_MATERIAL, 0, 0));
 

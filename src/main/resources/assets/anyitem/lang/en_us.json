@@ -1,5 +1,9 @@
 {
  "itemGroup.anyitem.general": "AnyItems Mod",
+ "itemGroup.anyitem.items": "AnyItems Mod: Items",
+ "itemGroup.anyitem.blocks": "AnyItems Mod: Blocks",
+ "itemGroup.anyitem.tools_and_weapons": "AnyItems Mod: Tools And Weapons",
+ "itemGroup.anyitem.armor": "AnyItems Mod: Armor",
  "item.anyitem.shaurma": "§eShaurma",
  "item.anyitem.cooked_shaurma": "§6Cooked Shaurma",
  "item.anyitem.echpochmak": "§eEchpochmak",

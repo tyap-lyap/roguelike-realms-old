@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.sfedunet.AnyItemsMod;
 import net.sfedunet.block.base.BaseBlock;
+import net.sfedunet.item.AnyItemGroups;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -57,7 +58,7 @@ public class AnyItemsBlocks {
     }
     private static <B extends Block> B add(String name, B block) {
         Item.Settings settings = new Item.Settings();
-        settings.group(AnyItemsMod.GENERAL);
+        settings.group(AnyItemGroups.BLOCKS);
         return add(name, block, new BlockItem(block, settings));
     }
 
