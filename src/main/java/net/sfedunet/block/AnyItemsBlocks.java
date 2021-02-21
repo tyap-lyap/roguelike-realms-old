@@ -35,6 +35,13 @@ public class AnyItemsBlocks {
     public static final Block DRACONIC_SHADOW_PORTAL = add("draconic_shadow_portal", new DraconicShadowPortalBlock()); //зачем?
     public static final EmeraldPedestal EMERALD_PEDESTAL = add("emerald_pedestal", new EmeraldPedestal(FabricBlockSettings.copy(Blocks.EMERALD_BLOCK).sounds(BlockSoundGroup.METAL)));
 
+    public static final Block GRAPE_TREE_LOG = add("grape_tree_log", new BaseBlock(Blocks.OAK_PLANKS, BlockSoundGroup.WOOD));
+    public static final Block GRAPE_TREE_LEAVES = add("grape_tree_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block GRAPE_VINES = add("grape_vines", new GrapeVinesBlock("normal"));
+    public static final Block GRAPE_VINES_TIP = add("grape_vines_tip", new GrapeVinesBlock("tip"));
+    public static final Block GRAPED_GRAPE_VINES = add("graped_grape_vines", new GrapeVinesBlock("graped"));
+
+
     private static <B extends Block> B add(String name, B block, ItemGroup tab) {
         Item.Settings settings = new Item.Settings();
         if (tab != null) {

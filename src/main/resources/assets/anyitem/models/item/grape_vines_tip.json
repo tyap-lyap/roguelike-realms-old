@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "anyitem:block/grape_vines_tip"
+  }
+}

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "anyitem:dragon_wood"
+    "anyitem:dragon_wood",
+    "anyitem:grape_tree_log"
   ]
 }

@@ -29,5 +29,9 @@ public class AnyItemsClient implements ClientModInitializer {
         EntityRendererRegistry.INSTANCE.register(AnyItemsEntities.SUPREME_DRAGON, (dispatcher, context) -> new SupremeDragonEntityRenderer(dispatcher));
 
         BlockRenderLayerMap.INSTANCE.putBlock(AnyItemsBlocks.DRACONIC_SHADOW_PORTAL, RenderLayer.getTranslucent());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(AnyItemsBlocks.GRAPE_VINES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AnyItemsBlocks.GRAPE_VINES_TIP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AnyItemsBlocks.GRAPED_GRAPE_VINES, RenderLayer.getCutout());
     }
 }
