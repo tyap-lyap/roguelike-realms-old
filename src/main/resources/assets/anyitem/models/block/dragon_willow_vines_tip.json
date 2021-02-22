@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "anyitem:block/dragon_willow_vines_tip"
+  }
+}

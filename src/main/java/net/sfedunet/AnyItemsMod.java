@@ -24,7 +24,6 @@ public class AnyItemsMod implements ModInitializer {
 		AnyItemsItems.register();
 		AnyItemsEntities.register();
 
-		//эксперемент
 		if(FabricLoader.INSTANCE.isModLoaded("botania")){
 			BotaniaIntegration.register();
 			LOGGER.info("[Any Items Mod] Botania integration is enabled");

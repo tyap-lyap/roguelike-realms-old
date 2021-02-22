@@ -6,8 +6,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -15,14 +13,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.sfedunet.item.AnyItemsItems;
 
 import java.util.Random;
 
-public class GrapeVinesBlock extends Block {
+public class WillowVinesBlock extends Block {
     private final String type;
 
-    public GrapeVinesBlock(String type) {
+    public WillowVinesBlock(String type) {
         super(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).noCollision());
         this.type = type;
     }
@@ -31,22 +28,9 @@ public class GrapeVinesBlock extends Block {
 
         ItemStack itemStack = player.getStackInHand(hand);
 
-        if(type.equals("graped")){
-            player.giveItemStack(AnyItemsItems.DRAGON_GRAPES.getDefaultStack());
-            world.setBlockState(pos, AnyItemsBlocks.GRAPE_VINES.getDefaultState());
-            world.playSound(null, pos, SoundEvents.ITEM_SWEET_BERRIES_PICK_FROM_BUSH, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
-            return ActionResult.success(world.isClient);
-        }
-        else if (type.equals("tip") && itemStack.getItem().equals(Items.BONE_MEAL) && world.isAir(pos.down(1))) {
-            world.setBlockState(pos, AnyItemsBlocks.GRAPE_VINES.getDefaultState());
-            world.setBlockState(pos.down(1), AnyItemsBlocks.GRAPE_VINES_TIP.getDefaultState());
-            if(!player.abilities.creativeMode){
-                itemStack.decrement(1);
-            }
-            return ActionResult.success(world.isClient);
-        }
-        else if (type.equals("normal") && itemStack.getItem().equals(Items.BONE_MEAL)){
-            world.setBlockState(pos, AnyItemsBlocks.GRAPED_GRAPE_VINES.getDefaultState());
+        if (type.equals("tip") && itemStack.getItem().equals(Items.BONE_MEAL) && world.isAir(pos.down(1))) {
+            world.setBlockState(pos, AnyItemsBlocks.DRAGON_WILLOW_VINES.getDefaultState());
+            world.setBlockState(pos.down(1), AnyItemsBlocks.DRAGON_WILLOW_VINES_TIP.getDefaultState());
             if(!player.abilities.creativeMode){
                 itemStack.decrement(1);
             }
@@ -64,16 +48,11 @@ public class GrapeVinesBlock extends Block {
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if(type.equals("tip")){
-            if (random.nextInt(16) == 0) {
-                if(world.isAir(pos.down(1))){
-                    world.setBlockState(pos, AnyItemsBlocks.GRAPE_VINES.getDefaultState(), 2);
-                    world.setBlockState(pos.down(1), AnyItemsBlocks.GRAPE_VINES_TIP.getDefaultState(), 2);
+            if (random.nextInt(8) == 0) {
+                if(world.getBlockState(pos.down(1)).getBlock().equals(Blocks.AIR)){
+                    world.setBlockState(pos, AnyItemsBlocks.DRAGON_WILLOW_VINES.getDefaultState(), 2);
+                    world.setBlockState(pos.down(1), AnyItemsBlocks.DRAGON_WILLOW_VINES_TIP.getDefaultState(), 2);
                 }
-
-            }
-        }else if(type.equals("normal")){
-            if (random.nextInt(16) == 0) {
-                world.setBlockState(pos, AnyItemsBlocks.GRAPED_GRAPE_VINES.getDefaultState(), 2);
 
             }
         }

@@ -33,5 +33,8 @@ public class AnyItemsClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(AnyItemsBlocks.GRAPE_VINES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AnyItemsBlocks.GRAPE_VINES_TIP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(AnyItemsBlocks.GRAPED_GRAPE_VINES, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(AnyItemsBlocks.DRAGON_WILLOW_VINES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AnyItemsBlocks.DRAGON_WILLOW_VINES_TIP, RenderLayer.getCutout());
     }
 }

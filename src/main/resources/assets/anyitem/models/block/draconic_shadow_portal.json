@@ -1,7 +1,7 @@
 {
 	"textures": {
-		"portal": "block/nether_portal",
-		"particle": "block/nether_portal"
+		"portal": "anyitem:block/draconic_shadow_portal",
+		"particle": "anyitem:block/draconic_shadow_portal"
 	},
 	"elements": [
 		{   "from": [0, 0, 0],

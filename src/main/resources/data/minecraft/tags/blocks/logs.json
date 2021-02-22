@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "anyitem:dragon_wood",
-    "anyitem:grape_tree_log"
+    "anyitem:grape_tree_log",
+    "anyitem:dragon_willow_log"
   ]
 }

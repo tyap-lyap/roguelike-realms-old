@@ -41,6 +41,11 @@ public class AnyItemsBlocks {
     public static final Block GRAPE_VINES_TIP = add("grape_vines_tip", new GrapeVinesBlock("tip"));
     public static final Block GRAPED_GRAPE_VINES = add("graped_grape_vines", new GrapeVinesBlock("graped"));
 
+    public static final Block DRAGON_WILLOW_LOG = add("dragon_willow_log", new BaseBlock(Blocks.OAK_PLANKS, BlockSoundGroup.WOOD));
+    public static final Block DRAGON_WILLOW_LEAVES = add("dragon_willow_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block DRAGON_WILLOW_VINES = add("dragon_willow_vines", new WillowVinesBlock("normal"));
+    public static final Block DRAGON_WILLOW_VINES_TIP = add("dragon_willow_vines_tip", new WillowVinesBlock("tip"));
+
 
     private static <B extends Block> B add(String name, B block, ItemGroup tab) {
         Item.Settings settings = new Item.Settings();
