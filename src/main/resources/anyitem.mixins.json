@@ -4,7 +4,6 @@
   "package": "net.sfedunet.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "OreBiomeMixin$DefaultBiomeFeaturesMixin",
     "LivingEntityMixin",
     "MobEntityMixin",
     "ModelPredicateProviderRegistryMixin",
