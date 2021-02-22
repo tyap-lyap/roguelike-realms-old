@@ -26,7 +26,7 @@ import net.sfedunet.world.dimension.DraconicShadow;
 public class DraconicShadowPortalBlock extends Block {
 
     public DraconicShadowPortalBlock() {
-        super(FabricBlockSettings.copyOf(Blocks.BEDROCK).sounds(BlockSoundGroup.GLASS).noCollision());
+        super(FabricBlockSettings.copyOf(Blocks.BEDROCK).sounds(BlockSoundGroup.GLASS).luminance(14).noCollision());
     }
 
 
