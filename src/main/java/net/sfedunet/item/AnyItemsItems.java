@@ -25,19 +25,19 @@ public class AnyItemsItems {
 
     public static final Item CRYPTON_DUST = add("crypton_dust", new BaseItem());
     public static final Item CRYPTONEZERIT = add("cryptonezerit", new BaseItem());
+    public static final Item DRAGON_INGOT = add("dragon_ingot", new BaseItem());
     public static final Item SOUL_INGOT = add("soul_ingot", new BaseItem());
     public static final Item FRIEND_SOUL = add("friend_soul", new BaseItem());
     public static final Item HOSTILE_SOUL = add("hostile_soul", new BaseItem());
+    public static final Item MILITANT_SOUL = add("militant_soul", new BaseItem());
+    public static final Item PACIFIED_SOUL = add("pacified_soul", new BaseItem());
+    public static final Item MILITANT_SOUL_SHARD = add("militant_soul_shard", new BaseItem());
+    public static final Item PACIFIED_SOUL_SHARD = add("pacified_soul_shard", new BaseItem());
     public static final Item FRIEND_SOUL_SHARD = add("friend_soul_shard", new BaseItem());
     public static final Item HOSTILE_SOUL_SHARD = add("hostile_soul_shard", new BaseItem());
     public static final Item ECHSEROCK_PIECE = add("echserock_piece", new BaseItem());
     public static final Item ECHSEROCK_CHUNK = add("echserock_chunk", new BaseItem());
-    public static final Item MILITANT_SOUL = add("militant_soul", new BaseItem());
-    public static final Item MILITANT_SOUL_SHARD = add("militant_soul_shard", new BaseItem());
-    public static final Item PACIFIED_SOUL = add("pacified_soul", new BaseItem());
-    public static final Item PACIFIED_SOUL_SHARD = add("pacified_soul_shard", new BaseItem());
     public static final Item RULER_SOUL_INGOT = add("ruler_soul_ingot", new BaseItem());
-    public static final Item DRAGON_INGOT = add("dragon_ingot", new BaseItem());
     public static final Item ASHES = add("ashes", new BaseItem());
     public static final Item DRAGON_SCALES = add("dragon_scales", new BaseItem());
     public static final Item DRAGON_FIRE = add("dragon_fire", new BaseItem());
