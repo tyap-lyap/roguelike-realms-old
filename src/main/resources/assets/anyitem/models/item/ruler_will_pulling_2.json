@@ -1,0 +1,6 @@
+{
+    "parent": "anyitem:item/ruler_will",
+    "textures": {
+        "layer0": "anyitem:item/ruler_will_pulling_2"
+    }
+}

@@ -18,7 +18,7 @@ public class AnyItemGroups {
             ()->new ItemStack(AnyItemsBlocks.CRYPTON_BLOCK));
 
     public static final ItemGroup TOOLS_AND_WEAPONS = FabricItemGroupBuilder.build(new Identifier(AnyItemsMod.MODID, "tools_and_weapons"),
-            ()->new ItemStack(AnyItemsTools.DRAGON_PICKAXE));
+            ()->new ItemStack(AnyItemsTools.CRYPTON_AXE));
 
     public static final ItemGroup ARMOR = FabricItemGroupBuilder.build(new Identifier(AnyItemsMod.MODID, "armor"),
             ()->new ItemStack(AnyItemsArmor.CRYPTON_HELMET));
