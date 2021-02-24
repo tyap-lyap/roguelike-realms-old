@@ -7,18 +7,18 @@ import net.sfedunet.item.base.BaseArmorMaterial;
 
 public class AnyArmorMaterials {
     public static final BaseArmorMaterial CRYPTON_ARMOR_MATERIAL = new BaseArmorMaterial("crypton",
-            new int[] {190, 225, 205, 180},
-            new int[] {4, 6, 6, 4}, 32, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2,
+            new int[] {2500, 3000, 2750, 2250},
+            new int[] {4, 9, 7, 4}, 32, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3,
             Ingredient.ofItems(AnyItemsItems.CRYPTON_DUST));
 
     public static final BaseArmorMaterial DRAGON_ARMOR_MATERIAL = new BaseArmorMaterial("dragon",
-            new int[] {385, 450, 415, 370},
-            new int[] {8, 12, 12, 8}, 50, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6,
+            new int[] {3222, 3444, 3333, 3111},
+            new int[] {5, 12, 10, 5}, 50, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4,
             Ingredient.ofItems(AnyItemsItems.DRAGON_INGOT));
 
     public static final BaseArmorMaterial ECHSEROCK_ARMOR_MATERIAL = new BaseArmorMaterial("echserock",
-            new int[] {385, 450, 415, 370},
-            new int[] {8, 12, 12, 8}, 0, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0,
+            new int[] {4000, 4500, 4250, 3750},
+            new int[] {5, 10, 8, 5}, 0, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4,
             Ingredient.ofItems(AnyItemsItems.ECHSEROCK_CHUNK));
 
 }

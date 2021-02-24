@@ -28,7 +28,6 @@ public class AnyItemsBlocks {
     public static final Block ASHES_BLOCK = add("ashes_block", new BaseBlock(Blocks.SAND, BlockSoundGroup.SAND));
     public static final Block DRAGON_INGOT_BLOCK = add("dragon_ingot_block", new BaseBlock(Blocks.IRON_BLOCK, BlockSoundGroup.METAL));
     public static final Block DRAGON_SCALES_BLOCK = add("dragon_scales_block", new BaseBlock(Blocks.STONE, BlockSoundGroup.NETHER_BRICKS));
-    //
 
     //public static final Block DRAGON_WOOD = add("dragon_wood", new BaseBlock(Blocks.OAK_PLANKS, BlockSoundGroup.WOOD));
     public static final Block DRAGON_STONE = add("dragon_stone", new BaseBlock());
@@ -37,7 +36,7 @@ public class AnyItemsBlocks {
     public static final Block DRAGON_PLANKS = add("dragon_planks", new BaseBlock(Blocks.OAK_PLANKS, BlockSoundGroup.WOOD));
     //public static final Block DRAGON_LEAVES1 = add("dragon_leaves1", new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).strength(0f).sounds(BlockSoundGroup.GRASS)));
     //public static final Block DRAGON_LEAVES2 = add("dragon_leaves2", new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).strength(0f).sounds(BlockSoundGroup.GRASS)));
-    public static final Block DRACONIC_SHADOW_PORTAL = add("draconic_shadow_portal", new DraconicShadowPortalBlock()); //зачем?
+    public static final Block DRACONIC_SHADOW_PORTAL = add("draconic_shadow_portal", new DraconicShadowPortalBlock());
     public static final EmeraldPedestal EMERALD_PEDESTAL = add("emerald_pedestal", new EmeraldPedestal(FabricBlockSettings.copy(Blocks.EMERALD_BLOCK).sounds(BlockSoundGroup.METAL)));
 
     public static final Block DRAGON_GRAPE_LOG = add("dragon_grape_log", new BaseBlock(Blocks.OAK_PLANKS, BlockSoundGroup.WOOD));

@@ -8,7 +8,7 @@ import net.sfedunet.item.AnyItemGroups;
 
 public class Scythe extends SwordItem {
     public Scythe(ToolMaterial toolMaterial) {
-        super(toolMaterial, 10, 5, new Settings().group(AnyItemGroups.TOOLS_AND_WEAPONS));
+        super(toolMaterial, 0, -3.0f, new Settings().group(AnyItemGroups.TOOLS_AND_WEAPONS));
     }
 
     @Override

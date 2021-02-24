@@ -11,6 +11,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.sfedunet.entity.projectiles.ParalysisArrowEntity;
+import net.sfedunet.item.armor.AnyItemsArmor;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -67,6 +68,12 @@ public abstract class LivingEntityMixin extends Entity {
                     livingEntity.removeStatusEffect(StatusEffects.MINING_FATIGUE);
                 }
             }
+
+            if (livingEntity.getEquippedStack(EquipmentSlot.HEAD).getItem() == AnyItemsArmor.DRAGON_HELMET && livingEntity.getEquippedStack(EquipmentSlot.CHEST).getItem() == AnyItemsArmor.DRAGON_CHESTPLATE  && livingEntity.getEquippedStack(EquipmentSlot.LEGS).getItem() == AnyItemsArmor.DRAGON_LEGGINGS && livingEntity.getEquippedStack(EquipmentSlot.FEET).getItem() == AnyItemsArmor.DRAGON_BOOTS && livingEntity.getType() == EntityType.PLAYER)
+            {
+                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,5,5));
+            }
+
         }
 
     public int getParalysis() {
