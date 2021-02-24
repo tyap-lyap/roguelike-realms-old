@@ -12,7 +12,7 @@ import net.sfedunet.item.tools.AnyItemsTools;
 public class AnyItemGroups {
 
     public static final ItemGroup ITEMS = FabricItemGroupBuilder.build(new Identifier(AnyItemsMod.MODID, "items"),
-            ()->new ItemStack(AnyItemsItems.DRAGON_FIRE));
+            ()->new ItemStack(AnyItemsItems.CRYPTON_DUST));
 
     public static final ItemGroup BLOCKS = FabricItemGroupBuilder.build(new Identifier(AnyItemsMod.MODID, "blocks"),
             ()->new ItemStack(AnyItemsBlocks.CRYPTON_BLOCK));

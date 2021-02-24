@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "anyitem:block/grape_vines_tip"
+    "cross": "anyitem:block/dragon_grape_vines_tip"
   }
 }

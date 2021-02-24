@@ -22,24 +22,29 @@ public class AnyItemsBlocks {
 
     public static final Block CRYPTON_BLOCK = add("crypton_block", new BaseBlock(Blocks.OBSIDIAN, BlockSoundGroup.BONE));
     public static final Block CRYPTON_ORE = add("crypton_ore", new BaseBlock());
+
+    // todo: redo
     public static final Block ECHSEROCK = add("echserock", new BaseBlock());
     public static final Block ASHES_BLOCK = add("ashes_block", new BaseBlock(Blocks.SAND, BlockSoundGroup.SAND));
     public static final Block DRAGON_INGOT_BLOCK = add("dragon_ingot_block", new BaseBlock(Blocks.IRON_BLOCK, BlockSoundGroup.METAL));
     public static final Block DRAGON_SCALES_BLOCK = add("dragon_scales_block", new BaseBlock(Blocks.STONE, BlockSoundGroup.NETHER_BRICKS));
-    public static final Block DRAGON_WOOD = add("dragon_wood", new BaseBlock(Blocks.OAK_PLANKS, BlockSoundGroup.WOOD));
+    //
+
+    //public static final Block DRAGON_WOOD = add("dragon_wood", new BaseBlock(Blocks.OAK_PLANKS, BlockSoundGroup.WOOD));
     public static final Block DRAGON_STONE = add("dragon_stone", new BaseBlock());
+    public static final Block DRAGOSS = add("dragoss", new Block(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK))); //драконий дерн оригинально да?
     public static final Block DRAGON_COBBLESTONE = add("dragon_cobblestone", new BaseBlock());
     public static final Block DRAGON_PLANKS = add("dragon_planks", new BaseBlock(Blocks.OAK_PLANKS, BlockSoundGroup.WOOD));
-    public static final Block DRAGON_LEAVES1 = add("dragon_leaves1", new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).strength(0f).sounds(BlockSoundGroup.GRASS)));
-    public static final Block DRAGON_LEAVES2 = add("dragon_leaves2", new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).strength(0f).sounds(BlockSoundGroup.GRASS)));
+    //public static final Block DRAGON_LEAVES1 = add("dragon_leaves1", new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).strength(0f).sounds(BlockSoundGroup.GRASS)));
+    //public static final Block DRAGON_LEAVES2 = add("dragon_leaves2", new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).strength(0f).sounds(BlockSoundGroup.GRASS)));
     public static final Block DRACONIC_SHADOW_PORTAL = add("draconic_shadow_portal", new DraconicShadowPortalBlock()); //зачем?
     public static final EmeraldPedestal EMERALD_PEDESTAL = add("emerald_pedestal", new EmeraldPedestal(FabricBlockSettings.copy(Blocks.EMERALD_BLOCK).sounds(BlockSoundGroup.METAL)));
 
-    public static final Block GRAPE_TREE_LOG = add("grape_tree_log", new BaseBlock(Blocks.OAK_PLANKS, BlockSoundGroup.WOOD));
-    public static final Block GRAPE_TREE_LEAVES = add("grape_tree_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
-    public static final Block GRAPE_VINES = add("grape_vines", new GrapeVinesBlock("normal"));
-    public static final Block GRAPE_VINES_TIP = add("grape_vines_tip", new GrapeVinesBlock("tip"));
-    public static final Block GRAPED_GRAPE_VINES = add("graped_grape_vines", new GrapeVinesBlock("graped"));
+    public static final Block DRAGON_GRAPE_LOG = add("dragon_grape_log", new BaseBlock(Blocks.OAK_PLANKS, BlockSoundGroup.WOOD));
+    public static final Block DRAGON_GRAPE_LEAVES = add("dragon_grape_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block DRAGON_GRAPE_VINES = add("dragon_grape_vines", new GrapeVinesBlock("normal"));
+    public static final Block DRAGON_GRAPE_VINES_TIP = add("dragon_grape_vines_tip", new GrapeVinesBlock("tip"));
+    public static final Block GRAPED_DRAGON_GRAPE_VINES = add("graped_dragon_grape_vines", new GrapeVinesBlock("graped"));
 
     public static final Block DRAGON_WILLOW_LOG = add("dragon_willow_log", new BaseBlock(Blocks.OAK_PLANKS, BlockSoundGroup.WOOD));
     public static final Block DRAGON_WILLOW_LEAVES = add("dragon_willow_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));

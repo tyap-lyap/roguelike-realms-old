@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "anyitem:block/dragoss_top",
+    "bottom": "minecraft:block/dirt",
+    "side": "anyitem:block/dragoss_side"
+  }
+}
