@@ -43,7 +43,7 @@ public class SupremeDragonEntity extends HostileEntity {
 
     protected void initEquipment() {
         Item mainHand = Items.STONE_SWORD;
-        Item offHand = Items.SHIELD;
+        //Item offHand = Items.SHIELD;
         Item head = AnyItemsArmor.DRAGON_HELMET;
         Item chest = AnyItemsArmor.DRAGON_CHESTPLATE;
         Item legs = AnyItemsArmor.DRAGON_LEGGINGS;
@@ -63,7 +63,7 @@ public class SupremeDragonEntity extends HostileEntity {
                 break;
         }
         this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(mainHand));
-        this.equipStack(EquipmentSlot.OFFHAND, new ItemStack(offHand));
+        //this.equipStack(EquipmentSlot.OFFHAND, new ItemStack(offHand));
         this.equipStack(EquipmentSlot.HEAD, new ItemStack(head));
         this.equipStack(EquipmentSlot.CHEST, new ItemStack(chest));
         this.equipStack(EquipmentSlot.LEGS, new ItemStack(legs));
