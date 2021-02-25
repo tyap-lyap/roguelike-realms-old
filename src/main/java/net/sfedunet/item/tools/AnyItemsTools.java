@@ -28,11 +28,11 @@ public class AnyItemsTools {
 
     public static final Item SCYTHE = add("scythe", new Scythe(AnyToolMaterials.SCYTHE_MATERIAL));
 
-    public static final Item DRAGON_SWORD = add("dragon_sword", new BaseSwordItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, 5, -2.0f));
-    public static final Item DRAGON_PICKAXE = add("dragon_pickaxe", new BasePickaxeItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, 1, -1.5f));
-    public static final Item DRAGON_AXE = add("dragon_axe", new BaseAxeItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, 3, -3.0f));
-    public static final Item DRAGON_SHOVEL = add("dragon_shovel", new BaseShovelItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, 3, -2.5f));
-    public static final Item DRAGON_HOE = add("dragon_hoe", new BaseHoeItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, -4, 0.0f));
+    public static final Item DRAGON_SWORD = add("dragon_sword", new DragonSwordItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, 5, -2.0f));
+    public static final Item DRAGON_PICKAXE = add("dragon_pickaxe", new DragonPickaxeItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, 1, -1.5f));
+    public static final Item DRAGON_AXE = add("dragon_axe", new DragonAxeItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, 3, -3.0f));
+    public static final Item DRAGON_SHOVEL = add("dragon_shovel", new DragonShovelItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, 3, -2.5f));
+    public static final Item DRAGON_HOE = add("dragon_hoe", new DragonHoeItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, -4, 0.0f));
 
     public static final Item RULER_WILL = add("ruler_will", new RulerWill(new Item.Settings().group(AnyItemGroups.TOOLS_AND_WEAPONS).maxCount(1).maxDamage(2000)));
 
