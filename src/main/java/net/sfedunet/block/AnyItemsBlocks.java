@@ -25,9 +25,11 @@ public class AnyItemsBlocks {
 
     // todo: redo
     public static final Block ECHSEROCK = add("echserock", new BaseBlock());
-    public static final Block ASHES_BLOCK = add("ashes_block", new BaseBlock(Blocks.SAND, BlockSoundGroup.SAND));
+    public static final Block ASHES_BLOCK = add("ashes_block", new FallingBlock(FabricBlockSettings.copyOf(Blocks.SAND)));
     public static final Block DRAGON_INGOT_BLOCK = add("dragon_ingot_block", new BaseBlock(Blocks.IRON_BLOCK, BlockSoundGroup.METAL));
-    public static final Block DRAGON_SCALES_BLOCK = add("dragon_scales_block", new BaseBlock(Blocks.STONE, BlockSoundGroup.NETHER_BRICKS));
+    public static final Block DRAGON_SCALES_BLOCK = add("dragon_scales_block", new DragonScalesBlock("normal"));
+    public static final Block GILDED_DRAGON_SCALES_BLOCK = add("gilded_dragon_scales_block", new DragonScalesBlock("gilded"));
+
 
     //public static final Block DRAGON_WOOD = add("dragon_wood", new BaseBlock(Blocks.OAK_PLANKS, BlockSoundGroup.WOOD));
     public static final Block DRAGON_STONE = add("dragon_stone", new BaseBlock());

@@ -6,6 +6,8 @@ import net.minecraft.block.Blocks;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
@@ -22,7 +24,7 @@ public class EmeraldPedestal extends Block {
     @Override
     public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
         world.getBlockTickScheduler().schedule(pos, this, 0);
-        if (checkFrame(world, pos)) createPortal(world, pos);
+        if (checkFrame(world, pos))createPortal(world, pos);
     }
 
     @Override
@@ -32,12 +34,14 @@ public class EmeraldPedestal extends Block {
     
 
     private boolean checkFrame(World world, BlockPos pos) {
-        Block Dragon_Scales = AnyItemsBlocks.DRAGON_SCALES_BLOCK;
-        Block Gold_Block = Blocks.GOLD_BLOCK;
-        return world.getBlockState(pos.add(0, -1, 0)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(0, -2, 0)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(0, -2, 1)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(0, -2, -1)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(1, -2, 0)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(-1, -2, 0)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(1, -2, 1)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(-1, -2, 1)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(1, -2, -1)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(-1, -2, -1)).getBlock() == Dragon_Scales && /*Основание 0 уровень*/
-                world.getBlockState(pos.add(2, -1, 0)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(2, -1, -1)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(2, -1, -2)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(1, -1, -2)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(0, -1, -2)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(-1, -1, -2)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(-2, -1, -2)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(-2, -1, -1)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(-2, -1, 0)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(-2, -1, 1)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(-2, -1, 2)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(-1, -1, 2)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(0, -1, 2)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(1, -1, 2)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(2, -1, 2)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(2, -1, 1)).getBlock() == Dragon_Scales && /*Осноание уровень 1*/
-                world.getBlockState(pos.add(-2, 0, -2)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(-2, 0, -1)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(-2, 0, 1)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(-2, 0, 2)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(-1, 0, 2)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(1, 0, 2)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(2, 0, 2)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(2, 0, 1)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(2, 0, -1)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(2, 0, -2)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(1, 0, -2)).getBlock() == Dragon_Scales && world.getBlockState(pos.add(-1, 0, -2)).getBlock() == Dragon_Scales && /* Основание 2 уровень*/
-                world.getBlockState(pos.add(-2, 1, -2)).getBlock() == Gold_Block && world.getBlockState(pos.add(-2, 1, 2)).getBlock() == Gold_Block && world.getBlockState(pos.add(2, 1, 2)).getBlock() == Gold_Block && world.getBlockState(pos.add(2, 1, -2)).getBlock() == Gold_Block;
+        Block dragonScales = AnyItemsBlocks.DRAGON_SCALES_BLOCK;
+        Block glidedDragonScales = AnyItemsBlocks.GILDED_DRAGON_SCALES_BLOCK;
+        Block goldBlock = Blocks.GOLD_BLOCK;
+
+        return world.getBlockState(pos.add(0, -1, 0)).getBlock() == dragonScales && world.getBlockState(pos.add(0, -2, 0)).getBlock() == dragonScales && world.getBlockState(pos.add(0, -2, 1)).getBlock() == dragonScales && world.getBlockState(pos.add(0, -2, -1)).getBlock() == dragonScales && world.getBlockState(pos.add(1, -2, 0)).getBlock() == dragonScales && world.getBlockState(pos.add(-1, -2, 0)).getBlock() == dragonScales && world.getBlockState(pos.add(1, -2, 1)).getBlock() == dragonScales && world.getBlockState(pos.add(-1, -2, 1)).getBlock() == dragonScales && world.getBlockState(pos.add(1, -2, -1)).getBlock() == dragonScales && world.getBlockState(pos.add(-1, -2, -1)).getBlock() == dragonScales && /*Основание 0 уровень*/
+                world.getBlockState(pos.add(2, -1, 0)).getBlock() == dragonScales && world.getBlockState(pos.add(2, -1, -1)).getBlock() == dragonScales && world.getBlockState(pos.add(2, -1, -2)).getBlock() == dragonScales && world.getBlockState(pos.add(1, -1, -2)).getBlock() == dragonScales && world.getBlockState(pos.add(0, -1, -2)).getBlock() == dragonScales && world.getBlockState(pos.add(-1, -1, -2)).getBlock() == dragonScales && world.getBlockState(pos.add(-2, -1, -2)).getBlock() == dragonScales && world.getBlockState(pos.add(-2, -1, -1)).getBlock() == dragonScales && world.getBlockState(pos.add(-2, -1, 0)).getBlock() == dragonScales && world.getBlockState(pos.add(-2, -1, 1)).getBlock() == dragonScales && world.getBlockState(pos.add(-2, -1, 2)).getBlock() == dragonScales && world.getBlockState(pos.add(-1, -1, 2)).getBlock() == dragonScales && world.getBlockState(pos.add(0, -1, 2)).getBlock() == dragonScales && world.getBlockState(pos.add(1, -1, 2)).getBlock() == dragonScales && world.getBlockState(pos.add(2, -1, 2)).getBlock() == dragonScales && world.getBlockState(pos.add(2, -1, 1)).getBlock() == dragonScales && /*Осноание уровень 1*/
+                world.getBlockState(pos.add(-2, 0, -2)).getBlock() == glidedDragonScales && world.getBlockState(pos.add(-2, 0, -1)).getBlock() == dragonScales && world.getBlockState(pos.add(-2, 0, 1)).getBlock() == dragonScales && world.getBlockState(pos.add(-2, 0, 2)).getBlock() == glidedDragonScales && world.getBlockState(pos.add(-1, 0, 2)).getBlock() == dragonScales && world.getBlockState(pos.add(1, 0, 2)).getBlock() == dragonScales && world.getBlockState(pos.add(2, 0, 2)).getBlock() == glidedDragonScales && world.getBlockState(pos.add(2, 0, 1)).getBlock() == dragonScales && world.getBlockState(pos.add(2, 0, -1)).getBlock() == dragonScales && world.getBlockState(pos.add(2, 0, -2)).getBlock() == glidedDragonScales && world.getBlockState(pos.add(1, 0, -2)).getBlock() == dragonScales && world.getBlockState(pos.add(-1, 0, -2)).getBlock() == dragonScales && /* Основание 2 уровень*/
+                world.getBlockState(pos.add(-2, 1, -2)).getBlock() == goldBlock && world.getBlockState(pos.add(-2, 1, 2)).getBlock() == goldBlock && world.getBlockState(pos.add(2, 1, 2)).getBlock() == goldBlock && world.getBlockState(pos.add(2, 1, -2)).getBlock() == goldBlock;
     }
 
     void createPortal(World world, BlockPos pos){
@@ -63,7 +67,8 @@ public class EmeraldPedestal extends Block {
 
     @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (!checkFrame(world, pos)) destroyPortal((World) world, pos);
+        if (!checkFrame(world, pos))destroyPortal(world, pos);
+
         world.getBlockTickScheduler().schedule(pos, this, 10);
     }
 }
