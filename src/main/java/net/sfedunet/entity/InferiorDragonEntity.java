@@ -44,10 +44,10 @@ public class InferiorDragonEntity extends HostileEntity {
     protected void initEquipment() {
         Item mainHand = Items.STONE_SWORD;
         //Item offHand = Items.SHIELD;
-        Item head = AnyItemsArmor.DRAGON_HELMET;
+        //Item head = AnyItemsArmor.DRAGON_HELMET;
         //Item chest = AnyItemsArmor.DRAGON_CHESTPLATE;
-        Item legs = AnyItemsArmor.DRAGON_LEGGINGS;
-        Item feet = AnyItemsArmor.DRAGON_BOOTS;
+        //Item legs = AnyItemsArmor.DRAGON_LEGGINGS;
+        //Item feet = AnyItemsArmor.DRAGON_BOOTS;
         switch (this.world.getDifficulty()) {
             case PEACEFUL:
                 mainHand = Items.POPPY;
@@ -64,24 +64,24 @@ public class InferiorDragonEntity extends HostileEntity {
         }
         this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(mainHand));
         //this.equipStack(EquipmentSlot.OFFHAND, new ItemStack(offHand));
-        this.equipStack(EquipmentSlot.HEAD, new ItemStack(head));
+        //this.equipStack(EquipmentSlot.HEAD, new ItemStack(head));
         //this.equipStack(EquipmentSlot.CHEST, new ItemStack(chest));
-        this.equipStack(EquipmentSlot.LEGS, new ItemStack(legs));
-        this.equipStack(EquipmentSlot.FEET, new ItemStack(feet));
+        //this.equipStack(EquipmentSlot.LEGS, new ItemStack(legs));
+        //this.equipStack(EquipmentSlot.FEET, new ItemStack(feet));
     }
     
     @Nullable
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable CompoundTag entityTag) {
         EntityData _entityData = super.initialize(world, difficulty, spawnReason, entityData, entityTag);
         this.initEquipment();
-        if (this.getEquippedStack(EquipmentSlot.HEAD).isEmpty()) {
+        if (this.getEquippedStack(EquipmentSlot.MAINHAND).isEmpty()) {
             LocalDate localDate = LocalDate.now();
             int i = localDate.get(ChronoField.DAY_OF_MONTH);
             int j = localDate.get(ChronoField.MONTH_OF_YEAR);
             if (j == 10 && i == 31 && this.random.nextFloat() < 0.25F) {
                 this.equipStack(EquipmentSlot.HEAD,
                         new ItemStack(this.random.nextFloat() < 0.1F ? Blocks.JACK_O_LANTERN : Blocks.CARVED_PUMPKIN));
-                this.armorDropChances[EquipmentSlot.HEAD.getEntitySlotId()] = 0.0F;
+                this.armorDropChances[EquipmentSlot.MAINHAND.getEntitySlotId()] = 0.0F;
             }
         }
         return _entityData;

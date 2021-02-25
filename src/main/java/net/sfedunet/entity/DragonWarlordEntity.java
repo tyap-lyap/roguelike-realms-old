@@ -3,6 +3,8 @@ package net.sfedunet.entity;
 import java.time.LocalDate;
 import java.time.temporal.ChronoField;
 
+import net.sfedunet.item.AnyItemsItems;
+import net.sfedunet.item.tools.AnyItemsTools;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.block.Blocks;
@@ -42,10 +44,10 @@ public class DragonWarlordEntity extends HostileEntity {
     }
 
     protected void initEquipment() {
-        Item mainHand = Items.STONE_SWORD;
+        Item mainHand = AnyItemsTools.DRAGON_SWORD;
         Item offHand = Items.SHIELD;
         Item head = AnyItemsArmor.DRAGON_HELMET;
-        //Item chest = AnyItemsArmor.DRAGON_CHESTPLATE;
+        Item chest = AnyItemsArmor.DRAGON_CHESTPLATE;
         Item legs = AnyItemsArmor.DRAGON_LEGGINGS;
         Item feet = AnyItemsArmor.DRAGON_BOOTS;
         switch (this.world.getDifficulty()) {
@@ -53,19 +55,19 @@ public class DragonWarlordEntity extends HostileEntity {
                 mainHand = Items.POPPY;
                 break;
             case EASY:
-                mainHand = Items.STICK;
+                mainHand = Items.NETHERITE_SWORD;
                 break;
             case NORMAL:
-                mainHand = Items.STONE_AXE;
+                mainHand = AnyItemsTools.CRYPTON_SWORD;
                 break;
             case HARD:
-                mainHand = Items.STONE_SWORD;
+                mainHand = AnyItemsTools.DRAGON_SWORD;
                 break;
         }
         this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(mainHand));
         this.equipStack(EquipmentSlot.OFFHAND, new ItemStack(offHand));
         this.equipStack(EquipmentSlot.HEAD, new ItemStack(head));
-        //this.equipStack(EquipmentSlot.CHEST, new ItemStack(chest));
+        this.equipStack(EquipmentSlot.CHEST, new ItemStack(chest));
         this.equipStack(EquipmentSlot.LEGS, new ItemStack(legs));
         this.equipStack(EquipmentSlot.FEET, new ItemStack(feet));
     }
@@ -82,6 +84,56 @@ public class DragonWarlordEntity extends HostileEntity {
                 this.equipStack(EquipmentSlot.HEAD,
                         new ItemStack(this.random.nextFloat() < 0.1F ? Blocks.JACK_O_LANTERN : Blocks.CARVED_PUMPKIN));
                 this.armorDropChances[EquipmentSlot.HEAD.getEntitySlotId()] = 0.0F;
+            }
+        }
+        if (this.getEquippedStack(EquipmentSlot.MAINHAND).isEmpty()) {
+            LocalDate localDate = LocalDate.now();
+            int i = localDate.get(ChronoField.DAY_OF_MONTH);
+            int j = localDate.get(ChronoField.MONTH_OF_YEAR);
+            if (j == 10 && i == 31 && this.random.nextFloat() < 0.25F) {
+                this.equipStack(EquipmentSlot.MAINHAND,
+                        new ItemStack(this.random.nextFloat() < 0.1F ? Blocks.JACK_O_LANTERN : Blocks.CARVED_PUMPKIN));
+                this.armorDropChances[EquipmentSlot.MAINHAND.getEntitySlotId()] = 0.0F;
+            }
+        }
+        if (this.getEquippedStack(EquipmentSlot.OFFHAND).isEmpty()) {
+            LocalDate localDate = LocalDate.now();
+            int i = localDate.get(ChronoField.DAY_OF_MONTH);
+            int j = localDate.get(ChronoField.MONTH_OF_YEAR);
+            if (j == 10 && i == 31 && this.random.nextFloat() < 0.25F) {
+                this.equipStack(EquipmentSlot.OFFHAND,
+                        new ItemStack(this.random.nextFloat() < 0.1F ? Blocks.JACK_O_LANTERN : Blocks.CARVED_PUMPKIN));
+                this.armorDropChances[EquipmentSlot.OFFHAND.getEntitySlotId()] = 0.0F;
+            }
+        }
+        if (this.getEquippedStack(EquipmentSlot.CHEST).isEmpty()) {
+            LocalDate localDate = LocalDate.now();
+            int i = localDate.get(ChronoField.DAY_OF_MONTH);
+            int j = localDate.get(ChronoField.MONTH_OF_YEAR);
+            if (j == 10 && i == 31 && this.random.nextFloat() < 0.25F) {
+                this.equipStack(EquipmentSlot.CHEST,
+                        new ItemStack(this.random.nextFloat() < 0.1F ? Blocks.JACK_O_LANTERN : Blocks.CARVED_PUMPKIN));
+                this.armorDropChances[EquipmentSlot.CHEST.getEntitySlotId()] = 0.0F;
+            }
+        }
+        if (this.getEquippedStack(EquipmentSlot.LEGS).isEmpty()) {
+            LocalDate localDate = LocalDate.now();
+            int i = localDate.get(ChronoField.DAY_OF_MONTH);
+            int j = localDate.get(ChronoField.MONTH_OF_YEAR);
+            if (j == 10 && i == 31 && this.random.nextFloat() < 0.25F) {
+                this.equipStack(EquipmentSlot.LEGS,
+                        new ItemStack(this.random.nextFloat() < 0.1F ? Blocks.JACK_O_LANTERN : Blocks.CARVED_PUMPKIN));
+                this.armorDropChances[EquipmentSlot.LEGS.getEntitySlotId()] = 0.0F;
+            }
+        }
+        if (this.getEquippedStack(EquipmentSlot.FEET).isEmpty()) {
+            LocalDate localDate = LocalDate.now();
+            int i = localDate.get(ChronoField.DAY_OF_MONTH);
+            int j = localDate.get(ChronoField.MONTH_OF_YEAR);
+            if (j == 10 && i == 31 && this.random.nextFloat() < 0.25F) {
+                this.equipStack(EquipmentSlot.FEET,
+                        new ItemStack(this.random.nextFloat() < 0.1F ? Blocks.JACK_O_LANTERN : Blocks.CARVED_PUMPKIN));
+                this.armorDropChances[EquipmentSlot.FEET.getEntitySlotId()] = 0.0F;
             }
         }
         return _entityData;

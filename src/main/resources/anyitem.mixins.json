@@ -6,7 +6,6 @@
   "mixins": [
     "LivingEntityMixin",
     "MobEntityMixin",
-    "ModelPredicateProviderRegistryMixin",
     "PlayerEntityRendererMixin",
     "HeldItemRendererMixin",
     "ZoglinEntityMixin",

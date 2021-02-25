@@ -2,15 +2,22 @@ package net.sfedunet;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.FabricLoader;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 import net.sfedunet.block.AnyItemsBlocks;
 import net.sfedunet.entity.AnyItemsEntities;
 import net.sfedunet.integration.botania.BotaniaIntegration;
 import net.sfedunet.item.AnyItemsItems;
+import net.sfedunet.item.tools.AnyItemsTools;
 import net.sfedunet.world.features.AnyItemsConfiguredFeatures;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class AnyItemsMod implements ModInitializer {
+
+	public static final Identifier ID_SPITTING = new Identifier("anyitem:spitting_pew");
+	public static SoundEvent SPITTING_PEW = new SoundEvent(ID_SPITTING);
 
 	public static final String MODID = "anyitem";
 
@@ -19,6 +26,8 @@ public class AnyItemsMod implements ModInitializer {
 	@Override
 	public void onInitialize()
 	{
+		Registry.register(Registry.SOUND_EVENT, AnyItemsMod.ID_SPITTING, SPITTING_PEW);
+
 		AnyItemsConfiguredFeatures.register();
 		AnyItemsBlocks.register();
 		AnyItemsItems.register();
