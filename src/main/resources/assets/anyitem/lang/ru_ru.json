@@ -12,7 +12,8 @@
   "item.anyitem.bow_dragon_spawn_egg": "Яйцо призыва лучника дракона",
   "item.anyitem.swordman_dragon_spawn_egg": "Яйцо призыва мечника дракона",
   "item.anyitem.spitting_dragon_spawn_egg": "Яйцо призыва плевуна дракона",
-  "block.anyitem.dragon_scales_block": "Блок скрепленной драконей чешуи",
+  "block.anyitem.dragon_scales_block": "Блок драконей чешуи",
+  "block.anyitem.gilded_dragon_scales_block": "Блок позолоченной драконьей чешуи",
   "block.anyitem.dragon_wood": "Драконье дерево",
   "block.anyitem.dragon_stone": "Драконий камень",
   "block.anyitem.dragon_cobblestone": "Драконий булыжник",
@@ -35,6 +36,7 @@
   "item.anyitem.ruler_soul_ingot": "Слиток с душой правителя", 
   "item.anyitem.ashes": "Пепел",
   "item.anyitem.scythe": "§kКоса",
+  "item.anyitem.ruler_will": "Воля правителя",
   "item.anyitem.crypton_sword": "§2Криптоновый меч",
   "item.anyitem.crypton_spraying_sword": "§aМеч с криптоновым напылением",
   "item.anyitem.crypton_pickaxe": "§2Криптоновая кирка",
@@ -80,6 +82,9 @@
   "item.anyitem.dragon_boots": "Драконьи ботинки",
   "item.anyitem.echserock_sword": "Эксероковый меч",
   "item.anyitem.echserock_pickaxe": "Эксероковая кирка",
+  "item.anyitem.echserock_axe": "Эксероковый топор",
+  "item.anyitem.echserock_shovel": "Эксероковая лопата",
+  "item.anyitem.echserock_hoe": "Эксероковая мотыга",
   "item.anyitem.echserock_helmet": "Эксероковый шлем",
   "item.anyitem.echserock_chestplate": "Эксероковый нагрудник",
   "item.anyitem.echserock_leggings": "Эксероковые штаны",
@@ -99,6 +104,9 @@
   "advancements.anyitem.eat_echpochmak.title": "Эчпочмак?",
   "advancements.anyitem.eat_echpochmak.description": "Попробуйте эчпочмак",
   "advancements.anyitem.eat_cooked_shaurma.title": "Еда богов",
-  "advancements.anyitem.eat_cooked_shaurma.description": "Попробуйте приготовленную шаурму"
-
+  "advancements.anyitem.eat_cooked_shaurma.description": "Попробуйте приготовленную шаурму",
+  
+  "tooltip.anyitem.flammable": "§6Поджигает",
+  "tooltip.anyitem.full_set_effect": "§7Эффект полного сета: ",
+  "tooltip.anyitem.fire_resistance": "§6Сопротивление огню"
 }
