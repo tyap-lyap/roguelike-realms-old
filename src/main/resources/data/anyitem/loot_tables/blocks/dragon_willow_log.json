@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "anyitem:dragon_planks"
+          "name": "anyitem:dragon_willow_log"
         }
       ],
       "conditions": [

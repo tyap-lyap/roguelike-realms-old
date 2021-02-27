@@ -99,6 +99,10 @@
   "advancements.anyitem.eat_echpochmak.title": "Эчпочмак?",
   "advancements.anyitem.eat_echpochmak.description": "Попробуйте эчпочмак",
   "advancements.anyitem.eat_cooked_shaurma.title": "Еда богов",
-  "advancements.anyitem.eat_cooked_shaurma.description": "Попробуйте приготовленную шаурму"
+  "advancements.anyitem.eat_cooked_shaurma.description": "Попробуйте приготовленную шаурму",
+
+  "tooltip.anyitem.flammable": "§6Воспламенение",
+  "tooltip.anyitem.full_set_effect": "§7Эффект полного набора: ",
+  "tooltip.anyitem.fire_resistance": "§6Огнестойкость"
 
 }

@@ -8,7 +8,7 @@
       "item": "anyitem:dragon_fire"
     },
     "$": {
-      "item": "anyitem:dragon_wood"
+      "tag": "minecraft:logs"
     }
   },
   "result": {

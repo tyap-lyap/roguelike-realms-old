@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "anyitem:dragon_wood"
+          "name": "anyitem:dragon_grape_planks"
         }
       ],
       "conditions": [

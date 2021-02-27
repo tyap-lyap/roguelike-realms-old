@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "anyitem:dragon_leaves2"
+          "name": "anyitem:dragon_grape_log"
         }
       ],
       "conditions": [

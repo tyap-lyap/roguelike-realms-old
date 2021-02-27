@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "anyitem:dragon_willow_log"
+    }
+  ],
+  "result": {
+    "item": "anyitem:dragon_willow_planks",
+    "count": 4
+  }
+}

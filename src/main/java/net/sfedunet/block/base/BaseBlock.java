@@ -15,6 +15,10 @@ public class BaseBlock extends Block {
         super(FabricBlockSettings.copy(copyOf).sounds(blockSoundGroup));
     }
 
+    public BaseBlock(Block copyOf) {
+        super(FabricBlockSettings.copy(copyOf));
+    }
+
     public BaseBlock(FabricBlockSettings settings) {
         super(settings);
     }

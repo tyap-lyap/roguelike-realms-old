@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "axis=x": {
+      "model": "anyitem:block/dragon_willow_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
       "model": "anyitem:block/dragon_willow_log"
+    },
+    "axis=z": {
+      "model": "anyitem:block/dragon_willow_log_horizontal",
+      "x": 90
     }
   }
 }

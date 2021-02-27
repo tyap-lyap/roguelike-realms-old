@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "anyitem:dragon_grape_log"
+    }
+  ],
+  "result": {
+    "item": "anyitem:dragon_grape_planks",
+    "count": 4
+  }
+}

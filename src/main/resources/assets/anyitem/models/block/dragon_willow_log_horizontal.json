@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/cube_column",
+  "parent": "minecraft:block/cube_column_horizontal",
   "textures": {
     "end": "anyitem:block/dragon_willow_log_top",
     "side": "anyitem:block/dragon_willow_log"
