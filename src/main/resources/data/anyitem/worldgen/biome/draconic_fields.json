@@ -32,7 +32,8 @@
 	  "minecraft:patch_sunflower",
 	  "minecraft:patch_grass_plain",
 	  "anyitem:draconic_fields_trees",
-	  "minecraft:lake_water"
+	  "minecraft:lake_water",
+      "anyitem:echserock"
 	]
   ],
   "starts": [],

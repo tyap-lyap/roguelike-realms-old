@@ -31,7 +31,8 @@
     [
       "anyitem:draconic_forest_trees",
 	  "minecraft:patch_grass_plain",
-	  "minecraft:lake_water"
+	  "minecraft:lake_water",
+      "anyitem:echserock"
     ]
   ],
   "starts": [],
