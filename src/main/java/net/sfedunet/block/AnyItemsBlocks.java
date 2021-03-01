@@ -24,7 +24,7 @@ public class AnyItemsBlocks {
     public static final Block CRYPTON_ORE = add("crypton_ore", new BaseBlock());
 
     // todo: redo
-    public static final Block ECHSEROCK = add("echserock", new BaseBlock());
+    public static final Block ECHSEROCK = add("echserock", new BaseBlock(FabricBlockSettings.copyOf(Blocks.STONE).luminance(7)));
     public static final Block ASHES_BLOCK = add("ashes_block", new FallingBlock(FabricBlockSettings.copyOf(Blocks.SAND)));
     public static final Block DRAGON_INGOT_BLOCK = add("dragon_ingot_block", new BaseBlock(Blocks.IRON_BLOCK, BlockSoundGroup.METAL));
     public static final Block DRAGON_SCALES_BLOCK = add("dragon_scales_block", new DragonScalesBlock("normal"));
