@@ -26,7 +26,7 @@ public class AnyItemsConfiguredFeatures {
     public static ConfiguredFeature<TreeFeatureConfig, ?> DRAGONWOOD, DRAGONWOODTWO;
     public static ConfiguredFeature<?, ?> DRACONIC_FOREST_TREES, DRACONIC_FIELDS_TREES;
     public static ConfiguredFeature<?, ?> CRYPTON_ORE_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, AnyItemsBlocks.CRYPTON_ORE.getDefaultState(), 5)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0,20,40))).spreadHorizontally().repeat(10);
-    public static ConfiguredFeature<?, ?> ECHSEROCK_ORE_DRAGONIC = Feature.ORE.configure(new OreFeatureConfig(Rules.DRAGONSTONE, AnyItemsBlocks.ECHSEROCK.getDefaultState(),5)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0,0,255))).spreadHorizontally().repeat(30);
+    public static ConfiguredFeature<?, ?> ECHSEROCK_ORE_DRAGONIC = Feature.ORE.configure(new OreFeatureConfig(Rules.DRAGONSTONE, AnyItemsBlocks.ECHSEROCK.getDefaultState(),6)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0,0,255))).spreadHorizontally().repeat(15);
     public static void register() {
         DRAGONWOOD = register("anyitem:dragonwood", Feature.TREE.configure(Configs.DRAGONWOOD_CONFIG));
         DRAGONWOODTWO = register("anyitem:dragonwoodtwo", Feature.TREE.configure(Configs.DRAGONWOODTWO_CONFIG));
