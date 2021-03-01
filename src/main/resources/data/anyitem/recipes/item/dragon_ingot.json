@@ -1,17 +1,22 @@
 {
-    "type": "minecraft:crafting_shapeless",
-    "ingredients": [
-      {
-        "item": "anyitem:echserock_chunk"
-      },
-      {
-        "item": "anyitem:dragon_fire"
-      },
-      {
-        "item": "anyitem:dragon_stone"
-      }
-    ],
-    "result": {
-      "item": "anyitem:dragon_ingot"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    " I ",
+    " ! "
+  ],
+  "key": {
+    "#": {
+      "item": "anyitem:dragon_fire"
+    },
+    "I": {
+      "item": "anyitem:echserock_chunk"
+    },
+    "!": {
+      "item": "anyitem:dragon_stone"
     }
+  },
+  "result": {
+    "item": "anyitem:dragon_ingot"
   }
+}

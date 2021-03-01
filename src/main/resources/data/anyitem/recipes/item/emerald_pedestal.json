@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#I#",
+    "III",
+    "III"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:emerald"
+    },
+    "I": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "item": "anyitem:emerald_pedestal"
+  }
+}
