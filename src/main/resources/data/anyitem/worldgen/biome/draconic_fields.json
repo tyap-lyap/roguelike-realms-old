@@ -1,7 +1,7 @@
 {
   "effects": {
-    "sky_color": 16032353,
-    "fog_color": 15320170,
+    "sky_color": 15112493,
+    "fog_color": 15779434,
 	"water_color": 9485933,
     "water_fog_color": 9485933,
 	"foliage_color": 16291358,
@@ -13,14 +13,14 @@
         "Properties": {
           "snowy": "false"
         },
-        "Name": "minecraft:grass_block"
+        "Name": "anyitem:dragoss"
       },
       "under_material": {
-        "Name": "minecraft:dirt",
+        "Name": "anyitem:dragon_dirt",
         "Properties": {}
       },
       "underwater_material": {
-        "Name": "minecraft:brown_wool",
+        "Name": "anyitem:dragon_dirt",
         "Properties": {}
       }
     },

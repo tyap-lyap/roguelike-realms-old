@@ -1,9 +1,11 @@
 package net.sfedunet.block;
 
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
@@ -17,14 +19,17 @@ import java.util.Random;
 
 public class EmeraldPedestal extends Block {
 
-    public EmeraldPedestal(Settings settings) {
-        super(settings);
+    public EmeraldPedestal() {
+        super(FabricBlockSettings.copy(Blocks.OBSIDIAN).sounds(BlockSoundGroup.METAL));
     }
 
     @Override
     public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
         world.getBlockTickScheduler().schedule(pos, this, 0);
-        if (checkFrame(world, pos))createPortal(world, pos);
+        if (checkFrame(world, pos)){
+            createPortal(world, pos);
+            world.playSound(null, pos, SoundEvents.BLOCK_CONDUIT_ACTIVATE, SoundCategory.BLOCKS, 1, 1);
+        }
     }
 
     @Override

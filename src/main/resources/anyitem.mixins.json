@@ -14,7 +14,9 @@
     "MoveControlMixin",
     "LookControlMixin",
     "TargetPredicateMixin",
-    "TrackTargetGoalMixin"
+    "TrackTargetGoalMixin",
+    "PlantBlockMixin",
+    "FeatureMixin"
   ],
   "client": [
   ],

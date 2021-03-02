@@ -24,17 +24,18 @@ public class AnyItemsBlocks {
     public static final Block CRYPTON_ORE = add("crypton_ore", new BaseBlock());
 
     // todo: redo
-    public static final Block ECHSEROCK = add("echserock", new BaseBlock(FabricBlockSettings.copyOf(Blocks.STONE).luminance(7)));
+    public static final Block ECHSEROCK = add("echserock", new BaseBlock(FabricBlockSettings.copyOf(Blocks.STONE).luminance(14)));
     public static final Block ASHES_BLOCK = add("ashes_block", new FallingBlock(FabricBlockSettings.copyOf(Blocks.SAND)));
-    public static final Block DRAGON_INGOT_BLOCK = add("dragon_ingot_block", new BaseBlock(Blocks.IRON_BLOCK, BlockSoundGroup.METAL));
+    public static final Block DRAGON_INGOT_BLOCK = add("dragon_ingot_block", new BaseBlock(Blocks.IRON_BLOCK));
     public static final Block DRAGON_SCALES_BLOCK = add("dragon_scales_block", new DragonScalesBlock("normal"));
     public static final Block GILDED_DRAGON_SCALES_BLOCK = add("gilded_dragon_scales_block", new DragonScalesBlock("gilded"));
 
     public static final Block DRAGON_STONE = add("dragon_stone", new BaseBlock());
-    public static final Block DRAGOSS = add("dragoss", new Block(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK))); //драконий дерн оригинально да?
+    public static final Block DRAGON_DIRT = add("dragon_dirt", new BaseBlock(Blocks.DIRT));
+    public static final Block DRAGOSS = add("dragoss", new BaseBlock(Blocks.GRASS_BLOCK)); //драконий дерн оригинально да?
     public static final Block DRAGON_COBBLESTONE = add("dragon_cobblestone", new BaseBlock());
     public static final Block DRACONIC_SHADOW_PORTAL = add("draconic_shadow_portal", new DraconicShadowPortalBlock());
-    public static final EmeraldPedestal EMERALD_PEDESTAL = add("emerald_pedestal", new EmeraldPedestal(FabricBlockSettings.copy(Blocks.EMERALD_BLOCK).sounds(BlockSoundGroup.METAL)));
+    public static final EmeraldPedestal EMERALD_PEDESTAL = add("emerald_pedestal", new EmeraldPedestal());
 
     public static final Block DRAGON_GRAPE_LOG = add("dragon_grape_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
     public static final Block DRAGON_GRAPE_PLANKS = add("dragon_grape_planks", new BaseBlock(Blocks.OAK_PLANKS));

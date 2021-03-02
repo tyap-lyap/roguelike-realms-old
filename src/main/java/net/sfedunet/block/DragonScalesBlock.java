@@ -13,7 +13,7 @@ public class DragonScalesBlock extends Block {
     private final String type;
 
     public DragonScalesBlock(String type) {
-        super(FabricBlockSettings.copyOf(Blocks.STONE).sounds(BlockSoundGroup.NETHER_BRICKS));
+        super(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).sounds(BlockSoundGroup.NETHER_BRICKS));
         this.type = type;
     }
 
