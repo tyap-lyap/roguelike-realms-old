@@ -70,7 +70,6 @@ public class DraconicShadowPortalBlock extends Block {
         origin.getProfiler().push("placing");
         player.setWorld(destination);
         destination.onPlayerChangeDimension(player);
-        player.refreshPositionAfterTeleport(0.5f, 65, 0.5f);
         createPlatform(destination);
         origin.getProfiler().pop();
         worldChanged(origin, player);
@@ -78,6 +77,8 @@ public class DraconicShadowPortalBlock extends Block {
         player.networkHandler.sendPacket(new PlayerAbilitiesS2CPacket(player.abilities));
         playerManager.sendWorldInfo(player, destination);
         playerManager.sendPlayerStatus(player);
+        player.teleport(0.5f, 65, 0.5f);
+        player.refreshPositionAfterTeleport(0.5f, 65, 0.5f);
 
         for (StatusEffectInstance statusEffectInstance : player.getStatusEffects()) {
             player.networkHandler.sendPacket(new EntityStatusEffectS2CPacket(player.getEntityId(), statusEffectInstance));

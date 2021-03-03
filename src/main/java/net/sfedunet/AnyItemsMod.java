@@ -11,6 +11,7 @@ import net.sfedunet.integration.botania.BotaniaIntegration;
 import net.sfedunet.item.AnyItemsItems;
 import net.sfedunet.item.tools.AnyItemsTools;
 import net.sfedunet.world.features.AnyItemsConfiguredFeatures;
+import net.sfedunet.world.features.trees.AnyTrees;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -32,6 +33,7 @@ public class AnyItemsMod implements ModInitializer {
 		AnyItemsBlocks.register();
 		AnyItemsItems.register();
 		AnyItemsEntities.register();
+		AnyTrees.registerTrees();
 
 		if(FabricLoader.INSTANCE.isModLoaded("botania")){
 			BotaniaIntegration.register();
