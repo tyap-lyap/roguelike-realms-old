@@ -34,19 +34,19 @@ public class DraconicShadowPortalBlock extends Block {
             if(entity instanceof PlayerEntity){
                 FabricDimensions.teleport(entity, draconicShadow, new TeleportTarget(new Vec3d(0.5f, 65, 0.5f), new Vec3d(0, 0, 0), entity.yaw, entity.pitch));
                 assert draconicShadow != null;
-                createPlatform(draconicShadow);
+                createPlatform(draconicShadow, 63, 1);
 
             }
         }
     }
 
-    void createPlatform(World world){
-        BlockPos blockPos = new BlockPos(0, 63, 0);
+    public static void createPlatform(World world, int height, int radius){
+        BlockPos blockPos = new BlockPos(0, height, 0);
         BlockState blockState = Blocks.BEDROCK.getDefaultState();
 
-        for (int x = -1; x <= 1; x++)
-            for (int z = -1; z <= 1; z++)
-                world.setBlockState(blockPos.add(x, -1, z), blockState);
+        for (int x = -radius; x <= radius; x++)
+            for (int z = -radius; z <= radius; z++)
+                world.setBlockState(blockPos.add(x, 0, z), blockState);
 
     }
 

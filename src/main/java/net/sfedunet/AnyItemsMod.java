@@ -9,7 +9,6 @@ import net.sfedunet.block.AnyItemsBlocks;
 import net.sfedunet.entity.AnyItemsEntities;
 import net.sfedunet.integration.botania.BotaniaIntegration;
 import net.sfedunet.item.AnyItemsItems;
-import net.sfedunet.item.tools.AnyItemsTools;
 import net.sfedunet.world.features.AnyItemsConfiguredFeatures;
 import net.sfedunet.world.features.trees.AnyTrees;
 import org.apache.logging.log4j.LogManager;

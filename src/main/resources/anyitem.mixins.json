@@ -16,7 +16,8 @@
     "TargetPredicateMixin",
     "TrackTargetGoalMixin",
     "PlantBlockMixin",
-    "FeatureMixin"
+    "FeatureMixin",
+    "LivingEntityInvoker"
   ],
   "client": [
   ],

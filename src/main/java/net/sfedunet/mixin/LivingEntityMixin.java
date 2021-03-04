@@ -2,6 +2,7 @@ package net.sfedunet.mixin;
 
 import net.minecraft.entity.*;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
@@ -11,8 +12,11 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.sfedunet.entity.projectiles.ParalysisArrowEntity;
+import net.sfedunet.item.ReincarnationStone;
 import net.sfedunet.item.armor.AnyItemsArmor;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Mutable;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.At;
@@ -24,16 +28,16 @@ import java.util.UUID;
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity {
 
-    @Shadow static final EntityAttributeModifier SPRINTING_SPEED_BOOST;
-    @Shadow protected static final TrackedData<Byte> LIVING_FLAGS;
-    @Shadow private static final TrackedData<Float> HEALTH;
-    @Shadow private static final TrackedData<Integer> POTION_SWIRLS_COLOR;
-    @Shadow private static final TrackedData<Boolean> POTION_SWIRLS_AMBIENT;
-    @Shadow private static final TrackedData<Integer> STUCK_ARROW_COUNT;
-    @Shadow private static final TrackedData<Integer> STINGER_COUNT;
-    @Shadow private static final TrackedData<Optional<BlockPos>> SLEEPING_POSITION;
-    @Shadow protected static final EntityDimensions SLEEPING_DIMENSIONS;
-    @Shadow private static final UUID SPRINTING_SPEED_BOOST_ID = UUID.fromString("662A6B8D-DA3E-4C1C-8813-96EA6097278D");
+    @Mutable @Final @Shadow private static final EntityAttributeModifier SPRINTING_SPEED_BOOST;
+    @Mutable @Final @Shadow protected static final TrackedData<Byte> LIVING_FLAGS;
+    @Mutable @Final @Shadow private static final TrackedData<Float> HEALTH;
+    @Mutable @Final @Shadow private static final TrackedData<Integer> POTION_SWIRLS_COLOR;
+    @Mutable @Final @Shadow private static final TrackedData<Boolean> POTION_SWIRLS_AMBIENT;
+    @Mutable @Final @Shadow private static final TrackedData<Integer> STUCK_ARROW_COUNT;
+    @Mutable @Final @Shadow private static final TrackedData<Integer> STINGER_COUNT;
+    @Mutable @Final @Shadow private static final TrackedData<Optional<BlockPos>> SLEEPING_POSITION;
+    @Mutable @Final @Shadow protected static final EntityDimensions SLEEPING_DIMENSIONS;
+    @Mutable @Final @Shadow private static final UUID SPRINTING_SPEED_BOOST_ID = UUID.fromString("662A6B8D-DA3E-4C1C-8813-96EA6097278D");
 
     LivingEntity livingEntity = ((LivingEntity) (Object) this);
 
@@ -41,7 +45,7 @@ public abstract class LivingEntityMixin extends Entity {
         super(type, world);
     }
 
-    @Inject(at = @At("HEAD"), method = "canTarget",cancellable = true)
+    @Inject(at = @At("HEAD"), method = "canTarget(Lnet/minecraft/entity/LivingEntity;)Z",cancellable = true)
 
     public void canTarget(CallbackInfoReturnable<Boolean> ret) {
 
@@ -77,7 +81,7 @@ public abstract class LivingEntityMixin extends Entity {
         }
 
     public int getParalysis() {
-        return (Integer) this.dataTracker.get(ParalysisArrowEntity.PARALYSIS);
+        return this.dataTracker.get(ParalysisArrowEntity.PARALYSIS);
     }
 
     public void setParalysis(int paralysis) {
@@ -100,6 +104,15 @@ public abstract class LivingEntityMixin extends Entity {
         if (tag.contains("Paralysis", 99)) {
             this.setParalysis(tag.getInt("Paralysis"));
         }
+    }
+
+    @Inject(at = @At("HEAD"), method = "tryUseTotem", cancellable = true)
+    private void tryUseTotem(DamageSource source, CallbackInfoReturnable<Boolean> cir){
+
+        if(ReincarnationStone.onDeath(livingEntity, world, source)){
+            cir.setReturnValue(true);
+        }
+
     }
 
     static {

@@ -3,12 +3,14 @@ package net.sfedunet.mixin;
 import net.minecraft.entity.ai.control.JumpControl;
 import net.minecraft.entity.mob.MobEntity;
 import net.sfedunet.entity.projectiles.ParalysisArrowEntity;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Mutable;
 import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(JumpControl.class)
 public class JumpControlMixin {
-    @Shadow private final MobEntity entity;
+    @Mutable @Final @Shadow private final MobEntity entity;
     @Shadow protected boolean active;
 
     public JumpControlMixin(MobEntity entity) {
