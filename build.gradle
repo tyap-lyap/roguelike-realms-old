@@ -12,9 +12,10 @@ group = project.maven_group
 
 
 repositories {
-	maven { url "https://dl.bintray.com/kyrptonaught/customportalapi" }
+
 	maven { url "https://maven.terraformersmc.com" }
 	maven { url "https://maven.shedaniel.me" }
+	maven { url "https://hephaestus.dev/release" }
 	
 }
 
@@ -26,8 +27,8 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation "net.kyrptonaught:customportalapi:0.0.1-beta20-1.16"
-    include "net.kyrptonaught:customportalapi:0.0.1-beta20-1.16"
+	modImplementation "dev.hephaestus:seedy-behavior:${project.seedy_version}"
+	include "dev.hephaestus:seedy-behavior:${project.seedy_version}"
 
 	modRuntime "me.shedaniel:RoughlyEnoughItems:5.9.170"
 	modRuntime "com.terraformersmc:modmenu:1.16.6"

@@ -2,7 +2,6 @@
   "type": "anyitem:draconic_shadow",
   "generator": {
     "biome_source": {
-	  "seed": 0,
 	  "type": "minecraft:multi_noise",
 	  "biomes": [
         {
@@ -55,7 +54,6 @@
         ]
       }
     },
-	"seed": 0,
 	"type": "minecraft:noise",
     "settings": "anyitem:draconic_shadow_noise"
   }
