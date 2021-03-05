@@ -11,8 +11,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(Feature.class)
 public class FeatureMixin {
 
-    @Inject(method = "isSoil(Lnet/minecraft/block/Block;)Z", at = @At("HEAD")   , cancellable = true)
+    @Inject(method = "isSoil(Lnet/minecraft/block/Block;)Z", at = @At("HEAD")  , cancellable = true)
     private static void isSoil(Block block, CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(block == AnyItemsBlocks.DRAGOSS || block == AnyItemsBlocks.DRAGON_DIRT);
+        if(block == AnyItemsBlocks.DRAGOSS || block == AnyItemsBlocks.DRAGON_DIRT){
+            cir.setReturnValue(true);
+        }
     }
 }

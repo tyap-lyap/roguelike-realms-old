@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
+@Deprecated //спизжено(зачеркнуто) позаимствовано у аезера так что todo: давай по новой миша
 public class DragonGrapeTrunkPlacer extends TrunkPlacer {
 
     public static final Codec<DragonGrapeTrunkPlacer> CODEC = RecordCodecBuilder.create(instance ->

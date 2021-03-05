@@ -15,6 +15,8 @@ public class PlantBlockMixin {
 
     @Inject(method = "canPlantOnTop", at = @At("TAIL"), cancellable = true)
     protected void canPlantOnTop(BlockState floor, BlockView world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(floor.isOf(AnyItemsBlocks.DRAGOSS) || floor.isOf(AnyItemsBlocks.DRAGON_DIRT));
+        if(floor.isOf(AnyItemsBlocks.DRAGOSS) || floor.isOf(AnyItemsBlocks.DRAGON_DIRT)){
+            cir.setReturnValue(true);
+        }
     }
 }

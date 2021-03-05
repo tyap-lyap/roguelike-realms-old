@@ -19,6 +19,7 @@ import net.sfedunet.world.features.trees.AnyTrees;
 import java.util.Random;
 import java.util.Set;
 
+@Deprecated //спизжено(зачеркнуто) позаимствовано у аезера так что todo: давай по новой миша
 public class DragonWillowFoliagePlacer extends FoliagePlacer {
 
     public static final Codec<DragonWillowFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
