@@ -30,7 +30,8 @@
   "features": [
     [
       "anyitem:draconic_forest_trees",
-	  "minecraft:patch_grass_plain",
+	  "anyitem:dragon_grass_patch",
+      "anyitem:dragon_daisy_patch",
 	  "minecraft:lake_water",
       "anyitem:echserock"
     ]

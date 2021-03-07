@@ -29,8 +29,8 @@
   "carvers": {},
   "features": [
 	[
-	  "minecraft:patch_sunflower",
-	  "minecraft:patch_grass_plain",
+      "anyitem:dragon_grass_patch",
+      "anyitem:dragon_daisy_patch",
 	  "anyitem:draconic_fields_trees",
 	  "minecraft:lake_water",
       "anyitem:echserock"

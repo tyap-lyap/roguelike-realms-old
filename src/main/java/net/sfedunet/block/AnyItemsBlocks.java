@@ -2,6 +2,7 @@ package net.sfedunet.block;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -10,6 +11,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.sfedunet.AnyItemsMod;
 import net.sfedunet.block.base.BaseBlock;
+import net.sfedunet.block.base.BasePlantBlock;
 import net.sfedunet.item.AnyItemGroups;
 
 import java.util.LinkedHashMap;
@@ -33,6 +35,8 @@ public class AnyItemsBlocks {
     public static final Block DRAGON_STONE = add("dragon_stone", new BaseBlock());
     public static final Block DRAGON_DIRT = add("dragon_dirt", new BaseBlock(Blocks.DIRT));
     public static final Block DRAGOSS = add("dragoss", new BaseBlock(Blocks.GRASS_BLOCK)); //драконий дерн оригинально да?
+    public static final Block DRAGON_GRASS = add("dragon_grass", new BasePlantBlock(FabricBlockSettings.copyOf(Blocks.GRASS)));
+    public static final Block DRAGON_DAISY = add("dragon_daisy", new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 240, FabricBlockSettings.copyOf(Blocks.OXEYE_DAISY).luminance(7)));
     public static final Block DRAGON_COBBLESTONE = add("dragon_cobblestone", new BaseBlock());
     public static final Block DRACONIC_SHADOW_PORTAL = add("draconic_shadow_portal", new DraconicShadowPortalBlock());
     public static final EmeraldPedestal EMERALD_PEDESTAL = add("emerald_pedestal", new EmeraldPedestal());

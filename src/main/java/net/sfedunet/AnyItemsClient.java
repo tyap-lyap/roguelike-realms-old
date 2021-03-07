@@ -44,6 +44,9 @@ public class AnyItemsClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(AnyItemsBlocks.EMERALD_PEDESTAL, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(AnyItemsBlocks.DRAGON_GRASS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(AnyItemsBlocks.DRAGON_DAISY, RenderLayer.getCutout());
+
 
         FabricModelPredicateProviderRegistry.register(AnyItemsTools.RULER_WILL, new Identifier("pull"), ModelPredicateProviderRegistry.get(Items.CROSSBOW, new Identifier("pull")));
         FabricModelPredicateProviderRegistry.register(AnyItemsTools.RULER_WILL, new Identifier("pulling"), ModelPredicateProviderRegistry.get(Items.CROSSBOW, new Identifier("pulling")));
