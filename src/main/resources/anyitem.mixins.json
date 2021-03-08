@@ -17,7 +17,8 @@
     "TrackTargetGoalMixin",
     "PlantBlockMixin",
     "FeatureMixin",
-    "LivingEntityInvoker"
+    "LivingEntityInvoker",
+    "ServerPlayerEntityMixin"
   ],
   "client": [
     "WorldRendererMixin"
