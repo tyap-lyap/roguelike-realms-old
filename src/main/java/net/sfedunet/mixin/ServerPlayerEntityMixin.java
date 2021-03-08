@@ -34,7 +34,7 @@ public abstract class ServerPlayerEntityMixin extends PlayerEntity implements Sc
         return (ServerWorld) this.world;
     }
 
-    @Inject(at = @At("TAIL"), method = "writeCustomDataToTag")
+    @Inject(at = @At("HEAD"), method = "writeCustomDataToTag")
     public void writeCustomDataToTag(CompoundTag tag, CallbackInfo ci) {
         tag.putBoolean("AddDraconBook", this.addDraconBook);
     }
