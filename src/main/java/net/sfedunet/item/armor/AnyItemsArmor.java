@@ -1,10 +1,15 @@
 package net.sfedunet.item.armor;
 
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.sfedunet.AnyItemsMod;
+import net.sfedunet.api.armor.ArmorEffectRegistry;
+import net.sfedunet.item.armor.effects.TickingArmorEffectTest;
 import net.sfedunet.item.base.BaseArmorItem;
 
 public class AnyItemsArmor {
@@ -28,12 +33,23 @@ public class AnyItemsArmor {
         registerArmorSet("crypton", CRYPTON_HELMET, CRYPTON_CHESTPLATE, CRYPTON_LEGGINGS, CRYPTON_BOOTS);
         registerArmorSet("dragon", DRAGON_HELMET, DRAGON_CHESTPLATE, DRAGON_LEGGINGS, DRAGON_BOOTS);
         registerArmorSet("echserock", ECHSEROCK_HELMET, ECHSEROCK_CHESTPLATE, ECHSEROCK_LEGGINGS, ECHSEROCK_BOOTS);
+
+        registerArmorEffects();
+
+
     }
 
-    public static void registerArmorSet(String prefix, Item entryHelmet, Item entryChestplate, Item entryLeggings, Item entryBoots){
+    static void registerArmorSet(String prefix, Item entryHelmet, Item entryChestplate, Item entryLeggings, Item entryBoots){
         Registry.register(Registry.ITEM, new Identifier(AnyItemsMod.MODID, prefix + "_helmet"), entryHelmet);
         Registry.register(Registry.ITEM, new Identifier(AnyItemsMod.MODID, prefix + "_chestplate"), entryChestplate);
         Registry.register(Registry.ITEM, new Identifier(AnyItemsMod.MODID, prefix + "_leggings"), entryLeggings);
         Registry.register(Registry.ITEM, new Identifier(AnyItemsMod.MODID, prefix + "_boots"), entryBoots);
+    }
+
+    static void registerArmorEffects(){
+        ArmorEffectRegistry.register(DRAGON_HELMET, DRAGON_CHESTPLATE, DRAGON_LEGGINGS, DRAGON_BOOTS, new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,60,0, false, false));
+
+        //test
+        ArmorEffectRegistry.register(new TickingArmorEffectTest(Items.NETHERITE_HELMET, DRAGON_CHESTPLATE, Items.NETHERITE_LEGGINGS, Items.NETHERITE_BOOTS, null));
     }
 }

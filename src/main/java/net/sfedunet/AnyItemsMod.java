@@ -1,13 +1,11 @@
 package net.sfedunet;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.loader.FabricLoader;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.sfedunet.block.AnyItemsBlocks;
 import net.sfedunet.entity.AnyItemsEntities;
-import net.sfedunet.integration.botania.BotaniaIntegration;
 import net.sfedunet.item.AnyItemsItems;
 import net.sfedunet.world.features.AnyItemsConfiguredFeatures;
 import net.sfedunet.world.features.trees.AnyTrees;
@@ -34,11 +32,5 @@ public class AnyItemsMod implements ModInitializer {
 		AnyItemsEntities.register();
 		AnyTrees.registerTrees();
 
-		if(FabricLoader.INSTANCE.isModLoaded("botania")){
-			BotaniaIntegration.register();
-			LOGGER.info("[Any Items Mod] Botania integration is enabled");
-		}else {
-			LOGGER.info("[Any Items Mod] Botania integration is disabled");
-		}
 	}
 }

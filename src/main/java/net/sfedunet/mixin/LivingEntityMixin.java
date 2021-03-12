@@ -8,12 +8,14 @@ import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.Item;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.sfedunet.api.armor.ArmorEffect;
+import net.sfedunet.api.armor.ArmorEffectRegistry;
 import net.sfedunet.entity.projectiles.ParalysisArrowEntity;
 import net.sfedunet.item.ReincarnationStone;
-import net.sfedunet.item.armor.AnyItemsArmor;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Mutable;
@@ -22,6 +24,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import java.util.Arrays;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -73,12 +77,21 @@ public abstract class LivingEntityMixin extends Entity {
                 }
             }
 
-            if (livingEntity.getEquippedStack(EquipmentSlot.HEAD).getItem() == AnyItemsArmor.DRAGON_HELMET && livingEntity.getEquippedStack(EquipmentSlot.CHEST).getItem() == AnyItemsArmor.DRAGON_CHESTPLATE  && livingEntity.getEquippedStack(EquipmentSlot.LEGS).getItem() == AnyItemsArmor.DRAGON_LEGGINGS && livingEntity.getEquippedStack(EquipmentSlot.FEET).getItem() == AnyItemsArmor.DRAGON_BOOTS && livingEntity.getType() == EntityType.PLAYER)
-            {
-                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,5,5));
+            for (ArmorEffect armorEffect : ArmorEffectRegistry.getArmorEffects()){
+                if(Arrays.equals(this.getArmorAsList(), armorEffect.getArmorAsList())){
+                    if(armorEffect.getEffectInstance() != null){
+                        livingEntity.addStatusEffect(armorEffect.getEffectInstance());
+                    }
+
+                    armorEffect.tick(livingEntity, world);
+                }
             }
 
         }
+
+    Item[] getArmorAsList(){
+        return new Item[]{livingEntity.getEquippedStack(EquipmentSlot.FEET).getItem(), livingEntity.getEquippedStack(EquipmentSlot.LEGS).getItem(), livingEntity.getEquippedStack(EquipmentSlot.CHEST).getItem(), livingEntity.getEquippedStack(EquipmentSlot.HEAD).getItem()};
+    }
 
     public int getParalysis() {
         return this.dataTracker.get(ParalysisArrowEntity.PARALYSIS);
