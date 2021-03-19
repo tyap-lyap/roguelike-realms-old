@@ -3,6 +3,8 @@ package net.sfedunet.entity;
 import java.time.LocalDate;
 import java.time.temporal.ChronoField;
 
+import net.minecraft.entity.attribute.DefaultAttributeContainer;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.sfedunet.item.AnyItemsItems;
 import net.sfedunet.item.tools.AnyItemsTools;
 import org.jetbrains.annotations.Nullable;
@@ -41,6 +43,10 @@ public class DragonWarlordEntity extends HostileEntity {
 
     public EntityGroup getGroup() {
         return AnyItemsEntityGroup.DRAGON;
+    }
+
+    public static DefaultAttributeContainer.Builder createAttr(){
+        return HostileEntity.createMobAttributes().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.6f);
     }
 
     protected void initEquipment() {
@@ -84,56 +90,6 @@ public class DragonWarlordEntity extends HostileEntity {
                 this.equipStack(EquipmentSlot.HEAD,
                         new ItemStack(this.random.nextFloat() < 0.1F ? Blocks.JACK_O_LANTERN : Blocks.CARVED_PUMPKIN));
                 this.armorDropChances[EquipmentSlot.HEAD.getEntitySlotId()] = 0.0F;
-            }
-        }
-        if (this.getEquippedStack(EquipmentSlot.MAINHAND).isEmpty()) {
-            LocalDate localDate = LocalDate.now();
-            int i = localDate.get(ChronoField.DAY_OF_MONTH);
-            int j = localDate.get(ChronoField.MONTH_OF_YEAR);
-            if (j == 10 && i == 31 && this.random.nextFloat() < 0.25F) {
-                this.equipStack(EquipmentSlot.MAINHAND,
-                        new ItemStack(this.random.nextFloat() < 0.1F ? Blocks.JACK_O_LANTERN : Blocks.CARVED_PUMPKIN));
-                this.armorDropChances[EquipmentSlot.MAINHAND.getEntitySlotId()] = 0.0F;
-            }
-        }
-        if (this.getEquippedStack(EquipmentSlot.OFFHAND).isEmpty()) {
-            LocalDate localDate = LocalDate.now();
-            int i = localDate.get(ChronoField.DAY_OF_MONTH);
-            int j = localDate.get(ChronoField.MONTH_OF_YEAR);
-            if (j == 10 && i == 31 && this.random.nextFloat() < 0.25F) {
-                this.equipStack(EquipmentSlot.OFFHAND,
-                        new ItemStack(this.random.nextFloat() < 0.1F ? Blocks.JACK_O_LANTERN : Blocks.CARVED_PUMPKIN));
-                this.armorDropChances[EquipmentSlot.OFFHAND.getEntitySlotId()] = 0.0F;
-            }
-        }
-        if (this.getEquippedStack(EquipmentSlot.CHEST).isEmpty()) {
-            LocalDate localDate = LocalDate.now();
-            int i = localDate.get(ChronoField.DAY_OF_MONTH);
-            int j = localDate.get(ChronoField.MONTH_OF_YEAR);
-            if (j == 10 && i == 31 && this.random.nextFloat() < 0.25F) {
-                this.equipStack(EquipmentSlot.CHEST,
-                        new ItemStack(this.random.nextFloat() < 0.1F ? Blocks.JACK_O_LANTERN : Blocks.CARVED_PUMPKIN));
-                this.armorDropChances[EquipmentSlot.CHEST.getEntitySlotId()] = 0.0F;
-            }
-        }
-        if (this.getEquippedStack(EquipmentSlot.LEGS).isEmpty()) {
-            LocalDate localDate = LocalDate.now();
-            int i = localDate.get(ChronoField.DAY_OF_MONTH);
-            int j = localDate.get(ChronoField.MONTH_OF_YEAR);
-            if (j == 10 && i == 31 && this.random.nextFloat() < 0.25F) {
-                this.equipStack(EquipmentSlot.LEGS,
-                        new ItemStack(this.random.nextFloat() < 0.1F ? Blocks.JACK_O_LANTERN : Blocks.CARVED_PUMPKIN));
-                this.armorDropChances[EquipmentSlot.LEGS.getEntitySlotId()] = 0.0F;
-            }
-        }
-        if (this.getEquippedStack(EquipmentSlot.FEET).isEmpty()) {
-            LocalDate localDate = LocalDate.now();
-            int i = localDate.get(ChronoField.DAY_OF_MONTH);
-            int j = localDate.get(ChronoField.MONTH_OF_YEAR);
-            if (j == 10 && i == 31 && this.random.nextFloat() < 0.25F) {
-                this.equipStack(EquipmentSlot.FEET,
-                        new ItemStack(this.random.nextFloat() < 0.1F ? Blocks.JACK_O_LANTERN : Blocks.CARVED_PUMPKIN));
-                this.armorDropChances[EquipmentSlot.FEET.getEntitySlotId()] = 0.0F;
             }
         }
         return _entityData;

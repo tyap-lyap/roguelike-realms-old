@@ -3,6 +3,8 @@ package net.sfedunet.entity;
 import java.time.LocalDate;
 import java.time.temporal.ChronoField;
 
+import net.minecraft.entity.attribute.DefaultAttributeContainer;
+import net.minecraft.entity.attribute.EntityAttributes;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.block.Blocks;
@@ -39,6 +41,10 @@ public class InferiorDragonEntity extends HostileEntity {
 
     public EntityGroup getGroup() {
         return AnyItemsEntityGroup.DRAGON;
+    }
+
+    public static DefaultAttributeContainer.Builder createAttr(){
+        return HostileEntity.createMobAttributes().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f);
     }
 
     protected void initEquipment() {

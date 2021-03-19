@@ -38,14 +38,14 @@ public class AnyItemsEntities {
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, SupremeDragonEntity::new).dimensions(EntityDimensions.fixed(0.65F, 2.1F)).build());
     
     public static void register() {
-        FabricDefaultAttributeRegistry.register(ARMORED_DRAGON, HostileEntity.createHostileAttributes());
-        FabricDefaultAttributeRegistry.register(DRAGON_BOWMAN, HostileEntity.createHostileAttributes());
-        FabricDefaultAttributeRegistry.register(DRAGON_CROSSBOWMAN, HostileEntity.createHostileAttributes());
-        FabricDefaultAttributeRegistry.register(DRAGON_SWORDMAN, HostileEntity.createHostileAttributes());
-        FabricDefaultAttributeRegistry.register(DRAGON_WARLORD, HostileEntity.createHostileAttributes());
-        FabricDefaultAttributeRegistry.register(INFERIOR_DRAGON, HostileEntity.createHostileAttributes());
-        FabricDefaultAttributeRegistry.register(SPITTING_DRAGON, HostileEntity.createHostileAttributes());
-        FabricDefaultAttributeRegistry.register(SUPREME_DRAGON, HostileEntity.createHostileAttributes());
+        FabricDefaultAttributeRegistry.register(ARMORED_DRAGON, ArmoredDragonEntity.createAttr());
+        FabricDefaultAttributeRegistry.register(DRAGON_BOWMAN, DragonBowmanEntity.createAttr());
+        FabricDefaultAttributeRegistry.register(DRAGON_CROSSBOWMAN, DragonCrossbowmanEntity.createAttr());
+        FabricDefaultAttributeRegistry.register(DRAGON_SWORDMAN, DragonSwordmanEntity.createAttr());
+        FabricDefaultAttributeRegistry.register(DRAGON_WARLORD, DragonWarlordEntity.createAttr());
+        FabricDefaultAttributeRegistry.register(INFERIOR_DRAGON, InferiorDragonEntity.createAttr());
+        FabricDefaultAttributeRegistry.register(SPITTING_DRAGON, SpittingDragonEntity.createAttr());
+        FabricDefaultAttributeRegistry.register(SUPREME_DRAGON, SupremeDragonEntity.createAttr());
     }
 
 }

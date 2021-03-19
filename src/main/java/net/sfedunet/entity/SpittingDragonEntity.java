@@ -3,6 +3,8 @@ package net.sfedunet.entity;
 import java.time.LocalDate;
 import java.time.temporal.ChronoField;
 
+import net.minecraft.entity.attribute.DefaultAttributeContainer;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.sound.SoundCategory;
 import net.sfedunet.AnyItemsMod;
 import org.jetbrains.annotations.Nullable;
@@ -46,6 +48,10 @@ public class SpittingDragonEntity extends HostileEntity {
 
     public EntityGroup getGroup() {
         return AnyItemsEntityGroup.DRAGON;
+    }
+
+    public static DefaultAttributeContainer.Builder createAttr(){
+        return HostileEntity.createMobAttributes().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5f);
     }
 
     protected void initEquipment() {
