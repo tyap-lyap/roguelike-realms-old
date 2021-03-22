@@ -6,6 +6,7 @@ import java.time.temporal.ChronoField;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.sfedunet.item.tools.AnyItemsTools;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.block.Blocks;
@@ -57,16 +58,16 @@ public class SupremeDragonEntity extends HostileEntity {
         Item feet = AnyItemsArmor.DRAGON_BOOTS;
         switch (this.world.getDifficulty()) {
             case PEACEFUL:
-                mainHand = Items.NETHERITE_SWORD;
+                mainHand = Items.WOODEN_SWORD;
                 break;
             case EASY:
                 mainHand = Items.NETHERITE_SWORD;
                 break;
             case NORMAL:
-                mainHand = Items.NETHERITE_SWORD;
+                mainHand = AnyItemsTools.DRAGON_SWORD;
                 break;
             case HARD:
-                mainHand = Items.NETHERITE_SWORD;
+                mainHand = AnyItemsTools.DRAGON_SWORD;
                 break;
         }
         this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(mainHand));

@@ -34,7 +34,7 @@ public class AnyItemsBlocks {
 
     public static final Block DRAGON_STONE = add("dragon_stone", new BaseBlock());
     public static final Block DRAGON_DIRT = add("dragon_dirt", new BaseBlock(Blocks.DIRT));
-    public static final Block DRAGOSS = add("dragoss", new BaseBlock(Blocks.GRASS_BLOCK)); //драконий дерн оригинально да?
+    public static final Block DRAGOSS = add("dragoss", new BaseBlock(Blocks.GRASS_BLOCK)); //драконий дерн оригинально да? P.s да
     public static final Block DRAGON_GRASS = add("dragon_grass", new BasePlantBlock(FabricBlockSettings.copyOf(Blocks.GRASS)));
     public static final Block DRAGON_DAISY = add("dragon_daisy", new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 240, FabricBlockSettings.copyOf(Blocks.OXEYE_DAISY).luminance(7)));
     public static final Block DRAGON_COBBLESTONE = add("dragon_cobblestone", new BaseBlock());
