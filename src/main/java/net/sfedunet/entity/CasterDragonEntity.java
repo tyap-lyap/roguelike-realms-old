@@ -5,6 +5,7 @@ import java.time.temporal.ChronoField;
 
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
 import net.sfedunet.AnyItemsMod;
 import org.jetbrains.annotations.Nullable;
@@ -29,9 +30,9 @@ import net.minecraft.world.World;
 import net.sfedunet.item.armor.AnyItemsArmor;
 
 @SuppressWarnings("EntityConstructor")
-public class SpittingDragonEntity extends HostileEntity {
+public class CasterDragonEntity extends HostileEntity {
 
-    public SpittingDragonEntity(EntityType<? extends SpittingDragonEntity> entityType, World world) {
+    public CasterDragonEntity(EntityType<? extends CasterDragonEntity> entityType, World world) {
         super(entityType, world);
         // if (SHOOTING == null) SHOOTING =
         // DataTracker.registerData(SpittingDragonEntity.class,
@@ -39,7 +40,7 @@ public class SpittingDragonEntity extends HostileEntity {
     }
 
     protected void initGoals() {
-        this.goalSelector.add(1, new SpittingDragonEntity.ShootFireballGoal(this));
+        this.goalSelector.add(1, new CasterDragonEntity.ShootFireballGoal(this));
         this.goalSelector.add(5, new WanderAroundFarGoal(this, 1.0D));
         this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
         this.goalSelector.add(6, new LookAroundGoal(this));
@@ -51,13 +52,13 @@ public class SpittingDragonEntity extends HostileEntity {
     }
 
     public static DefaultAttributeContainer.Builder createAttr(){
-        return HostileEntity.createMobAttributes().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5f);
+        return HostileEntity.createMobAttributes().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.4f).add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 1).add(EntityAttributes.GENERIC_MAX_HEALTH, 35);
     }
 
     protected void initEquipment() {
-        // Item mainHand = Items.STONE_SWORD;
+         Item mainHand = Items.STONE_SWORD;
         // Item offHand = Items.SHIELD;
-        //Item head = AnyItemsArmor.DRAGON_HELMET;
+        Item head = AnyItemsArmor.DRAGON_HELMET;
         // Item chest = AnyItemsArmor.DRAGON_CHESTPLATE;
         //Item legs = AnyItemsArmor.DRAGON_LEGGINGS;
         Item feet = AnyItemsArmor.DRAGON_BOOTS;
@@ -66,18 +67,24 @@ public class SpittingDragonEntity extends HostileEntity {
                 // mainHand = Items.POPPY;
                 break;
             case EASY:
-                // mainHand = Items.STICK;
+                 mainHand = Items.STICK;
+                 head = Items.AIR;
+                 feet = Items.GOLDEN_BOOTS;
                 break;
             case NORMAL:
-                // mainHand = Items.STONE_AXE;
+                mainHand = Items.STICK;
+                head = Items.GOLDEN_HELMET;
+                feet = Items.GOLDEN_BOOTS;
                 break;
             case HARD:
-                // mainHand = Items.STONE_SWORD;
+                 mainHand = Items.BONE;
+                 head = Items.NETHERITE_HELMET;
+                 feet = Items.NETHERITE_BOOTS;
                 break;
         }
-        // this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(mainHand));
+         this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(mainHand));
         // this.equipStack(EquipmentSlot.OFFHAND, new ItemStack(offHand));
-        //this.equipStack(EquipmentSlot.HEAD, new ItemStack(head));
+        this.equipStack(EquipmentSlot.HEAD, new ItemStack(head));
         // this.equipStack(EquipmentSlot.CHEST, new ItemStack(chest));
         //this.equipStack(EquipmentSlot.LEGS, new ItemStack(legs));
         this.equipStack(EquipmentSlot.FEET, new ItemStack(feet));
@@ -105,10 +112,10 @@ public class SpittingDragonEntity extends HostileEntity {
     }
 
     static class ShootFireballGoal extends Goal {
-        private final SpittingDragonEntity dragon;
+        private final CasterDragonEntity dragon;
         public int cooldown;
 
-        public ShootFireballGoal(SpittingDragonEntity dragon) {
+        public ShootFireballGoal(CasterDragonEntity dragon) {
             this.dragon = dragon;
         }
 

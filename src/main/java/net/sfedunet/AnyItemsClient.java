@@ -16,7 +16,7 @@ import net.sfedunet.entity.renderer.DragonCrossbowmanEntityRenderer;
 import net.sfedunet.entity.renderer.DragonSwordmanEntityRenderer;
 import net.sfedunet.entity.renderer.DragonWarlordEntityRenderer;
 import net.sfedunet.entity.renderer.InferiorDragonEntityRenderer;
-import net.sfedunet.entity.renderer.SpittingDragonEntityRenderer;
+import net.sfedunet.entity.renderer.CasterDragonEntityRenderer;
 import net.sfedunet.entity.renderer.SupremeDragonEntityRenderer;
 import net.sfedunet.item.tools.AnyItemsTools;
 
@@ -30,7 +30,7 @@ public class AnyItemsClient implements ClientModInitializer {
         EntityRendererRegistry.INSTANCE.register(AnyItemsEntities.DRAGON_SWORDMAN, (dispatcher, context) -> new DragonSwordmanEntityRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(AnyItemsEntities.DRAGON_WARLORD, (dispatcher, context) -> new DragonWarlordEntityRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(AnyItemsEntities.INFERIOR_DRAGON, (dispatcher, context) -> new InferiorDragonEntityRenderer(dispatcher));
-        EntityRendererRegistry.INSTANCE.register(AnyItemsEntities.SPITTING_DRAGON, (dispatcher, context) -> new SpittingDragonEntityRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(AnyItemsEntities.CASTER_DRAGON, (dispatcher, context) -> new CasterDragonEntityRenderer(dispatcher));
         EntityRendererRegistry.INSTANCE.register(AnyItemsEntities.SUPREME_DRAGON, (dispatcher, context) -> new SupremeDragonEntityRenderer(dispatcher));
 
         BlockRenderLayerMap.INSTANCE.putBlock(AnyItemsBlocks.DRACONIC_SHADOW_PORTAL, RenderLayer.getTranslucent());

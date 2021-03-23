@@ -53,7 +53,7 @@ public class AnyItemsItems {
     public static final Item SWORDMAN_DRAGON_EGG = add((String)"swordman_dragon_spawn_egg", (Item)(new SpawnEggItem(AnyItemsEntities.DRAGON_SWORDMAN, 14252800, 12616295, (new Item.Settings()).group(AnyItemGroups.ITEMS))));
     public static final Item WARLORD_DRAGON_EGG = add((String)"warlord_dragon_spawn_egg", (Item)(new SpawnEggItem(AnyItemsEntities.DRAGON_WARLORD, 14252800, 16741417, (new Item.Settings()).group(AnyItemGroups.ITEMS))));
     public static final Item ARMORED_DRAGON_EGG = add((String)"armored_dragon_spawn_egg", (Item)(new SpawnEggItem(AnyItemsEntities.ARMORED_DRAGON, 14252800, 10176297, (new Item.Settings()).group(AnyItemGroups.ITEMS))));
-    public static final Item SPITTING_DRAGON_EGG = add((String)"spitting_dragon_spawn_egg", (Item)(new SpawnEggItem(AnyItemsEntities.SPITTING_DRAGON, 14252800, 12810315, (new Item.Settings()).group(AnyItemGroups.ITEMS))));
+    public static final Item CASTER_DRAGON_EGG = add((String)"caster_dragon_spawn_egg", (Item)(new SpawnEggItem(AnyItemsEntities.CASTER_DRAGON, 14252800, 12810315, (new Item.Settings()).group(AnyItemGroups.ITEMS))));
     public static final Item SUPREME_DRAGON_EGG = add((String)"supreme_dragon_spawn_egg", (Item)(new SpawnEggItem(AnyItemsEntities.SUPREME_DRAGON, 14252800, 16748875, (new Item.Settings()).group(AnyItemGroups.ITEMS))));
 
 

@@ -44,11 +44,11 @@ public class ArmoredDragonEntity extends HostileEntity {
     }
 
     public static DefaultAttributeContainer.Builder createAttr(){
-        return HostileEntity.createMobAttributes().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.4f);
+        return HostileEntity.createMobAttributes().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.4f).add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2).add(EntityAttributes.GENERIC_MAX_HEALTH, 60).add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 2);
     }
 
     protected void initEquipment() {
-        Item mainHand = Items.STONE_SWORD;
+        //Item mainHand = Items.STONE_SWORD;
         Item offHand = Items.SHIELD;
         Item head = AnyItemsArmor.DRAGON_HELMET;
         Item chest = AnyItemsArmor.DRAGON_CHESTPLATE;
@@ -56,19 +56,28 @@ public class ArmoredDragonEntity extends HostileEntity {
         Item feet = AnyItemsArmor.DRAGON_BOOTS;
         switch (this.world.getDifficulty()) {
             case PEACEFUL:
-                mainHand = Items.POPPY;
+                //mainHand = Items.POPPY;
                 break;
             case EASY:
-                mainHand = Items.STICK;
+                head = Items.GOLDEN_HELMET;
+                chest = Items.GOLDEN_CHESTPLATE;
+                legs = Items.GOLDEN_LEGGINGS;
+                feet = Items.GOLDEN_BOOTS;
                 break;
             case NORMAL:
-                mainHand = Items.STONE_AXE;
+                head = Items.IRON_HELMET;
+                chest = Items.IRON_CHESTPLATE;
+                legs = Items.IRON_LEGGINGS;
+                feet = Items.IRON_BOOTS;
                 break;
             case HARD:
-                mainHand = Items.STONE_SWORD;
+                head = Items.NETHERITE_HELMET;
+                chest = Items.NETHERITE_CHESTPLATE;
+                legs = Items.NETHERITE_LEGGINGS;
+                feet = Items.NETHERITE_BOOTS;
                 break;
         }
-        this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(mainHand));
+        //this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(mainHand));
         this.equipStack(EquipmentSlot.OFFHAND, new ItemStack(offHand));
         this.equipStack(EquipmentSlot.HEAD, new ItemStack(head));
         this.equipStack(EquipmentSlot.CHEST, new ItemStack(chest));

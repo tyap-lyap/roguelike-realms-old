@@ -30,7 +30,7 @@ public class AnyItemsTools {
 
     public static final Item DRAGON_SWORD = add("dragon_sword", new DragonSwordItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, 5, -2.0f));
     public static final Item DRAGON_PICKAXE = add("dragon_pickaxe", new DragonPickaxeItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, 1, -1.5f));
-    public static final Item DRAGON_AXE = add("dragon_axe", new DragonAxeItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, 3, -3.0f));
+    public static final Item DRAGON_AXE = add("dragon_axe", new DragonAxeItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, 11, -3.0f));
     public static final Item DRAGON_SHOVEL = add("dragon_shovel", new DragonShovelItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, 3, -2.5f));
     public static final Item DRAGON_HOE = add("dragon_hoe", new DragonHoeItem(AnyToolMaterials.DRAGON_TOOL_MATERIAL, -4, 0.0f));
 

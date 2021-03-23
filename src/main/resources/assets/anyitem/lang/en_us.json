@@ -17,7 +17,7 @@
  "item.anyitem.crossbow_dragon_spawn_egg": "Crossbow Dragon Egg",
  "item.anyitem.bow_dragon_spawn_egg": "Bow Dragon Egg",
  "item.anyitem.swordman_dragon_spawn_egg": "Swordman Dragon Egg",
- "item.anyitem.spitting_dragon_spawn_egg": "Spitting Dragon Egg",
+ "item.anyitem.caster_dragon_spawn_egg": "Caster Dragon Egg",
  "item.anyitem.echserock_piece": "Echserock piece",
  "item.anyitem.echserock_chunk": "Echserock chunk",
  "item.anyitem.soul_ingot": "Soul Ingot",
@@ -100,7 +100,7 @@
  "block.anyitem.dragon_cobblestone": "Dragon Cobblestone",
 
  "entity.anyitem.inferior_dragon": "Inferior Dragon",
- "entity.anyitem.spitting_dragon": "Spitting Dragon",
+ "entity.anyitem.caster_dragon": "Caster Dragon",
  "entity.anyitem.supreme_dragon": "Supreme Dragon",
  "entity.anyitem.armored_dragon": "Armored Dragon",
  "entity.anyitem.dragon_bowman": "Dragon Bowman",

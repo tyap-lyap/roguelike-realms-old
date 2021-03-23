@@ -46,7 +46,7 @@ public class SupremeDragonEntity extends HostileEntity {
     }
 
     public static DefaultAttributeContainer.Builder createAttr(){
-        return HostileEntity.createMobAttributes().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5f);
+        return HostileEntity.createMobAttributes().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5f).add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 10).add(EntityAttributes.GENERIC_MAX_HEALTH, 100).add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 4).add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 2);
     }
 
     protected void initEquipment() {
@@ -61,13 +61,21 @@ public class SupremeDragonEntity extends HostileEntity {
                 mainHand = Items.WOODEN_SWORD;
                 break;
             case EASY:
-                mainHand = Items.NETHERITE_SWORD;
+                mainHand = AnyItemsTools.ECHSEROCK_SWORD;
+                head = Items.NETHERITE_HELMET;
+                chest = Items.NETHERITE_CHESTPLATE;
+                legs = Items.NETHERITE_LEGGINGS;
+                feet = Items.NETHERITE_BOOTS;
                 break;
             case NORMAL:
                 mainHand = AnyItemsTools.DRAGON_SWORD;
+                head = AnyItemsArmor.ECHSEROCK_HELMET;
+                chest = AnyItemsArmor.ECHSEROCK_CHESTPLATE;
+                legs = AnyItemsArmor.ECHSEROCK_LEGGINGS;
+                feet = AnyItemsArmor.ECHSEROCK_BOOTS;
                 break;
             case HARD:
-                mainHand = AnyItemsTools.DRAGON_SWORD;
+                mainHand = AnyItemsTools.DRAGON_AXE;
                 break;
         }
         this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(mainHand));

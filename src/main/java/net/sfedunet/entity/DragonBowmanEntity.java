@@ -51,7 +51,7 @@ public class DragonBowmanEntity extends HostileEntity implements RangedAttackMob
     }
 
     public static DefaultAttributeContainer.Builder createAttr(){
-        return HostileEntity.createMobAttributes().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f);
+        return HostileEntity.createMobAttributes().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f).add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 3).add(EntityAttributes.GENERIC_MAX_HEALTH, 30);
     }
 
     protected void initEquipment() {
@@ -60,16 +60,18 @@ public class DragonBowmanEntity extends HostileEntity implements RangedAttackMob
         Item head = AnyItemsArmor.DRAGON_HELMET;
         // Item chest = AnyItemsArmor.DRAGON_CHESTPLATE;
         Item legs = AnyItemsArmor.DRAGON_LEGGINGS;
-        Item feet = AnyItemsArmor.DRAGON_BOOTS;
+       // Item feet = AnyItemsArmor.DRAGON_BOOTS;
         switch (this.world.getDifficulty()) {
             case PEACEFUL:
                 //mainHand = Items.POPPY;
                 break;
             case EASY:
-                //mainHand = Items.STICK;
+                head = Items.GOLDEN_HELMET;
+                legs = Items.GOLDEN_LEGGINGS;
                 break;
             case NORMAL:
-                //mainHand = Items.STONE_AXE;
+                head = Items.NETHERITE_HELMET;
+                legs = Items.NETHERITE_LEGGINGS;
                 break;
             case HARD:
                 //mainHand = Items.STONE_SWORD;
@@ -80,7 +82,7 @@ public class DragonBowmanEntity extends HostileEntity implements RangedAttackMob
         this.equipStack(EquipmentSlot.HEAD, new ItemStack(head));
         // this.equipStack(EquipmentSlot.CHEST, new ItemStack(chest));
         this.equipStack(EquipmentSlot.LEGS, new ItemStack(legs));
-        this.equipStack(EquipmentSlot.FEET, new ItemStack(feet));
+       // this.equipStack(EquipmentSlot.FEET, new ItemStack(feet));
     }
 
     @Nullable

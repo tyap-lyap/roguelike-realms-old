@@ -11,7 +11,7 @@
   "item.anyitem.crossbow_dragon_spawn_egg": "Яйцо призыва арбалетчика дракона",
   "item.anyitem.bow_dragon_spawn_egg": "Яйцо призыва лучника дракона",
   "item.anyitem.swordman_dragon_spawn_egg": "Яйцо призыва мечника дракона",
-  "item.anyitem.spitting_dragon_spawn_egg": "Яйцо призыва плевуна дракона",
+  "item.anyitem.caster_dragon_spawn_egg": "Яйцо призыва плевуна дракона",
   "item.anyitem.echserock_piece": "Кусочек эксерока",
   "item.anyitem.echserock_chunk": "Часть эксерока",
   "item.anyitem.crypton_dust": "Криптоновая пыль",
@@ -89,7 +89,7 @@
   "block.anyitem.dragon_cobblestone": "Драконий булыжник",
 
  "entity.anyitem.inferior_dragon": "Низшим драконом",
-  "entity.anyitem.spitting_dragon": "Плюющиймся драконом",
+  "entity.anyitem.caster_dragon": "Плюющиймся драконом",
   "entity.anyitem.supreme_dragon": "Высшим драконом",
   "entity.anyitem.armored_dragon": "Драконом с щитом",
   "entity.anyitem.dragon_bowman": "Драконом лучником",

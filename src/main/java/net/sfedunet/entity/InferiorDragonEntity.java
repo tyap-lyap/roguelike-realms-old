@@ -44,33 +44,36 @@ public class InferiorDragonEntity extends HostileEntity {
     }
 
     public static DefaultAttributeContainer.Builder createAttr(){
-        return HostileEntity.createMobAttributes().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f);
+        return HostileEntity.createMobAttributes().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f).add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 3).add(EntityAttributes.GENERIC_MAX_HEALTH, 40);
     }
 
     protected void initEquipment() {
         Item mainHand = Items.STONE_SWORD;
         //Item offHand = Items.SHIELD;
-        //Item head = AnyItemsArmor.DRAGON_HELMET;
+        Item head = Items.GOLDEN_HELMET;
         //Item chest = AnyItemsArmor.DRAGON_CHESTPLATE;
         //Item legs = AnyItemsArmor.DRAGON_LEGGINGS;
         //Item feet = AnyItemsArmor.DRAGON_BOOTS;
         switch (this.world.getDifficulty()) {
             case PEACEFUL:
-                mainHand = Items.POPPY;
+                //mainHand = Items.POPPY;
                 break;
             case EASY:
-                mainHand = Items.STICK;
+                mainHand = Items.AIR;
+                head = Items.AIR;
                 break;
             case NORMAL:
-                mainHand = Items.STONE_AXE;
+                mainHand = Items.WOODEN_SWORD;
+                head = Items.AIR;
                 break;
             case HARD:
                 mainHand = Items.STONE_SWORD;
+                head = Items.GOLDEN_HELMET;
                 break;
         }
         this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(mainHand));
         //this.equipStack(EquipmentSlot.OFFHAND, new ItemStack(offHand));
-        //this.equipStack(EquipmentSlot.HEAD, new ItemStack(head));
+        this.equipStack(EquipmentSlot.HEAD, new ItemStack(head));
         //this.equipStack(EquipmentSlot.CHEST, new ItemStack(chest));
         //this.equipStack(EquipmentSlot.LEGS, new ItemStack(legs));
         //this.equipStack(EquipmentSlot.FEET, new ItemStack(feet));
