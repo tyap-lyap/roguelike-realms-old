@@ -10,8 +10,8 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 3,
-                "max": 5
+                "min": 1,
+                "max": 2
               }
             }
           ]
@@ -20,7 +20,7 @@
       "conditions": [
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.1,
+          "chance": 3,
           "looting_multiplier": 0.1
         },
         {
@@ -33,7 +33,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "anyitem:dragon_fire",
+          "name": "anyitem:militant_soul_shard",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -48,7 +48,7 @@
       "conditions": [
         {
           "condition": "minecraft:random_chance_with_looting",
-          "chance": 0.1,
+          "chance": 10,
           "looting_multiplier": 0.1
         },
         {
