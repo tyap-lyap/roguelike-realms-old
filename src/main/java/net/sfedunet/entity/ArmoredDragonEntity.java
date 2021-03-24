@@ -5,6 +5,7 @@ import java.time.temporal.ChronoField;
 
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.mob.ZombifiedPiglinEntity;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.block.Blocks;
@@ -37,6 +38,7 @@ public class ArmoredDragonEntity extends HostileEntity {
         this.goalSelector.add(6, new LookAroundGoal(this));
         this.goalSelector.add(4, new MeleeAttackGoal(this, 1.0D, false));
         this.targetSelector.add(2, new FollowTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.add(1, (new RevengeGoal(this, new Class[0])).setGroupRevenge(new Class[]{ZombifiedPiglinEntity.class}));
     }
 
     public EntityGroup getGroup() {

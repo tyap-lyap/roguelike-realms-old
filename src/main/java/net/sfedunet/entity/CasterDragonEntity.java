@@ -5,6 +5,7 @@ import java.time.temporal.ChronoField;
 
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.mob.ZombifiedPiglinEntity;
 import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
 import net.sfedunet.AnyItemsMod;
@@ -45,6 +46,7 @@ public class CasterDragonEntity extends HostileEntity {
         this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
         this.goalSelector.add(6, new LookAroundGoal(this));
         this.targetSelector.add(2, new FollowTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.add(1, (new RevengeGoal(this, new Class[0])).setGroupRevenge(new Class[]{ZombifiedPiglinEntity.class}));
     }
 
     public EntityGroup getGroup() {
@@ -136,12 +138,12 @@ public class CasterDragonEntity extends HostileEntity {
             if (livingEntity.squaredDistanceTo(this.dragon) < 4096.0D && this.dragon.canSee(livingEntity)) {
                 World world = this.dragon.world;
                 ++this.cooldown;
-                if (this.cooldown == 10 && !this.dragon.isSilent()) {
+                if (this.cooldown == 8 && !this.dragon.isSilent()) {
                     //world.syncWorldEvent((PlayerEntity) null, 1015, this.dragon.getBlockPos(), 0);
                     world.playSound(null, this.dragon.getBlockPos(), AnyItemsMod.SPITTING_PEW, SoundCategory.AMBIENT, 1.0F, 1.0F);
                 }
 
-                if (this.cooldown == 20) {
+                if (this.cooldown == 12) {
                     double f = livingEntity.getX() - (this.dragon.getX());
                     double g = livingEntity.getBodyY(0.5D) - (0.5D + this.dragon.getBodyY(0.5D));
                     double h = livingEntity.getZ() - (this.dragon.getZ());
@@ -153,13 +155,13 @@ public class CasterDragonEntity extends HostileEntity {
                     fireballEntity.explosionPower = this.dragon.getFireballStrength();
                     fireballEntity.updatePosition(this.dragon.getX(), this.dragon.getBodyY(0.5D) + 0.75D, fireballEntity.getZ());
                     world.spawnEntity(fireballEntity);
-                    this.cooldown = -40;
+                    this.cooldown = -38;
                 }
             } else if (this.cooldown > 0) {
                 --this.cooldown;
             }
 
-            this.dragon.setShooting(this.cooldown > 10);
+            this.dragon.setShooting(this.cooldown > 8);
         }
     }
 
