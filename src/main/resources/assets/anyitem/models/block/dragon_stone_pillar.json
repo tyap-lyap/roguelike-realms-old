@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "anyitem:block/dragon_stone_pillar_top",
+    "bottom": "anyitem:block/dragon_stone_pillar_top",
+    "side": "anyitem:block/dragon_stone_pillar"
+  }
+}

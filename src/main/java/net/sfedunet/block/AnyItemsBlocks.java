@@ -25,7 +25,6 @@ public class AnyItemsBlocks {
     public static final Block CRYPTON_BLOCK = add("crypton_block", new BaseBlock(Blocks.OBSIDIAN, BlockSoundGroup.BONE));
     public static final Block CRYPTON_ORE = add("crypton_ore", new BaseBlock());
 
-    // todo: redo
     public static final Block ECHSEROCK = add("echserock", new BaseBlock(FabricBlockSettings.copyOf(Blocks.STONE).luminance(14)));
     public static final Block ASHES_BLOCK = add("ashes_block", new FallingBlock(FabricBlockSettings.copyOf(Blocks.SAND)));
     public static final Block DRAGON_INGOT_BLOCK = add("dragon_ingot_block", new BaseBlock(Blocks.IRON_BLOCK));
@@ -33,11 +32,20 @@ public class AnyItemsBlocks {
     public static final Block GILDED_DRAGON_SCALES_BLOCK = add("gilded_dragon_scales_block", new DragonScalesBlock("gilded"));
 
     public static final Block DRAGON_STONE = add("dragon_stone", new BaseBlock());
+    public static final Block DRAGON_COBBLESTONE = add("dragon_cobblestone", new BaseBlock());
+    public static final Block DRAGON_STONE_TILES = add("dragon_stone_tiles", new BaseBlock());
+    public static final Block CRACKED_DRAGON_STONE_TILES = add("cracked_dragon_stone_tiles", new BaseBlock());
+    public static final Block DRAGON_STONE_BRICKS = add("dragon_stone_bricks", new BaseBlock());
+    public static final Block OVERGROWN_DRAGON_STONE_BRICKS = add("overgrown_dragon_stone_bricks", new BaseBlock());
+    public static final Block SMOOTH_DRAGON_STONE = add("smooth_dragon_stone", new BaseBlock());
+    public static final Block CHISELED_DRAGON_STONE = add("chiseled_dragon_stone", new BaseBlock());
+    public static final Block DRAGON_STONE_PILLAR = add("dragon_stone_pillar", new BaseBlock());
+
+
     public static final Block DRAGON_DIRT = add("dragon_dirt", new BaseBlock(Blocks.DIRT));
     public static final Block DRAGOSS = add("dragoss", new BaseBlock(Blocks.GRASS_BLOCK)); //драконий дерн оригинально да? P.s да
     public static final Block DRAGON_GRASS = add("dragon_grass", new BasePlantBlock(FabricBlockSettings.copyOf(Blocks.GRASS)));
     public static final Block DRAGON_DAISY = add("dragon_daisy", new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 240, FabricBlockSettings.copyOf(Blocks.OXEYE_DAISY).luminance(7)));
-    public static final Block DRAGON_COBBLESTONE = add("dragon_cobblestone", new BaseBlock());
     public static final Block DRACONIC_SHADOW_PORTAL = add("draconic_shadow_portal", new DraconicShadowPortalBlock());
     public static final EmeraldPedestal EMERALD_PEDESTAL = add("emerald_pedestal", new EmeraldPedestal());
 
