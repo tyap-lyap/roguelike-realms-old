@@ -11,16 +11,16 @@ import net.sfedunet.entity.DragonWarlordEntity;
 import net.sfedunet.entity.model.DragonWarlordEntityModel;
 
 @Environment(EnvType.CLIENT)
-public class DragonWarlordEntityRenderer extends BipedEntityRenderer<DragonWarlordEntity, DragonWarlordEntityModel> {
+public class DragonWarlordEntityRenderer extends BipedEntityRenderer<DragonWarlordEntity, DragonWarlordEntityModel<DragonWarlordEntity>> {
     public DragonWarlordEntityRenderer(EntityRenderDispatcher dispatcher) {
-        super(dispatcher, new DragonWarlordEntityModel(0.0F, false), 0.5f);
+        super(dispatcher, new DragonWarlordEntityModel<>(), 0.5f);
         this.addFeature(new ArmorFeatureRenderer<>(this, new BipedEntityModel<>(0.5f), new BipedEntityModel<>(1.0f)));
     }
 
     private static final Identifier TEXTURE = new Identifier("anyitem:textures/entity/dragon_warlord.png");
-    
+
     @Override
-   public Identifier getTexture(DragonWarlordEntity entity) {
-      return TEXTURE;
-   }
+    public Identifier getTexture(DragonWarlordEntity entity) {
+        return TEXTURE;
+    }
 }

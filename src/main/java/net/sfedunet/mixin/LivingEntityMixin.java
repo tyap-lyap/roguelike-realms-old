@@ -119,14 +119,14 @@ public abstract class LivingEntityMixin extends Entity {
         }
     }
 
-    @Inject(at = @At("HEAD"), method = "tryUseTotem", cancellable = true)
-    private void tryUseTotem(DamageSource source, CallbackInfoReturnable<Boolean> cir){
-
-        if(ReincarnationStone.onDeath(livingEntity, world, source)){
-            cir.setReturnValue(true);
-        }
-
-    }
+//    @Inject(at = @At("HEAD"), method = "tryUseTotem", cancellable = true)
+//    private void tryUseTotem(DamageSource source, CallbackInfoReturnable<Boolean> cir){
+//
+//        if(ReincarnationStone.onDeath(livingEntity, world, source)){
+//            cir.setReturnValue(true);
+//        }
+//
+//    }
 
     static {
         SPRINTING_SPEED_BOOST = new EntityAttributeModifier(SPRINTING_SPEED_BOOST_ID, "Sprinting speed boost", 0.30000001192092896D, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);

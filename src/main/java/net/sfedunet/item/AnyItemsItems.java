@@ -41,7 +41,7 @@ public class AnyItemsItems {
     public static final Item ASHES = add("ashes", new BaseItem());
     public static final Item DRAGON_SCALES = add("dragon_scales", new BaseItem());
     public static final Item DRAGON_FIRE = add("dragon_fire", new BaseItem());
-    public static final Item REINCARNATION_STONE = add("reincarnation_stone", new ReincarnationStone());
+//    public static final Item REINCARNATION_STONE = add("reincarnation_stone", new ReincarnationStone());
     public static final Item SHAURMA = add("shaurma", new BaseItem(new FabricItemSettings().group(AnyItemGroups.ITEMS).food(new FoodComponent.Builder().saturationModifier(7.5f).hunger(9).statusEffect(new StatusEffectInstance(StatusEffects.POISON,20*20),0.2f).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 20*10),0.21f).build())));
     public static final Item COOKED_SHAURMA = add("cooked_shaurma", new BaseItem(new FabricItemSettings().group(AnyItemGroups.ITEMS).food(new FoodComponent.Builder().saturationModifier(15f).hunger(18).statusEffect(new StatusEffectInstance(StatusEffects.POISON,20*15),0.09f).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 20*30),0.1f).statusEffect(new StatusEffectInstance(StatusEffects.LUCK, 20*30,5),0.05f).build())));
     public static final Item ECHPOCHMAK = add("echpochmak", new BaseItem(new FabricItemSettings().group(AnyItemGroups.ITEMS).food(new FoodComponent.Builder().saturationModifier(10f).hunger(14).statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,20*5),0.5f).statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 20*5),0.5f).build())));

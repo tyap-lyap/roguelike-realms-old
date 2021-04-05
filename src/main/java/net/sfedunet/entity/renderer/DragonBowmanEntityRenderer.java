@@ -11,16 +11,16 @@ import net.sfedunet.entity.DragonBowmanEntity;
 import net.sfedunet.entity.model.DragonBowmanEntityModel;
 
 @Environment(EnvType.CLIENT)
-public class DragonBowmanEntityRenderer extends BipedEntityRenderer<DragonBowmanEntity, DragonBowmanEntityModel> {
+public class DragonBowmanEntityRenderer extends BipedEntityRenderer<DragonBowmanEntity, DragonBowmanEntityModel<DragonBowmanEntity>> {
     public DragonBowmanEntityRenderer(EntityRenderDispatcher dispatcher) {
-        super(dispatcher, new DragonBowmanEntityModel(0.0F, false), 0.5f);
+        super(dispatcher, new DragonBowmanEntityModel<>(), 0.5f);
         this.addFeature(new ArmorFeatureRenderer<>(this, new BipedEntityModel<>(0.5f), new BipedEntityModel<>(1.0f)));
     }
 
     private static final Identifier TEXTURE = new Identifier("anyitem:textures/entity/dragon_bowman.png");
-    
+
     @Override
-   public Identifier getTexture(DragonBowmanEntity entity) {
-      return TEXTURE;
-   }
+    public Identifier getTexture(DragonBowmanEntity entity) {
+        return TEXTURE;
+    }
 }

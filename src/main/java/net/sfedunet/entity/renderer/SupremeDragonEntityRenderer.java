@@ -11,16 +11,16 @@ import net.sfedunet.entity.SupremeDragonEntity;
 import net.sfedunet.entity.model.SupremeDragonEntityModel;
 
 @Environment(EnvType.CLIENT)
-public class SupremeDragonEntityRenderer extends BipedEntityRenderer<SupremeDragonEntity, SupremeDragonEntityModel> {
+public class SupremeDragonEntityRenderer extends BipedEntityRenderer<SupremeDragonEntity, SupremeDragonEntityModel<SupremeDragonEntity>> {
     public SupremeDragonEntityRenderer(EntityRenderDispatcher dispatcher) {
-        super(dispatcher, new SupremeDragonEntityModel(0.0F, false), 0.5f);
+        super(dispatcher, new SupremeDragonEntityModel<>(), 0.5f);
         this.addFeature(new ArmorFeatureRenderer<>(this, new BipedEntityModel<>(0.5f), new BipedEntityModel<>(1.0f)));
     }
 
     private static final Identifier TEXTURE = new Identifier("anyitem:textures/entity/supreme_dragon.png");
-    
+
     @Override
-   public Identifier getTexture(SupremeDragonEntity entity) {
-      return TEXTURE;
-   }
+    public Identifier getTexture(SupremeDragonEntity entity) {
+        return TEXTURE;
+    }
 }

@@ -11,16 +11,16 @@ import net.sfedunet.entity.DragonCrossbowmanEntity;
 import net.sfedunet.entity.model.DragonCrossbowmanEntityModel;
 
 @Environment(EnvType.CLIENT)
-public class DragonCrossbowmanEntityRenderer extends BipedEntityRenderer<DragonCrossbowmanEntity, DragonCrossbowmanEntityModel> {
+public class DragonCrossbowmanEntityRenderer extends BipedEntityRenderer<DragonCrossbowmanEntity, DragonCrossbowmanEntityModel<DragonCrossbowmanEntity>> {
     public DragonCrossbowmanEntityRenderer(EntityRenderDispatcher dispatcher) {
-        super(dispatcher, new DragonCrossbowmanEntityModel(0.0F, false), 0.5f);
+        super(dispatcher, new DragonCrossbowmanEntityModel<>(), 0.5f);
         this.addFeature(new ArmorFeatureRenderer<>(this, new BipedEntityModel<>(0.5f), new BipedEntityModel<>(1.0f)));
     }
 
     private static final Identifier TEXTURE = new Identifier("anyitem:textures/entity/dragon_crossbowman.png");
-    
+
     @Override
-   public Identifier getTexture(DragonCrossbowmanEntity entity) {
-      return TEXTURE;
-   }
+    public Identifier getTexture(DragonCrossbowmanEntity entity) {
+        return TEXTURE;
+    }
 }
