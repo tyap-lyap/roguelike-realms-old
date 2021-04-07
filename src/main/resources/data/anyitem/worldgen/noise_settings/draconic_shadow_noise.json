@@ -4,39 +4,50 @@
   "sea_level": 0,
   "disable_mob_generation": false,
   "structures": {
-    "structures": {}
-  },
-  "noise": {
-    "density_factor": 0,
-    "density_offset": 0,
-    "simplex_surface_noise": true,
-    "bottom_slide": {
-      "target": -30,
-      "size": 7,
-      "offset": 1
-    },
-    "size_horizontal": 2,
-    "size_vertical": 1,
-    "height": 128,
-    "sampling": {
-      "xz_scale": 2.0,
-      "y_scale": 2.0,
-      "xz_factor": 80.0,
-      "y_factor": 160.0
-    },
-    "top_slide": {
-      "target": -3000,
-      "size": 64,
-      "offset": -46
+    "structures": {
+      "anyitem:bone": {
+        "spacing": 4,
+        "separation": 3,
+        "salt": 1313131
+      },
+        "anyitem:well": {
+          "spacing": 4,
+          "separation": 3,
+          "salt": 1313121
+        }
     }
   },
-  "default_block": {
-    "Name": "anyitem:dragon_stone"
-  },
-  "default_fluid": {
-    "Properties": {
-      "level": "0"
+    "noise": {
+      "density_factor": 0,
+      "density_offset": 0,
+      "simplex_surface_noise": true,
+      "bottom_slide": {
+        "target": -30,
+        "size": 7,
+        "offset": 1
+      },
+      "size_horizontal": 2,
+      "size_vertical": 1,
+      "height": 128,
+      "sampling": {
+        "xz_scale": 2.0,
+        "y_scale": 2.0,
+        "xz_factor": 80.0,
+        "y_factor": 160.0
+      },
+      "top_slide": {
+        "target": -3000,
+        "size": 64,
+        "offset": -46
+      }
     },
-    "Name": "minecraft:water"
+    "default_block": {
+      "Name": "anyitem:dragon_stone"
+    },
+    "default_fluid": {
+      "Properties": {
+        "level": "0"
+      },
+      "Name": "minecraft:water"
+    }
   }
-}

@@ -36,7 +36,10 @@
       "anyitem:echserock"
 	]
   ],
-  "starts": [],
+  "starts": [
+    "anyitem:bone",
+    "anyitem:well"
+  ],
   "spawners": {
     "monster": [
       {
