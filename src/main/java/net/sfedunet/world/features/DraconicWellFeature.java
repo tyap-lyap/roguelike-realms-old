@@ -68,7 +68,7 @@ public class DraconicWellFeature extends StructureFeature<DefaultFeatureConfig> 
 
             BlockRotation rotation = BlockRotation.random(this.random);
             if (y >= 40) {
-                BlockPos pos = new BlockPos(chunkX * 20, y, chunkZ * 20);
+                BlockPos pos = new BlockPos(chunkX * 16 + 24, y, chunkZ * 16 + 24);
                 DraconicWellGenerator.addPieces(manager, pos, rotation, this.children, random);
                 this.setBoundingBoxFromChildren();
             }
