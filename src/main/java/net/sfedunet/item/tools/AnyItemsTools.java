@@ -1,5 +1,6 @@
 package net.sfedunet.item.tools;
 
+import com.oroarmor.multi_item_lib.UniqueItemRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -52,5 +53,7 @@ public class AnyItemsTools {
         for (Identifier id : ITEMS.keySet()) {
             Registry.register(Registry.ITEM, id, ITEMS.get(id));
         }
+
+        UniqueItemRegistry.CROSSBOW.addItemToRegistry(RULER_WILL);
     }
 }

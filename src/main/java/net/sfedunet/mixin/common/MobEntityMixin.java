@@ -1,4 +1,4 @@
-package net.sfedunet.mixin;
+package net.sfedunet.mixin.common;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;

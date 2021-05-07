@@ -5,7 +5,6 @@ import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -36,7 +35,7 @@ public class AnyItemsBlocks {
     public static final Block DRAGON_STONE_TILES = add("dragon_stone_tiles", new BaseBlock());
     public static final Block CRACKED_DRAGON_STONE_TILES = add("cracked_dragon_stone_tiles", new BaseBlock());
     public static final Block DRAGON_STONE_BRICKS = add("dragon_stone_bricks", new BaseBlock());
-    public static final Block OVERGROWN_DRAGON_STONE_BRICKS = add("overgrown_dragon_stone_bricks", new BaseBlock());
+//    public static final Block OVERGROWN_DRAGON_STONE_BRICKS = add("overgrown_dragon_stone_bricks", new BaseBlock());
     public static final Block SMOOTH_DRAGON_STONE = add("smooth_dragon_stone", new BaseBlock());
     public static final Block CHISELED_DRAGON_STONE = add("chiseled_dragon_stone", new BaseBlock());
     public static final Block DRAGON_STONE_PILLAR = add("dragon_stone_pillar", new BaseBlock());
@@ -46,8 +45,8 @@ public class AnyItemsBlocks {
     public static final Block DRAGOSS = add("dragoss", new BaseBlock(Blocks.GRASS_BLOCK)); //драконий дерн оригинально да? P.s да
     public static final Block DRAGON_GRASS = add("dragon_grass", new BasePlantBlock(FabricBlockSettings.copyOf(Blocks.GRASS)));
     public static final Block DRAGON_DAISY = add("dragon_daisy", new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 240, FabricBlockSettings.copyOf(Blocks.OXEYE_DAISY).luminance(7)));
-    public static final Block DRACONIC_SHADOW_PORTAL = add("draconic_shadow_portal", new DraconicShadowPortalBlock());
-    public static final EmeraldPedestal EMERALD_PEDESTAL = add("emerald_pedestal", new EmeraldPedestal());
+    public static final Block DRACONIC_SHADOW_PORTAL = addBlock("draconic_shadow_portal", new DraconicShadowPortalBlock());
+    public static final Block EMERALD_PEDESTAL = add("emerald_pedestal", new EmeraldPedestal());
 
     public static final Block DRAGON_GRAPE_LOG = add("dragon_grape_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
     public static final Block DRAGON_GRAPE_PLANKS = add("dragon_grape_planks", new BaseBlock(Blocks.OAK_PLANKS));
@@ -63,15 +62,13 @@ public class AnyItemsBlocks {
     public static final Block DRAGON_WILLOW_VINES_TIP = add("dragon_willow_vines_tip", new WillowVinesBlock("tip"));
 
 
-    private static <B extends Block> B add(String name, B block, ItemGroup tab) {
+    private static <B extends Block> B add(String name, B block) {
         Item.Settings settings = new Item.Settings();
-        if (tab != null) {
-            settings.group(tab);
-        }
-        return add(name, block, new BlockItem(block, settings));
+        settings.group(AnyItemGroups.BLOCKS);
+        return addBlockItem(name, block, new BlockItem(block, settings));
     }
 
-    private static <B extends Block> B add(String name, B block, BlockItem item) {
+    private static <B extends Block> B addBlockItem(String name, B block, BlockItem item) {
         addBlock(name, block);
         if (item != null) {
             item.appendBlocks(Item.BLOCK_ITEMS, item);
@@ -83,17 +80,6 @@ public class AnyItemsBlocks {
     private static <B extends Block> B addBlock(String name, B block) {
         BLOCKS.put(new Identifier(AnyItemsMod.MODID, name), block);
         return block;
-    }
-    private static <B extends Block> B add(String name, B block) {
-        Item.Settings settings = new Item.Settings();
-        settings.group(AnyItemGroups.BLOCKS);
-        return add(name, block, new BlockItem(block, settings));
-    }
-
-    private static <I extends BlockItem> I add(String name, I item) {
-        item.appendBlocks(Item.BLOCK_ITEMS, item);
-        ITEMS.put(new Identifier(AnyItemsMod.MODID, name), item);
-        return item;
     }
 
     public static void register() {

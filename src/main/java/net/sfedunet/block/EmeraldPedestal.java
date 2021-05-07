@@ -28,7 +28,7 @@ public class EmeraldPedestal extends Block {
         world.getBlockTickScheduler().schedule(pos, this, 0);
         if (checkFrame(world, pos)){
             createPortal(world, pos);
-            world.playSound(null, pos, SoundEvents.BLOCK_CONDUIT_ACTIVATE, SoundCategory.BLOCKS, 1, 1);
+            world.playSound(null, pos, SoundEvents.BLOCK_END_PORTAL_SPAWN, SoundCategory.BLOCKS, 1, 1);
         }
     }
 

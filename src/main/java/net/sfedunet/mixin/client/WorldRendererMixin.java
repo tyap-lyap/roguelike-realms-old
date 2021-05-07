@@ -1,4 +1,4 @@
-package net.sfedunet.mixin;
+package net.sfedunet.mixin.client;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.WorldRenderer;

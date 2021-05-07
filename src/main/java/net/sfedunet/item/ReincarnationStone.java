@@ -1,22 +1,7 @@
 package net.sfedunet.item;
 
-import net.fabricmc.fabric.api.dimension.v1.FabricDimensions;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.Hand;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.TeleportTarget;
-import net.minecraft.world.World;
-import net.sfedunet.mixin.LivingEntityInvoker;
-import net.sfedunet.world.dimension.DraconicShadow;
-
-import java.util.Objects;
 
 public class ReincarnationStone extends Item {
 

@@ -1,8 +1,7 @@
-package net.sfedunet.mixin;
+package net.sfedunet.mixin.common;
 
 import net.minecraft.entity.*;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
@@ -12,10 +11,8 @@ import net.minecraft.item.Item;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.sfedunet.api.armor.ArmorEffect;
 import net.sfedunet.api.armor.ArmorEffectRegistry;
 import net.sfedunet.entity.projectiles.ParalysisArrowEntity;
-import net.sfedunet.item.ReincarnationStone;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Mutable;
@@ -43,7 +40,7 @@ public abstract class LivingEntityMixin extends Entity {
     @Mutable @Final @Shadow protected static final EntityDimensions SLEEPING_DIMENSIONS;
     @Mutable @Final @Shadow private static final UUID SPRINTING_SPEED_BOOST_ID = UUID.fromString("662A6B8D-DA3E-4C1C-8813-96EA6097278D");
 
-    LivingEntity livingEntity = ((LivingEntity) (Object) this);
+    LivingEntity self = ((LivingEntity) (Object) this);
 
     public LivingEntityMixin(EntityType<?> type, World world) {
         super(type, world);
@@ -53,7 +50,7 @@ public abstract class LivingEntityMixin extends Entity {
 
     public void canTarget(CallbackInfoReturnable<Boolean> ret) {
 
-        if (livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 1) {
+        if (self.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 1) {
 
             ret.setReturnValue(Boolean.FALSE);
         }
@@ -62,35 +59,43 @@ public abstract class LivingEntityMixin extends Entity {
         @Inject(at = @At("HEAD"), method = "tick")
     private void tick(CallbackInfo ci) {
 
-            if (livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 1) {
-                livingEntity.getDataTracker().set(ParalysisArrowEntity.PARALYSIS, livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) - 1);
+            if (self.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 1) {
+                self.getDataTracker().set(ParalysisArrowEntity.PARALYSIS, self.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) - 1);
             }
-            if (livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 2 && livingEntity.getType() == EntityType.PLAYER) {
-                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS), 4));
-                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS), 4));
-                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS), 4));
+            if (self.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 2 && self.getType() == EntityType.PLAYER) {
+                self.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, self.getDataTracker().get(ParalysisArrowEntity.PARALYSIS), 4));
+                self.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, self.getDataTracker().get(ParalysisArrowEntity.PARALYSIS), 4));
+                self.addStatusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, self.getDataTracker().get(ParalysisArrowEntity.PARALYSIS), 4));
             } else {
-                if (livingEntity.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 1 && livingEntity.getType() == EntityType.PLAYER) {
-                    livingEntity.removeStatusEffect(StatusEffects.SLOWNESS);
-                    livingEntity.removeStatusEffect(StatusEffects.WEAKNESS);
-                    livingEntity.removeStatusEffect(StatusEffects.MINING_FATIGUE);
+                if (self.getDataTracker().get(ParalysisArrowEntity.PARALYSIS) >= 1 && self.getType() == EntityType.PLAYER) {
+                    self.removeStatusEffect(StatusEffects.SLOWNESS);
+                    self.removeStatusEffect(StatusEffects.WEAKNESS);
+                    self.removeStatusEffect(StatusEffects.MINING_FATIGUE);
                 }
             }
 
-            for (ArmorEffect armorEffect : ArmorEffectRegistry.getArmorEffects()){
+            ArmorEffectRegistry.getArmorEffects().forEach(armorEffect -> {
                 if(Arrays.equals(this.getArmorAsList(), armorEffect.getArmorAsList())){
                     if(armorEffect.getEffectInstance() != null){
-                        livingEntity.addStatusEffect(armorEffect.getEffectInstance());
+                        self.addStatusEffect(armorEffect.getEffectInstance());
                     }
-
-                    armorEffect.tick(livingEntity, world);
+                    armorEffect.tick(self, world);
                 }
-            }
+            });
+//            for (ArmorEffect armorEffect : ArmorEffectRegistry.getArmorEffects()){
+//                if(Arrays.equals(this.getArmorAsList(), armorEffect.getArmorAsList())){
+//                    if(armorEffect.getEffectInstance() != null){
+//                        livingEntity.addStatusEffect(armorEffect.getEffectInstance());
+//                    }
+//
+//                    armorEffect.tick(livingEntity, world);
+//                }
+//            }
 
         }
 
     Item[] getArmorAsList(){
-        return new Item[]{livingEntity.getEquippedStack(EquipmentSlot.FEET).getItem(), livingEntity.getEquippedStack(EquipmentSlot.LEGS).getItem(), livingEntity.getEquippedStack(EquipmentSlot.CHEST).getItem(), livingEntity.getEquippedStack(EquipmentSlot.HEAD).getItem()};
+        return new Item[]{self.getEquippedStack(EquipmentSlot.FEET).getItem(), self.getEquippedStack(EquipmentSlot.LEGS).getItem(), self.getEquippedStack(EquipmentSlot.CHEST).getItem(), self.getEquippedStack(EquipmentSlot.HEAD).getItem()};
     }
 
     public int getParalysis() {

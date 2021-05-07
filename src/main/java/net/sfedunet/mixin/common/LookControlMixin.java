@@ -1,4 +1,4 @@
-package net.sfedunet.mixin;
+package net.sfedunet.mixin.common;
 
 import net.minecraft.entity.ai.control.LookControl;
 import net.minecraft.entity.mob.MobEntity;
