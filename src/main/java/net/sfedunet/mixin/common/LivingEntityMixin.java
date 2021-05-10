@@ -74,29 +74,17 @@ public abstract class LivingEntityMixin extends Entity {
                 }
             }
 
-            ArmorEffectRegistry.getArmorEffects().forEach(armorEffect -> {
-                if(Arrays.equals(this.getArmorAsList(), armorEffect.getArmorAsList())){
-                    if(armorEffect.getEffectInstance() != null){
-                        self.addStatusEffect(armorEffect.getEffectInstance());
-                    }
-                    armorEffect.tick(self, world);
-                }
-            });
-//            for (ArmorEffect armorEffect : ArmorEffectRegistry.getArmorEffects()){
+//            ArmorEffectRegistry.getArmorEffects().forEach(armorEffect -> {
 //                if(Arrays.equals(this.getArmorAsList(), armorEffect.getArmorAsList())){
 //                    if(armorEffect.getEffectInstance() != null){
-//                        livingEntity.addStatusEffect(armorEffect.getEffectInstance());
+//                        self.addStatusEffect(armorEffect.getEffectInstance());
 //                    }
-//
-//                    armorEffect.tick(livingEntity, world);
+//                    armorEffect.tick(self, world);
 //                }
-//            }
+//            });
+
 
         }
-
-    Item[] getArmorAsList(){
-        return new Item[]{self.getEquippedStack(EquipmentSlot.FEET).getItem(), self.getEquippedStack(EquipmentSlot.LEGS).getItem(), self.getEquippedStack(EquipmentSlot.CHEST).getItem(), self.getEquippedStack(EquipmentSlot.HEAD).getItem()};
-    }
 
     public int getParalysis() {
         return this.dataTracker.get(ParalysisArrowEntity.PARALYSIS);

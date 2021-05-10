@@ -1,7 +1,6 @@
 package net.sfedunet.item.armor;
 
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -47,7 +46,7 @@ public class AnyItemsArmor {
     }
 
     static void registerArmorEffects(){
-        ArmorEffectRegistry.register(DRAGON_HELMET, DRAGON_CHESTPLATE, DRAGON_LEGGINGS, DRAGON_BOOTS, new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,60,0, false, false));
+        ArmorEffectRegistry.register("Dragon Armor", DRAGON_HELMET, DRAGON_CHESTPLATE, DRAGON_LEGGINGS, DRAGON_BOOTS, StatusEffects.FIRE_RESISTANCE);
 
         //test
         ArmorEffectRegistry.register(new TickingArmorEffectTest(Items.NETHERITE_HELMET, DRAGON_CHESTPLATE, Items.NETHERITE_LEGGINGS, Items.NETHERITE_BOOTS, null));

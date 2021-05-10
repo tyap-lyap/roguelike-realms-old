@@ -20,7 +20,8 @@
   ],
   "client": [
     "client.ArmorFeatureRendererMixin",
-    "client.WorldRendererMixin"
+    "client.WorldRendererMixin",
+    "client.StatusEffectUtilMixin"
   ],
   "server": [],
   "injectors": {

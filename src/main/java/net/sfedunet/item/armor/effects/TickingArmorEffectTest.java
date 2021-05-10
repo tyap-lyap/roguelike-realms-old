@@ -1,7 +1,7 @@
 package net.sfedunet.item.armor.effects;
 
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.Item;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -11,8 +11,8 @@ import net.sfedunet.api.armor.ArmorEffect;
 
 public class TickingArmorEffectTest extends ArmorEffect {
 
-    public TickingArmorEffectTest(Item helmet, Item chestplate, Item leggings, Item boots, StatusEffectInstance effectInstance) {
-        super(helmet, chestplate, leggings, boots, effectInstance);
+    public TickingArmorEffectTest(Item helmet, Item chestplate, Item leggings, Item boots, StatusEffect statusEffect) {
+        super(helmet, chestplate, leggings, boots, statusEffect);
     }
 
     @Override
