@@ -13,6 +13,7 @@
     "common.MobEntityMixin",
     "common.MoveControlMixin",
     "common.PlantBlockMixin",
+    "common.ServerPlayerEntity2Mixin",
     "common.ServerPlayerEntityMixin",
     "common.TargetPredicateMixin",
     "common.TrackTargetGoalMixin",
@@ -20,8 +21,8 @@
   ],
   "client": [
     "client.ArmorFeatureRendererMixin",
-    "client.WorldRendererMixin",
-    "client.StatusEffectUtilMixin"
+    "client.StatusEffectUtilMixin",
+    "client.WorldRendererMixin"
   ],
   "server": [],
   "injectors": {
