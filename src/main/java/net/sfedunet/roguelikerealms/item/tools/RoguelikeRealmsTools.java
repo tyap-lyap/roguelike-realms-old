@@ -6,7 +6,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.sfedunet.roguelikerealms.RoguelikeRealmsMod;
 import net.sfedunet.roguelikerealms.item.RoguelikeRealmsItemGroups;
-import net.sfedunet.item.base.*;
 import net.sfedunet.roguelikerealms.item.base.*;
 
 import java.util.LinkedHashMap;
