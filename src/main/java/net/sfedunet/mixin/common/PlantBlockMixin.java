@@ -4,7 +4,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.PlantBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
-import net.sfedunet.block.AnyItemsBlocks;
+import net.sfedunet.block.RoguelikeRealmsBlocks;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -15,7 +15,7 @@ public class PlantBlockMixin {
 
     @Inject(method = "canPlantOnTop", at = @At("TAIL"), cancellable = true)
     protected void canPlantOnTop(BlockState floor, BlockView world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
-        if(floor.isOf(AnyItemsBlocks.DRAGOSS) || floor.isOf(AnyItemsBlocks.DRAGON_DIRT)){
+        if(floor.isOf(RoguelikeRealmsBlocks.DRAGOSS) || floor.isOf(RoguelikeRealmsBlocks.DRAGON_DIRT)){
             cir.setReturnValue(true);
         }
     }

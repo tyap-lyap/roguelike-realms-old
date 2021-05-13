@@ -19,12 +19,12 @@ import java.util.Objects;
 public class ReincarnationStone extends Item {
 
     public ReincarnationStone() {
-        super(new FabricItemSettings().group(AnyItemGroups.ITEMS).maxCount(1));
+        super(new FabricItemSettings().group(RoguelikeRealmsItemGroups.ITEMS).maxCount(1));
     }
 
     public static void decrementReincarnationStone(PlayerEntity playerEntity){
 
-        playerEntity.inventory.removeStack(playerEntity.inventory.getSlotWithStack(AnyItemsItems.REINCARNATION_STONE.getDefaultStack()),1);
+        playerEntity.inventory.removeStack(playerEntity.inventory.getSlotWithStack(RoguelikeRealmsItems.REINCARNATION_STONE.getDefaultStack()),1);
 
     }
 
@@ -50,7 +50,7 @@ public class ReincarnationStone extends Item {
 
             if (mainHand != Items.TOTEM_OF_UNDYING.getDefaultStack() && offHand != Items.TOTEM_OF_UNDYING.getDefaultStack()) {
 
-                if (playerEntity.inventory.contains(AnyItemsItems.REINCARNATION_STONE.getDefaultStack())) {
+                if (playerEntity.inventory.contains(RoguelikeRealmsItems.REINCARNATION_STONE.getDefaultStack())) {
 
                     if (world.getRegistryKey() == DraconicShadow.DRACONIC_SHADOW) {
 

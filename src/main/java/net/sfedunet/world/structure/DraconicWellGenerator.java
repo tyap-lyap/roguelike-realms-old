@@ -1,8 +1,5 @@
 package net.sfedunet.world.structure;
 
-import com.google.common.collect.ImmutableMap;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.structure.*;
 import net.minecraft.structure.processor.BlockIgnoreStructureProcessor;
@@ -12,19 +9,13 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockBox;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
-import net.minecraft.world.Heightmap;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.StructureWorldAccess;
 import net.minecraft.world.gen.StructureAccessor;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
-import net.minecraft.world.gen.feature.StructureFeature;
-import net.sfedunet.AnyItemsMod;
-import net.sfedunet.block.AnyItemsBlocks;
-import net.sfedunet.world.features.DraconicWellFeature;
-import org.lwjgl.system.CallbackI;
+import net.sfedunet.block.RoguelikeRealmsBlocks;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 
 public class DraconicWellGenerator {
@@ -40,14 +31,14 @@ public class DraconicWellGenerator {
         private final Identifier template;
 
         public Piece(StructureManager structureManager, CompoundTag compoundTag) {
-            super(AnyItemsStructures.WELL_PIECE, compoundTag);
+            super(RoguelikeRealmsStructures.WELL_PIECE, compoundTag);
             this.template = new Identifier(compoundTag.getString("Template"));
             this.rotation = BlockRotation.valueOf(compoundTag.getString("Rot"));
             this.initializeStructureData(structureManager);
         }
 
         public Piece(StructureManager structureManager, BlockPos pos, Identifier template, BlockRotation rotation) {
-            super(AnyItemsStructures.WELL_PIECE, 0);
+            super(RoguelikeRealmsStructures.WELL_PIECE, 0);
             this.pos = pos;
             this.rotation = rotation;
             this.template = template;
@@ -59,10 +50,10 @@ public class DraconicWellGenerator {
                 StructurePlacementData structurePlacementData = (new StructurePlacementData()).setRotation(this.rotation).setMirror(BlockMirror.NONE).addProcessor(BlockIgnoreStructureProcessor.IGNORE_STRUCTURE_BLOCKS);;
                 boolean bl = super.generate(structureWorldAccess, structureAccessor, chunkGenerator, random, boundingBox, chunkPos, blockPos);
 
-                    structureWorldAccess.setBlockState(this.pos.add(Structure.transform(structurePlacementData, new BlockPos(2, -1, 1))), AnyItemsBlocks.DRAGON_STONE_TILES.getDefaultState(), 0);
-                    structureWorldAccess.setBlockState(this.pos.add(Structure.transform(structurePlacementData, new BlockPos(1, -1, 2))), AnyItemsBlocks.DRAGON_STONE_TILES.getDefaultState(), 0);
-                    structureWorldAccess.setBlockState(this.pos.add(Structure.transform(structurePlacementData, new BlockPos(1, -1, 1))), AnyItemsBlocks.DRAGON_STONE_TILES.getDefaultState(), 0);
-                    structureWorldAccess.setBlockState(this.pos.add(Structure.transform(structurePlacementData, new BlockPos(2, -1, 2))), AnyItemsBlocks.DRAGON_STONE_TILES.getDefaultState(), 0);
+                    structureWorldAccess.setBlockState(this.pos.add(Structure.transform(structurePlacementData, new BlockPos(2, -1, 1))), RoguelikeRealmsBlocks.DRAGON_STONE_TILES.getDefaultState(), 0);
+                    structureWorldAccess.setBlockState(this.pos.add(Structure.transform(structurePlacementData, new BlockPos(1, -1, 2))), RoguelikeRealmsBlocks.DRAGON_STONE_TILES.getDefaultState(), 0);
+                    structureWorldAccess.setBlockState(this.pos.add(Structure.transform(structurePlacementData, new BlockPos(1, -1, 1))), RoguelikeRealmsBlocks.DRAGON_STONE_TILES.getDefaultState(), 0);
+                    structureWorldAccess.setBlockState(this.pos.add(Structure.transform(structurePlacementData, new BlockPos(2, -1, 2))), RoguelikeRealmsBlocks.DRAGON_STONE_TILES.getDefaultState(), 0);
 
                 return bl;
             }

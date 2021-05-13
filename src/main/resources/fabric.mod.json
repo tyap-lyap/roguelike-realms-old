@@ -19,10 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.sfedunet.AnyItemsMod"
+      "net.sfedunet.RoguelikeRealmsMod"
     ],
     "client": [
-      "net.sfedunet.AnyItemsClient"
+      "net.sfedunet.RoguelikeRealmsClient"
     ]
   },
 

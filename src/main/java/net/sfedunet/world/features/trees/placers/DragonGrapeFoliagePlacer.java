@@ -13,8 +13,8 @@ import net.minecraft.world.gen.feature.TreeFeature;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.foliage.FoliagePlacer;
 import net.minecraft.world.gen.foliage.FoliagePlacerType;
-import net.sfedunet.block.AnyItemsBlocks;
-import net.sfedunet.world.features.trees.AnyTrees;
+import net.sfedunet.block.RoguelikeRealmsBlocks;
+import net.sfedunet.world.features.trees.RoguelikeRealmsTrees;
 
 import java.util.Random;
 import java.util.Set;
@@ -31,7 +31,7 @@ public class DragonGrapeFoliagePlacer extends FoliagePlacer {
 
     @Override
     protected FoliagePlacerType<?> getType() {
-        return AnyTrees.DRAGON_GRAPE_FOLIAGE;
+        return RoguelikeRealmsTrees.DRAGON_GRAPE_FOLIAGE;
     }
 
     @Override
@@ -41,9 +41,9 @@ public class DragonGrapeFoliagePlacer extends FoliagePlacer {
         radius -= treeNode.getFoliageRadius();
         BlockPos nodePos = treeNode.getCenter();
         BlockState leafBlock = config.leavesProvider.getBlockState(random, nodePos);
-        BlockState hanger = AnyItemsBlocks.DRAGON_GRAPE_VINES.getDefaultState();
-        BlockState grapedHanger = AnyItemsBlocks.GRAPED_DRAGON_GRAPE_VINES.getDefaultState();
-        BlockState hangerTip = AnyItemsBlocks.DRAGON_GRAPE_VINES_TIP.getDefaultState();
+        BlockState hanger = RoguelikeRealmsBlocks.DRAGON_GRAPE_VINES.getDefaultState();
+        BlockState grapedHanger = RoguelikeRealmsBlocks.GRAPED_DRAGON_GRAPE_VINES.getDefaultState();
+        BlockState hangerTip = RoguelikeRealmsBlocks.DRAGON_GRAPE_VINES_TIP.getDefaultState();
 
         for(int i = -radius; i <= radius; i++) {
             for (int j = -radius; j <= radius; j++) {

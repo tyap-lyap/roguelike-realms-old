@@ -12,8 +12,8 @@ import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Language;
 import net.minecraft.world.World;
-import net.sfedunet.AnyItemsMod;
-import net.sfedunet.item.AnyItemGroups;
+import net.sfedunet.RoguelikeRealmsMod;
+import net.sfedunet.item.RoguelikeRealmsItemGroups;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ public class BaseArmorItem extends ArmorItem {
     private final String fullSetEffect;
 
     public BaseArmorItem(ArmorMaterial material, EquipmentSlot slot, String fullSetEffect) {
-        super(material, slot, new FabricItemSettings().group(AnyItemGroups.ARMOR));
+        super(material, slot, new FabricItemSettings().group(RoguelikeRealmsItemGroups.ARMOR));
 
         this.fullSetEffect = fullSetEffect;
     }
@@ -33,9 +33,9 @@ public class BaseArmorItem extends ArmorItem {
         super.appendTooltip(stack, world, tooltip, context);
 
         if(!this.fullSetEffect.equals("none")){
-            String full_set_effect = Language.getInstance().get("tooltip." + AnyItemsMod.MODID + ".full_set_effect");
+            String full_set_effect = Language.getInstance().get("tooltip." + RoguelikeRealmsMod.MODID + ".full_set_effect");
 
-            String effect = Language.getInstance().get("tooltip." + AnyItemsMod.MODID + "." + fullSetEffect);
+            String effect = Language.getInstance().get("tooltip." + RoguelikeRealmsMod.MODID + "." + fullSetEffect);
 
             tooltip.add(new LiteralText(full_set_effect + effect));
         }

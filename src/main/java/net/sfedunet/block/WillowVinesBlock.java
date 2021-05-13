@@ -29,8 +29,8 @@ public class WillowVinesBlock extends Block {
         ItemStack itemStack = player.getStackInHand(hand);
 
         if (type.equals("tip") && itemStack.getItem().equals(Items.BONE_MEAL) && world.isAir(pos.down(1))) {
-            world.setBlockState(pos, AnyItemsBlocks.DRAGON_WILLOW_VINES.getDefaultState());
-            world.setBlockState(pos.down(1), AnyItemsBlocks.DRAGON_WILLOW_VINES_TIP.getDefaultState());
+            world.setBlockState(pos, RoguelikeRealmsBlocks.DRAGON_WILLOW_VINES.getDefaultState());
+            world.setBlockState(pos.down(1), RoguelikeRealmsBlocks.DRAGON_WILLOW_VINES_TIP.getDefaultState());
             if(!player.abilities.creativeMode){
                 itemStack.decrement(1);
             }
@@ -50,8 +50,8 @@ public class WillowVinesBlock extends Block {
         if(type.equals("tip")){
             if (random.nextInt(8) == 0) {
                 if(world.getBlockState(pos.down(1)).getBlock().equals(Blocks.AIR)){
-                    world.setBlockState(pos, AnyItemsBlocks.DRAGON_WILLOW_VINES.getDefaultState(), 2);
-                    world.setBlockState(pos.down(1), AnyItemsBlocks.DRAGON_WILLOW_VINES_TIP.getDefaultState(), 2);
+                    world.setBlockState(pos, RoguelikeRealmsBlocks.DRAGON_WILLOW_VINES.getDefaultState(), 2);
+                    world.setBlockState(pos.down(1), RoguelikeRealmsBlocks.DRAGON_WILLOW_VINES_TIP.getDefaultState(), 2);
                 }
 
             }

@@ -24,7 +24,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
-import net.sfedunet.item.armor.AnyItemsArmor;
+import net.sfedunet.item.armor.RoguelikeRealmsArmor;
 
 @SuppressWarnings("EntityConstructor")
 public class ArmoredDragonEntity extends HostileEntity {
@@ -42,7 +42,7 @@ public class ArmoredDragonEntity extends HostileEntity {
     }
 
     public EntityGroup getGroup() {
-        return AnyItemsEntityGroup.DRAGON;
+        return RoguelikeRealmsEntityGroup.DRAGON;
     }
 
     public static DefaultAttributeContainer.Builder createAttr(){
@@ -52,10 +52,10 @@ public class ArmoredDragonEntity extends HostileEntity {
     protected void initEquipment() {
         //Item mainHand = Items.STONE_SWORD;
         Item offHand = Items.SHIELD;
-        Item head = AnyItemsArmor.DRAGON_HELMET;
-        Item chest = AnyItemsArmor.DRAGON_CHESTPLATE;
-        Item legs = AnyItemsArmor.DRAGON_LEGGINGS;
-        Item feet = AnyItemsArmor.DRAGON_BOOTS;
+        Item head = RoguelikeRealmsArmor.DRAGON_HELMET;
+        Item chest = RoguelikeRealmsArmor.DRAGON_CHESTPLATE;
+        Item legs = RoguelikeRealmsArmor.DRAGON_LEGGINGS;
+        Item feet = RoguelikeRealmsArmor.DRAGON_BOOTS;
         switch (this.world.getDifficulty()) {
             case PEACEFUL:
                 //mainHand = Items.POPPY;

@@ -22,10 +22,10 @@ public class DragonScalesBlock extends Block {
 
         if(type.equals("normal") && world.getBlockState(pos.up(1)).isOf(Blocks.GOLD_BLOCK)){
 
-            world.setBlockState(pos, AnyItemsBlocks.GILDED_DRAGON_SCALES_BLOCK.getDefaultState());
+            world.setBlockState(pos, RoguelikeRealmsBlocks.GILDED_DRAGON_SCALES_BLOCK.getDefaultState());
 
         }else if(type.equals("gilded") && !world.getBlockState(pos.up(1)).isOf(Blocks.GOLD_BLOCK)){
-            world.setBlockState(pos, AnyItemsBlocks.DRAGON_SCALES_BLOCK.getDefaultState());
+            world.setBlockState(pos, RoguelikeRealmsBlocks.DRAGON_SCALES_BLOCK.getDefaultState());
         }
     }
 }

@@ -12,7 +12,7 @@ import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.foliage.FoliagePlacer;
 import net.minecraft.world.gen.trunk.TrunkPlacer;
 import net.minecraft.world.gen.trunk.TrunkPlacerType;
-import net.sfedunet.world.features.trees.AnyTrees;
+import net.sfedunet.world.features.trees.RoguelikeRealmsTrees;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +31,7 @@ public class DragonWillowTrunkPlacer extends TrunkPlacer {
 
     @Override
     protected TrunkPlacerType<?> getType() {
-        return AnyTrees.DRAGON_WILLOW_TRUNK;
+        return RoguelikeRealmsTrees.DRAGON_WILLOW_TRUNK;
     }
 
     @Override

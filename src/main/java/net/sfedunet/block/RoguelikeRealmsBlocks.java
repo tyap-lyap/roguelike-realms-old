@@ -8,15 +8,15 @@ import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.sfedunet.AnyItemsMod;
+import net.sfedunet.RoguelikeRealmsMod;
 import net.sfedunet.block.base.BaseBlock;
 import net.sfedunet.block.base.BasePlantBlock;
-import net.sfedunet.item.AnyItemGroups;
+import net.sfedunet.item.RoguelikeRealmsItemGroups;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class AnyItemsBlocks {
+public class RoguelikeRealmsBlocks {
 
     private static final Map<Identifier, BlockItem> ITEMS = new LinkedHashMap<>();
     private static final Map<Identifier, Block> BLOCKS = new LinkedHashMap<>();
@@ -64,7 +64,7 @@ public class AnyItemsBlocks {
 
     private static <B extends Block> B add(String name, B block) {
         Item.Settings settings = new Item.Settings();
-        settings.group(AnyItemGroups.BLOCKS);
+        settings.group(RoguelikeRealmsItemGroups.BLOCKS);
         return addBlockItem(name, block, new BlockItem(block, settings));
     }
 
@@ -72,13 +72,13 @@ public class AnyItemsBlocks {
         addBlock(name, block);
         if (item != null) {
             item.appendBlocks(Item.BLOCK_ITEMS, item);
-            ITEMS.put(new Identifier(AnyItemsMod.MODID, name), item);
+            ITEMS.put(new Identifier(RoguelikeRealmsMod.MODID, name), item);
         }
         return block;
     }
 
     private static <B extends Block> B addBlock(String name, B block) {
-        BLOCKS.put(new Identifier(AnyItemsMod.MODID, name), block);
+        BLOCKS.put(new Identifier(RoguelikeRealmsMod.MODID, name), block);
         return block;
     }
 

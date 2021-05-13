@@ -5,7 +5,7 @@ import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffectUtil;
 import net.sfedunet.api.armor.ArmorEffectRegistry;
-import net.sfedunet.util.AnyUtils;
+import net.sfedunet.util.ArmorUtils;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -23,7 +23,7 @@ public class StatusEffectUtilMixin {
 
         if(player != null){
             ArmorEffectRegistry.getArmorEffects().forEach((armorEffect) -> {
-                if(Arrays.equals(AnyUtils.getArmorAsList(player), armorEffect.getArmorAsList())){
+                if(Arrays.equals(ArmorUtils.getArmorAsList(player), armorEffect.getArmorAsList())){
                     if(armorEffect.getStatusEffect() != null && effect.getEffectType().equals(armorEffect.getStatusEffect())){
                         cir.setReturnValue(armorEffect.getName());
                     }

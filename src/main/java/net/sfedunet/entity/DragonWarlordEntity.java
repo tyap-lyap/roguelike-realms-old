@@ -6,8 +6,7 @@ import java.time.temporal.ChronoField;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.ZombifiedPiglinEntity;
-import net.sfedunet.item.AnyItemsItems;
-import net.sfedunet.item.tools.AnyItemsTools;
+import net.sfedunet.item.tools.RoguelikeRealmsTools;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.block.Blocks;
@@ -26,7 +25,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
-import net.sfedunet.item.armor.AnyItemsArmor;
+import net.sfedunet.item.armor.RoguelikeRealmsArmor;
 
 @SuppressWarnings("EntityConstructor")
 public class DragonWarlordEntity extends HostileEntity {
@@ -44,7 +43,7 @@ public class DragonWarlordEntity extends HostileEntity {
     }
 
     public EntityGroup getGroup() {
-        return AnyItemsEntityGroup.DRAGON;
+        return RoguelikeRealmsEntityGroup.DRAGON;
     }
 
     public static DefaultAttributeContainer.Builder createAttr(){
@@ -52,12 +51,12 @@ public class DragonWarlordEntity extends HostileEntity {
     }
 
     protected void initEquipment() {
-        Item mainHand = AnyItemsTools.DRAGON_SWORD;
+        Item mainHand = RoguelikeRealmsTools.DRAGON_SWORD;
         Item offHand = Items.SHIELD;
-        Item head = AnyItemsArmor.DRAGON_HELMET;
-        Item chest = AnyItemsArmor.DRAGON_CHESTPLATE;
-        Item legs = AnyItemsArmor.DRAGON_LEGGINGS;
-        Item feet = AnyItemsArmor.DRAGON_BOOTS;
+        Item head = RoguelikeRealmsArmor.DRAGON_HELMET;
+        Item chest = RoguelikeRealmsArmor.DRAGON_CHESTPLATE;
+        Item legs = RoguelikeRealmsArmor.DRAGON_LEGGINGS;
+        Item feet = RoguelikeRealmsArmor.DRAGON_BOOTS;
         switch (this.world.getDifficulty()) {
             case PEACEFUL:
                 mainHand = Items.POPPY;
@@ -71,17 +70,17 @@ public class DragonWarlordEntity extends HostileEntity {
                 break;
             case NORMAL:
                 mainHand = Items.NETHERITE_SWORD;
-                head = AnyItemsArmor.DRAGON_HELMET;
+                head = RoguelikeRealmsArmor.DRAGON_HELMET;
                 chest = Items.NETHERITE_CHESTPLATE;
                 legs = Items.NETHERITE_LEGGINGS;
                 feet = Items.NETHERITE_BOOTS;
                 break;
             case HARD:
-                mainHand = AnyItemsTools.ECHSEROCK_SWORD;
-                head = AnyItemsArmor.DRAGON_HELMET;
-                chest = AnyItemsArmor.ECHSEROCK_CHESTPLATE;
-                legs = AnyItemsArmor.ECHSEROCK_LEGGINGS;
-                feet = AnyItemsArmor.ECHSEROCK_BOOTS;
+                mainHand = RoguelikeRealmsTools.ECHSEROCK_SWORD;
+                head = RoguelikeRealmsArmor.DRAGON_HELMET;
+                chest = RoguelikeRealmsArmor.ECHSEROCK_CHESTPLATE;
+                legs = RoguelikeRealmsArmor.ECHSEROCK_LEGGINGS;
+                feet = RoguelikeRealmsArmor.ECHSEROCK_BOOTS;
                 break;
         }
         this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(mainHand));

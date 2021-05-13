@@ -2,7 +2,7 @@ package net.sfedunet.mixin.common;
 
 import net.minecraft.block.Block;
 import net.minecraft.world.gen.feature.Feature;
-import net.sfedunet.block.AnyItemsBlocks;
+import net.sfedunet.block.RoguelikeRealmsBlocks;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -13,7 +13,7 @@ public class FeatureMixin {
 
     @Inject(method = "isSoil(Lnet/minecraft/block/Block;)Z", at = @At("HEAD")  , cancellable = true)
     private static void isSoil(Block block, CallbackInfoReturnable<Boolean> cir) {
-        if(block == AnyItemsBlocks.DRAGOSS || block == AnyItemsBlocks.DRAGON_DIRT){
+        if(block == RoguelikeRealmsBlocks.DRAGOSS || block == RoguelikeRealmsBlocks.DRAGON_DIRT){
             cir.setReturnValue(true);
         }
     }

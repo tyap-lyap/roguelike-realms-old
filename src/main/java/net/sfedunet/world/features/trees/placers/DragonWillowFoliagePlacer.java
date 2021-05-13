@@ -13,8 +13,8 @@ import net.minecraft.world.gen.feature.TreeFeature;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.foliage.FoliagePlacer;
 import net.minecraft.world.gen.foliage.FoliagePlacerType;
-import net.sfedunet.block.AnyItemsBlocks;
-import net.sfedunet.world.features.trees.AnyTrees;
+import net.sfedunet.block.RoguelikeRealmsBlocks;
+import net.sfedunet.world.features.trees.RoguelikeRealmsTrees;
 
 import java.util.Random;
 import java.util.Set;
@@ -31,7 +31,7 @@ public class DragonWillowFoliagePlacer extends FoliagePlacer {
 
     @Override
     protected FoliagePlacerType<?> getType() {
-        return AnyTrees.DRAGON_WILLOW_FOLIAGE;
+        return RoguelikeRealmsTrees.DRAGON_WILLOW_FOLIAGE;
     }
 
     @Override
@@ -41,8 +41,8 @@ public class DragonWillowFoliagePlacer extends FoliagePlacer {
         radius -= treeNode.getFoliageRadius();
         BlockPos nodePos = treeNode.getCenter();
         BlockState leafBlock = config.leavesProvider.getBlockState(random, nodePos);
-        BlockState hanger = AnyItemsBlocks.DRAGON_WILLOW_VINES.getDefaultState();
-        BlockState hangerTip = AnyItemsBlocks.DRAGON_WILLOW_VINES_TIP.getDefaultState();
+        BlockState hanger = RoguelikeRealmsBlocks.DRAGON_WILLOW_VINES.getDefaultState();
+        BlockState hangerTip = RoguelikeRealmsBlocks.DRAGON_WILLOW_VINES_TIP.getDefaultState();
 
         for(int i = -radius; i <= radius; i++) {
             for (int j = -radius; j <= radius; j++) {

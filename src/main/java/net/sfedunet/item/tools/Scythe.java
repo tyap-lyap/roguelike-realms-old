@@ -3,12 +3,11 @@ package net.sfedunet.item.tools;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
-import net.sfedunet.AnyItemsMod;
-import net.sfedunet.item.AnyItemGroups;
+import net.sfedunet.item.RoguelikeRealmsItemGroups;
 
 public class Scythe extends SwordItem {
     public Scythe(ToolMaterial toolMaterial) {
-        super(toolMaterial, 0, -3.0f, new Settings().group(AnyItemGroups.TOOLS_AND_WEAPONS));
+        super(toolMaterial, 0, -3.0f, new Settings().group(RoguelikeRealmsItemGroups.TOOLS_AND_WEAPONS));
     }
 
     @Override

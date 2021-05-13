@@ -5,9 +5,7 @@ import java.time.temporal.ChronoField;
 
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.mob.ZombifiedPiglinEntity;
-import net.minecraft.entity.passive.IronGolemEntity;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.block.Blocks;
@@ -26,7 +24,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
-import net.sfedunet.item.armor.AnyItemsArmor;
 
 @SuppressWarnings("EntityConstructor")
 public class InferiorDragonEntity extends HostileEntity {
@@ -44,7 +41,7 @@ public class InferiorDragonEntity extends HostileEntity {
     }
 
     public EntityGroup getGroup() {
-        return AnyItemsEntityGroup.DRAGON;
+        return RoguelikeRealmsEntityGroup.DRAGON;
     }
 
     public static DefaultAttributeContainer.Builder createAttr(){

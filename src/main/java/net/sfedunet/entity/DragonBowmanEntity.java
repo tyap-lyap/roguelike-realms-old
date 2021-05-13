@@ -30,7 +30,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
-import net.sfedunet.item.armor.AnyItemsArmor;
+import net.sfedunet.item.armor.RoguelikeRealmsArmor;
 
 @SuppressWarnings("EntityConstructor")
 public class DragonBowmanEntity extends HostileEntity implements RangedAttackMob {
@@ -49,7 +49,7 @@ public class DragonBowmanEntity extends HostileEntity implements RangedAttackMob
     }
 
     public EntityGroup getGroup() {
-        return AnyItemsEntityGroup.DRAGON;
+        return RoguelikeRealmsEntityGroup.DRAGON;
     }
 
     public static DefaultAttributeContainer.Builder createAttr(){
@@ -59,9 +59,9 @@ public class DragonBowmanEntity extends HostileEntity implements RangedAttackMob
     protected void initEquipment() {
         Item mainHand = Items.BOW;
         //Item offHand = Items.SHIELD;
-        Item head = AnyItemsArmor.DRAGON_HELMET;
+        Item head = RoguelikeRealmsArmor.DRAGON_HELMET;
         // Item chest = AnyItemsArmor.DRAGON_CHESTPLATE;
-        Item legs = AnyItemsArmor.DRAGON_LEGGINGS;
+        Item legs = RoguelikeRealmsArmor.DRAGON_LEGGINGS;
        // Item feet = AnyItemsArmor.DRAGON_BOOTS;
         switch (this.world.getDifficulty()) {
             case PEACEFUL:

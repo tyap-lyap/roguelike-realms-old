@@ -39,8 +39,8 @@ public class EmeraldPedestal extends Block {
     
 
     private boolean checkFrame(World world, BlockPos pos) {
-        Block dragonScales = AnyItemsBlocks.DRAGON_SCALES_BLOCK;
-        Block glidedDragonScales = AnyItemsBlocks.GILDED_DRAGON_SCALES_BLOCK;
+        Block dragonScales = RoguelikeRealmsBlocks.DRAGON_SCALES_BLOCK;
+        Block glidedDragonScales = RoguelikeRealmsBlocks.GILDED_DRAGON_SCALES_BLOCK;
         Block goldBlock = Blocks.GOLD_BLOCK;
 
         return world.getBlockState(pos.add(0, -1, 0)).getBlock() == dragonScales && world.getBlockState(pos.add(0, -2, 0)).getBlock() == dragonScales && world.getBlockState(pos.add(0, -2, 1)).getBlock() == dragonScales && world.getBlockState(pos.add(0, -2, -1)).getBlock() == dragonScales && world.getBlockState(pos.add(1, -2, 0)).getBlock() == dragonScales && world.getBlockState(pos.add(-1, -2, 0)).getBlock() == dragonScales && world.getBlockState(pos.add(1, -2, 1)).getBlock() == dragonScales && world.getBlockState(pos.add(-1, -2, 1)).getBlock() == dragonScales && world.getBlockState(pos.add(1, -2, -1)).getBlock() == dragonScales && world.getBlockState(pos.add(-1, -2, -1)).getBlock() == dragonScales && /*Основание 0 уровень*/
@@ -50,7 +50,7 @@ public class EmeraldPedestal extends Block {
     }
 
     void createPortal(World world, BlockPos pos){
-        BlockState portal = AnyItemsBlocks.DRACONIC_SHADOW_PORTAL.getDefaultState();
+        BlockState portal = RoguelikeRealmsBlocks.DRACONIC_SHADOW_PORTAL.getDefaultState();
         for (int x = -1; x <= 1; x++)
             for (int z = -1; z <= 1; z++)
             if (!((z == 0) && (x == 0))) {
@@ -60,7 +60,7 @@ public class EmeraldPedestal extends Block {
 
     void destroyPortal(World world, BlockPos pos){
         BlockState air = Blocks.AIR.getDefaultState();
-        BlockState portal = AnyItemsBlocks.DRACONIC_SHADOW_PORTAL.getDefaultState();
+        BlockState portal = RoguelikeRealmsBlocks.DRACONIC_SHADOW_PORTAL.getDefaultState();
         for (int i = -1; i <= 1; i++)
             for (int j = -1; j <= 1; j++)
             if (!((j == 0) && (i == 0))) {

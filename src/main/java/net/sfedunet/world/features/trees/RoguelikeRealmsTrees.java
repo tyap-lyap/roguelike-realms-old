@@ -7,7 +7,7 @@ import net.minecraft.world.gen.foliage.FoliagePlacer;
 import net.minecraft.world.gen.foliage.FoliagePlacerType;
 import net.minecraft.world.gen.trunk.TrunkPlacer;
 import net.minecraft.world.gen.trunk.TrunkPlacerType;
-import net.sfedunet.AnyItemsMod;
+import net.sfedunet.RoguelikeRealmsMod;
 import net.sfedunet.world.features.trees.placers.DragonGrapeFoliagePlacer;
 import net.sfedunet.world.features.trees.placers.DragonGrapeTrunkPlacer;
 import net.sfedunet.world.features.trees.placers.DragonWillowFoliagePlacer;
@@ -18,7 +18,7 @@ import java.lang.reflect.InvocationTargetException;
 
 
 @SuppressWarnings({"unchecked", "rawtypes"})
-public class AnyTrees {
+public class RoguelikeRealmsTrees {
 
     private static Constructor<FoliagePlacerType> foliageConstructor;
     private static Constructor<TrunkPlacerType> trunkConstructor;
@@ -30,10 +30,10 @@ public class AnyTrees {
     public static TrunkPlacerType<DragonGrapeTrunkPlacer> DRAGON_GRAPE_TRUNK;
 
     public static <P extends FoliagePlacer> FoliagePlacerType<P> registerFoliage(String name, Codec<P> codec) throws IllegalAccessException, InvocationTargetException, InstantiationException {
-        return Registry.register(Registry.FOLIAGE_PLACER_TYPE, new Identifier(AnyItemsMod.MODID, name), foliageConstructor.newInstance(codec));
+        return Registry.register(Registry.FOLIAGE_PLACER_TYPE, new Identifier(RoguelikeRealmsMod.MODID, name), foliageConstructor.newInstance(codec));
     }
     public static <P extends TrunkPlacer> TrunkPlacerType<P> registerTrunk(String name, Codec<P> codec) throws IllegalAccessException, InvocationTargetException, InstantiationException {
-        return Registry.register(Registry.TRUNK_PLACER_TYPE, new Identifier(AnyItemsMod.MODID, name), trunkConstructor.newInstance(codec));
+        return Registry.register(Registry.TRUNK_PLACER_TYPE, new Identifier(RoguelikeRealmsMod.MODID, name), trunkConstructor.newInstance(codec));
     }
 
 

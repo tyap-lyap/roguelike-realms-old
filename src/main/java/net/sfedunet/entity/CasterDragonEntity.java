@@ -8,7 +8,7 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.ZombifiedPiglinEntity;
 import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
-import net.sfedunet.AnyItemsMod;
+import net.sfedunet.RoguelikeRealmsMod;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.block.Blocks;
@@ -28,7 +28,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
-import net.sfedunet.item.armor.AnyItemsArmor;
+import net.sfedunet.item.armor.RoguelikeRealmsArmor;
 
 @SuppressWarnings("EntityConstructor")
 public class CasterDragonEntity extends HostileEntity {
@@ -50,7 +50,7 @@ public class CasterDragonEntity extends HostileEntity {
     }
 
     public EntityGroup getGroup() {
-        return AnyItemsEntityGroup.DRAGON;
+        return RoguelikeRealmsEntityGroup.DRAGON;
     }
 
     public static DefaultAttributeContainer.Builder createAttr(){
@@ -60,10 +60,10 @@ public class CasterDragonEntity extends HostileEntity {
     protected void initEquipment() {
          Item mainHand = Items.STONE_SWORD;
         // Item offHand = Items.SHIELD;
-        Item head = AnyItemsArmor.DRAGON_HELMET;
+        Item head = RoguelikeRealmsArmor.DRAGON_HELMET;
         // Item chest = AnyItemsArmor.DRAGON_CHESTPLATE;
         //Item legs = AnyItemsArmor.DRAGON_LEGGINGS;
-        Item feet = AnyItemsArmor.DRAGON_BOOTS;
+        Item feet = RoguelikeRealmsArmor.DRAGON_BOOTS;
         switch (this.world.getDifficulty()) {
             case PEACEFUL:
                 // mainHand = Items.POPPY;
@@ -140,7 +140,7 @@ public class CasterDragonEntity extends HostileEntity {
                 ++this.cooldown;
                 if (this.cooldown == 8 && !this.dragon.isSilent()) {
                     //world.syncWorldEvent((PlayerEntity) null, 1015, this.dragon.getBlockPos(), 0);
-                    world.playSound(null, this.dragon.getBlockPos(), AnyItemsMod.SPITTING_PEW, SoundCategory.AMBIENT, 1.0F, 1.0F);
+                    world.playSound(null, this.dragon.getBlockPos(), RoguelikeRealmsMod.SPITTING_PEW, SoundCategory.AMBIENT, 1.0F, 1.0F);
                 }
 
                 if (this.cooldown == 12) {

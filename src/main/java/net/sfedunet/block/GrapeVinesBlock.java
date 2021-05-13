@@ -15,7 +15,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.sfedunet.item.AnyItemsItems;
+import net.sfedunet.item.RoguelikeRealmsItems;
 
 import java.util.Random;
 
@@ -32,21 +32,21 @@ public class GrapeVinesBlock extends Block {
         ItemStack itemStack = player.getStackInHand(hand);
 
         if(type.equals("graped")){
-            player.giveItemStack(AnyItemsItems.DRAGON_GRAPES.getDefaultStack());
-            world.setBlockState(pos, AnyItemsBlocks.DRAGON_GRAPE_VINES.getDefaultState());
+            player.giveItemStack(RoguelikeRealmsItems.DRAGON_GRAPES.getDefaultStack());
+            world.setBlockState(pos, RoguelikeRealmsBlocks.DRAGON_GRAPE_VINES.getDefaultState());
             world.playSound(null, pos, SoundEvents.ITEM_SWEET_BERRIES_PICK_FROM_BUSH, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
             return ActionResult.success(world.isClient);
         }
         else if (type.equals("tip") && itemStack.getItem().equals(Items.BONE_MEAL) && world.isAir(pos.down(1))) {
-            world.setBlockState(pos, AnyItemsBlocks.DRAGON_GRAPE_VINES.getDefaultState());
-            world.setBlockState(pos.down(1), AnyItemsBlocks.DRAGON_GRAPE_VINES_TIP.getDefaultState());
+            world.setBlockState(pos, RoguelikeRealmsBlocks.DRAGON_GRAPE_VINES.getDefaultState());
+            world.setBlockState(pos.down(1), RoguelikeRealmsBlocks.DRAGON_GRAPE_VINES_TIP.getDefaultState());
             if(!player.abilities.creativeMode){
                 itemStack.decrement(1);
             }
             return ActionResult.success(world.isClient);
         }
         else if (type.equals("normal") && itemStack.getItem().equals(Items.BONE_MEAL)){
-            world.setBlockState(pos, AnyItemsBlocks.GRAPED_DRAGON_GRAPE_VINES.getDefaultState());
+            world.setBlockState(pos, RoguelikeRealmsBlocks.GRAPED_DRAGON_GRAPE_VINES.getDefaultState());
             if(!player.abilities.creativeMode){
                 itemStack.decrement(1);
             }
@@ -66,14 +66,14 @@ public class GrapeVinesBlock extends Block {
         if(type.equals("tip")){
             if (random.nextInt(16) == 0) {
                 if(world.isAir(pos.down(1))){
-                    world.setBlockState(pos, AnyItemsBlocks.DRAGON_GRAPE_VINES.getDefaultState(), 2);
-                    world.setBlockState(pos.down(1), AnyItemsBlocks.DRAGON_GRAPE_VINES_TIP.getDefaultState(), 2);
+                    world.setBlockState(pos, RoguelikeRealmsBlocks.DRAGON_GRAPE_VINES.getDefaultState(), 2);
+                    world.setBlockState(pos.down(1), RoguelikeRealmsBlocks.DRAGON_GRAPE_VINES_TIP.getDefaultState(), 2);
                 }
 
             }
         }else if(type.equals("normal")){
             if (random.nextInt(16) == 0) {
-                world.setBlockState(pos, AnyItemsBlocks.GRAPED_DRAGON_GRAPE_VINES.getDefaultState(), 2);
+                world.setBlockState(pos, RoguelikeRealmsBlocks.GRAPED_DRAGON_GRAPE_VINES.getDefaultState(), 2);
 
             }
         }

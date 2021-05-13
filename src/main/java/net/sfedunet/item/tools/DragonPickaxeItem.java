@@ -3,7 +3,6 @@ package net.sfedunet.item.tools;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
@@ -13,16 +12,15 @@ import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Language;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.sfedunet.AnyItemsMod;
-import net.sfedunet.item.AnyItemGroups;
+import net.sfedunet.RoguelikeRealmsMod;
+import net.sfedunet.item.RoguelikeRealmsItemGroups;
 
 import java.util.List;
 
 public class DragonPickaxeItem extends PickaxeItem {
     public DragonPickaxeItem(ToolMaterial material, int attackDamage, float attackSpeed) {
-        super(material, attackDamage, attackSpeed, new FabricItemSettings().group(AnyItemGroups.TOOLS_AND_WEAPONS));
+        super(material, attackDamage, attackSpeed, new FabricItemSettings().group(RoguelikeRealmsItemGroups.TOOLS_AND_WEAPONS));
     }
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         stack.damage(2, attacker, (e) -> {
@@ -36,7 +34,7 @@ public class DragonPickaxeItem extends PickaxeItem {
     @Environment(EnvType.CLIENT)
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         super.appendTooltip(stack, world, tooltip, context);
-        String flammable = Language.getInstance().get("tooltip." + AnyItemsMod.MODID + ".flammable");
+        String flammable = Language.getInstance().get("tooltip." + RoguelikeRealmsMod.MODID + ".flammable");
         tooltip.add(new LiteralText(flammable));
     }
 }
