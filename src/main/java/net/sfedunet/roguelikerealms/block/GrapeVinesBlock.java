@@ -15,15 +15,16 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.sfedunet.roguelikerealms.block.base.BaseBlock;
 import net.sfedunet.roguelikerealms.item.RoguelikeRealmsItems;
 
 import java.util.Random;
 
-public class GrapeVinesBlock extends Block {
+public class GrapeVinesBlock extends BaseBlock {
     private final String type;
 
-    public GrapeVinesBlock(String type) {
-        super(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).noCollision());
+    public GrapeVinesBlock(String type, String parentModel) {
+        super(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).noCollision(), parentModel);
         this.type = type;
     }
 

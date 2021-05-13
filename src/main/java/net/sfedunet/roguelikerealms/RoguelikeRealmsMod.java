@@ -5,6 +5,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.sfedunet.roguelikerealms.block.RoguelikeRealmsBlocks;
+import net.sfedunet.roguelikerealms.data.RRResources;
 import net.sfedunet.roguelikerealms.entity.RoguelikeRealmsEntities;
 import net.sfedunet.roguelikerealms.event.RoguelikeRealmsEvents;
 import net.sfedunet.roguelikerealms.item.RoguelikeRealmsItems;
@@ -35,6 +36,8 @@ public class RoguelikeRealmsMod implements ModInitializer {
 		RoguelikeRealmsEvents.register();
 		RoguelikeRealmsTrees.registerTrees();
 		RoguelikeRealmsStructures.registerStructures();
+
+		RRResources.init();
 
 	}
 }

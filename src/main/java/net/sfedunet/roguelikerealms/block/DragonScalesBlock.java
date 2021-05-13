@@ -7,13 +7,14 @@ import net.minecraft.block.Blocks;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.sfedunet.roguelikerealms.block.base.BaseBlock;
 
-public class DragonScalesBlock extends Block {
+public class DragonScalesBlock extends BaseBlock {
 
     private final String type;
 
     public DragonScalesBlock(String type) {
-        super(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).sounds(BlockSoundGroup.NETHER_BRICKS));
+        super(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).sounds(BlockSoundGroup.NETHER_BRICKS), "cube_all");
         this.type = type;
     }
 

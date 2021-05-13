@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "roguelikerealms:block/dragoss_top",
+    "bottom": "roguelikerealms:block/dragon_dirt",
+    "side": "roguelikerealms:block/dragoss_side"
+  }
+}

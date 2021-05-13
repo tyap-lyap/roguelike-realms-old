@@ -7,6 +7,7 @@ import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.feature.ArmorFeatureRenderer;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.util.Identifier;
+import net.sfedunet.roguelikerealms.RoguelikeRealmsMod;
 import net.sfedunet.roguelikerealms.entity.CasterDragonEntity;
 import net.sfedunet.roguelikerealms.entity.model.CasterDragonEntityModel;
 
@@ -17,7 +18,7 @@ public class CasterDragonEntityRenderer extends BipedEntityRenderer<CasterDragon
         this.addFeature(new ArmorFeatureRenderer<>(this, new BipedEntityModel<>(0.5f), new BipedEntityModel<>(1.0f)));
     }
 
-    private static final Identifier TEXTURE = new Identifier("anyitem:textures/entity/spitting_dragon.png");
+    private static final Identifier TEXTURE = new Identifier(RoguelikeRealmsMod.MODID, "textures/entity/spitting_dragon.png");
 
     @Override
     public Identifier getTexture(CasterDragonEntity entity) {

@@ -6,7 +6,13 @@
   "name": "Roguelike Realms",
   "description": "description",
   "authors": [
-    "Andrey Miroshnikov, Polina Petrova, Misha Chesnokov, Maxim Suhanov"
+    "Andrey Miroshnikov",
+    "Polina Petrova",
+    "Misha Chesnokov",
+    "Maxim Suhanov",
+    "PinkGoosik",
+    "Space1",
+    "aSomik"
   ],
   "contact": {
     "homepage": "",
@@ -14,7 +20,7 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/anyitem/icon.png",
+  "icon": "assets/roguelikerealms/icon.png",
 
   "environment": "*",
   "entrypoints": {

@@ -1,0 +1,42 @@
+{
+	"textures": {
+		"portal": "roguelikerealms:block/draconic_shadow_portal",
+		"particle": "roguelikerealms:block/draconic_shadow_portal"
+	},
+	"elements": [
+		{   "from": [0, 0, 0],
+			"to": [16, 13, 16],
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "texture": "#portal"}
+			}
+		}
+	],
+	"gui_light": "side",
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [0.3, 0.3, 0.3]
+		},
+		"thirdperson_lefthand": {
+			"scale": [0.3, 0.3, 0.3]
+		},
+		"firstperson_righthand": {
+			"scale": [0.3, 0.3, 0.3]
+		},
+		"firstperson_lefthand": {
+			"scale": [0.3, 0.3, 0.3]
+		},
+		"ground": {
+			"scale": [0.3, 0.3, 0.3]
+		},
+		"gui": {
+			"rotation": [90, 0, 0]
+		},
+		"head": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 0, -1.5]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0]
+		}
+	}
+}

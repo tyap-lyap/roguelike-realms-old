@@ -15,14 +15,17 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.TeleportTarget;
 import net.minecraft.world.World;
+import net.sfedunet.roguelikerealms.block.base.BaseBlock;
 import net.sfedunet.roguelikerealms.world.dimension.DraconicShadow;
 
 import java.util.Objects;
 
-public class DraconicShadowPortalBlock extends Block {
+public class DraconicShadowPortalBlock extends BaseBlock {
+
+    private static final VoxelShape SHAPE;
 
     public DraconicShadowPortalBlock() {
-        super(FabricBlockSettings.copyOf(Blocks.BEDROCK).sounds(BlockSoundGroup.GLASS).luminance(14).noCollision());
+        super(FabricBlockSettings.copyOf(Blocks.BEDROCK).sounds(BlockSoundGroup.GLASS).luminance(14).noCollision(), "custom_model");
     }
 
 
@@ -52,12 +55,18 @@ public class DraconicShadowPortalBlock extends Block {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 13.0D, 16.0D);
+        return SHAPE;
     }
 
     @Override
     public BlockRenderType getRenderType(BlockState blockState) {
         return BlockRenderType.MODEL;
+    }
+
+    static {
+
+        SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 13.0D, 16.0D);
+        
     }
 
 

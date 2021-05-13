@@ -13,14 +13,17 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
+import net.sfedunet.roguelikerealms.block.base.BaseBlock;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-public class EmeraldPedestal extends Block {
+public class EmeraldPedestal extends BaseBlock {
+
+    private static final VoxelShape SHAPE;
 
     public EmeraldPedestal() {
-        super(FabricBlockSettings.copy(Blocks.OBSIDIAN).sounds(BlockSoundGroup.METAL));
+        super(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).sounds(BlockSoundGroup.METAL), "custom_model");
     }
 
     @Override
@@ -79,11 +82,15 @@ public class EmeraldPedestal extends Block {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
+        return SHAPE;
     }
 
     @Override
     public BlockRenderType getRenderType(BlockState blockState) {
         return BlockRenderType.MODEL;
+    }
+
+    static {
+        SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
     }
 }

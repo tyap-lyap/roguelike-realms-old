@@ -13,14 +13,15 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.sfedunet.roguelikerealms.block.base.BaseBlock;
 
 import java.util.Random;
 
-public class WillowVinesBlock extends Block {
+public class WillowVinesBlock extends BaseBlock {
     private final String type;
 
-    public WillowVinesBlock(String type) {
-        super(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).noCollision());
+    public WillowVinesBlock(String type, String parentModel) {
+        super(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).noCollision(), parentModel);
         this.type = type;
     }
 
