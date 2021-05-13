@@ -16,10 +16,10 @@ import org.apache.logging.log4j.Logger;
 
 public class RoguelikeRealmsMod implements ModInitializer {
 
-	public static final Identifier ID_SPITTING = new Identifier("anyitem:spitting_pew");
+	public static final Identifier ID_SPITTING = new Identifier("roguelikerealms:spitting_pew");
 	public static SoundEvent SPITTING_PEW = new SoundEvent(ID_SPITTING);
 
-	public static final String MODID = "anyitem";
+	public static final String MODID = "roguelikerealms";
 
 	public static final Logger LOGGER = LogManager.getLogger();
 

@@ -19,6 +19,7 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.placer.SimpleBlockPlacer;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
+import net.sfedunet.RoguelikeRealmsMod;
 import net.sfedunet.block.RoguelikeRealmsBlocks;
 import net.sfedunet.world.features.trees.placers.DragonGrapeFoliagePlacer;
 import net.sfedunet.world.features.trees.placers.DragonGrapeTrunkPlacer;
@@ -48,7 +49,7 @@ public class RoguelikeRealmsConfiguredFeatures {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreCryptonOverworld);
     }
     private static <FC extends FeatureConfig> ConfiguredFeature<FC, ?> register(String id, ConfiguredFeature<FC, ?> configuredFeature) {
-        return Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, "anyitem:" + id, configuredFeature);
+        return Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, RoguelikeRealmsMod.MODID + ":" + id, configuredFeature);
     }
     public static class Configs {
         public static final TreeFeatureConfig DRAGON_GRAPE_CONFIG = (new TreeFeatureConfig.Builder(new SimpleBlockStateProvider(RoguelikeRealmsBlocks.DRAGON_GRAPE_LOG.getDefaultState()), new SimpleBlockStateProvider(RoguelikeRealmsBlocks.DRAGON_GRAPE_LEAVES.getDefaultState()), new DragonGrapeFoliagePlacer(UniformIntDistribution.of(3, 1), UniformIntDistribution.of(0, 1)), new DragonGrapeTrunkPlacer(3, 2, 1), new TwoLayersFeatureSize(3, 0, 3))).ignoreVines().build();

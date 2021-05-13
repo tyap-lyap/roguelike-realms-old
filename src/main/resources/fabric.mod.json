@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "id": "anyitem",
+  "id": "roguelikerealms",
   "version": "${version}",
 
-  "name": "Any Items Mod",
-  "description": "Mod that contain any items.",
+  "name": "Roguelike Realms",
+  "description": "description",
   "authors": [
     "Andrey Miroshnikov, Polina Petrova, Misha Chesnokov, Maxim Suhanov"
   ],
   "contact": {
     "homepage": "",
-    "sources": "https://github.com/DoctorNight799/AnyItemsMod"
+    "sources": "https://github.com/DoctorNight799/roguelike-realms"
   },
 
   "license": "CC0-1.0",
@@ -27,15 +27,12 @@
   },
 
   "mixins": [
-    "anyitem.mixins.json"
+    "roguelikerealms.mixins.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
     "minecraft": "1.16.x"
-  },
-  "suggests": {
-    "flamingo": "*"
   }
 }
