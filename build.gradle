@@ -7,7 +7,8 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
 archivesBaseName = project.archives_base_name
-version = project.mod_version
+//я хз как менять имя забилженого джар файла так что пока так, а в ручную менять каждый раз при новом билде не удобно
+version = "mc" + project.minecraft_version + "-" + project.mod_version + "-" + project.release_type
 group = project.maven_group
 
 
@@ -43,10 +44,10 @@ dependencies {
 }
 
 processResources {
-	inputs.property "version", project.version
+	inputs.property "version", project.mod_version
 
 	filesMatching("fabric.mod.json") {
-		expand "version": project.version
+		expand "version": project.mod_version
 	}
 }
 

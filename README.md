@@ -1,9 +1,13 @@
-# Fabric Example Mod
+# Roguelike Realms Fabric
 
-## Setup
+## About
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+Some description
 
-## License
+## Images
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+Some cool screenshots
+
+## Latest Builds
+
+Get recent mod's build from github actions [here](https://github.com/DoctorNight799/roguelike-realms/actions).
