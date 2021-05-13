@@ -1,28 +1,28 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.sfedunet.mixin",
+  "package": "net.sfedunet.roguelikerealms.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "net.sfedunet.roguelikerealms.mixin.common.FeatureMixin",
-    "net.sfedunet.roguelikerealms.mixin.common.HoglinEntityMixin",
-    "net.sfedunet.roguelikerealms.mixin.common.JumpControlMixin",
-    "net.sfedunet.roguelikerealms.mixin.common.LivingEntityInvoker",
-    "net.sfedunet.roguelikerealms.mixin.common.LivingEntityMixin",
-    "net.sfedunet.roguelikerealms.mixin.common.LookControlMixin",
-    "net.sfedunet.roguelikerealms.mixin.common.MobEntityMixin",
-    "net.sfedunet.roguelikerealms.mixin.common.MoveControlMixin",
-    "net.sfedunet.roguelikerealms.mixin.common.PlantBlockMixin",
-    "net.sfedunet.roguelikerealms.mixin.common.ServerPlayerEntity2Mixin",
-    "net.sfedunet.roguelikerealms.mixin.common.ServerPlayerEntityMixin",
-    "net.sfedunet.roguelikerealms.mixin.common.TargetPredicateMixin",
-    "net.sfedunet.roguelikerealms.mixin.common.TrackTargetGoalMixin",
-    "net.sfedunet.roguelikerealms.mixin.common.ZoglinEntityMixin"
+    "common.FeatureMixin",
+    "common.HoglinEntityMixin",
+    "common.JumpControlMixin",
+    "common.LivingEntityInvoker",
+    "common.LivingEntityMixin",
+    "common.LookControlMixin",
+    "common.MobEntityMixin",
+    "common.MoveControlMixin",
+    "common.PlantBlockMixin",
+    "common.ServerPlayerEntity2Mixin",
+    "common.ServerPlayerEntityMixin",
+    "common.TargetPredicateMixin",
+    "common.TrackTargetGoalMixin",
+    "common.ZoglinEntityMixin"
   ],
   "client": [
-    "net.sfedunet.roguelikerealms.mixin.client.ArmorFeatureRendererMixin",
-    "net.sfedunet.roguelikerealms.mixin.client.StatusEffectUtilMixin",
-    "net.sfedunet.roguelikerealms.mixin.client.WorldRendererMixin"
+    "client.ArmorFeatureRendererMixin",
+    "client.StatusEffectUtilMixin",
+    "client.WorldRendererMixin"
   ],
   "server": [],
   "injectors": {
